@@ -41,7 +41,6 @@ export interface AudioPlayerState {
 // Component prop types
 export interface ReleaseCardProps {
   release: Release;
-  onClick: () => void;
 }
 
 export interface SongListProps {

@@ -175,7 +175,7 @@ export const releases: Release[] = [
       {
         id: "love-1-corinthians-13",
         title: "Love (1 Corinthians 13)",
-        audioUrl: "/assets/music/1_corinthians_13_love.m4a",
+        audioUrl: "/assets/music/singles/1_corinthians_13_love.m4a",
         lyrics:
           "Love is patient, love is kind\nLove lets what I cling to and what I want to die\nLove is full of hope, love will never boast\nLove in purity and all good things delights\n\nSo love the Lord, Your God\nWith all your strength and mind and heart\nLove your neighbor as yourself\nAnd love your enemy as well\n\nLove is humble, love is strong\nLove can bear all things and love will suffer long\nLove will never fade though the earth give way\nLove will hold you in his everlasting arms\n\nIf I speak with the tongues of angels (but have not love)\nIf I give all I own away (but have not love)\nEven if I could move the mountains\nI am nothing but a resounding noise",
         copyright:
@@ -199,7 +199,7 @@ export const releases: Release[] = [
       {
         id: "psalm-27-one-thing",
         title: "Psalm 27 (One Thing)",
-        audioUrl: "/assets/music/psalm_27_one_thing.m4a",
+        audioUrl: "/assets/music/singles/psalm_27_one_thing.m4a",
         lyrics:
           'The LORD is my light and my salvation\nThe LORD is the strength of my life\nWhen evil men assail me, they will stumble and fall\nThough the host of hell surround me, I will not fear\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings\n\nHear me, O LORD, when I cry out\nShow your great grace and answer me\nHide not your love and mercy, turn me not away\nAnd when the host of hell surround me, my heart will say\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings\n\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings',
         copyright:
@@ -222,7 +222,7 @@ export const releases: Release[] = [
       {
         id: "psalm-23-shepherd-me",
         title: "Psalm 23 (Shepherd Me)",
-        audioUrl: "/assets/music/psalm_23_shepherd_me.m4a",
+        audioUrl: "/assets/music/singles/psalm_23_shepherd_me.m4a",
         lyrics:
           "The LORD is My Shepherd, I shall not want\nIn pastures of green I will rest\nBeside quiet waters my soul is restored\nI drink and my heart is content\nHe leads me in righteousness\n\nYea, though I walk through the dark of death\nEvil I will not fear\nYour rod and your staff are my confidence\nMy God, you are always near\n\nA table you set in the midst of my foes\nA banquet prepared just for me\nMy head drips with oil and my cup overflows\nI sit at your table and feast\nMy shepherd supplies all I need\n\nSurely goodness and mercy will follow me\nAnd I will dwell in the house of God\nThrough the gates of eternity shepherd me\nAnd I will dwell in your house, O God",
         copyright:
@@ -247,7 +247,7 @@ export const releases: Release[] = [
       {
         id: "psalm-63-better-than-life",
         title: "Psalm 63 (Better Than Life)",
-        audioUrl: "/assets/music/psalm_63_better_than_life.m4a",
+        audioUrl: "/assets/music/singles/psalm_63_better_than_life.m4a",
         lyrics:
           "O God, you are my God\nHow earnestly I seek you\nHow desperately I need you\nMy heart and flesh cry out\n\nO God, you are my God\nMy soul is dry and weary\nMy hope is in your mercy\nOh how I need you now\n\nI have seen you in the sanctuary\nI have felt you like a cloud of glory fall\nLet my soul remember\nBread of heaven for the hungry spirit\nHoly presence of an unrelenting love\nLet my soul remember\n\nLet my soul remember\nYour love is better\nLet my soul remember\nYour love is better than life",
         copyright:
@@ -271,7 +271,7 @@ export const releases: Release[] = [
       {
         id: "son-of-glory-john-1",
         title: "Son of Glory (John 1)",
-        audioUrl: "/assets/music/son_of_glory_john_1.m4a",
+        audioUrl: "/assets/music/singles/son_of_glory_john_1.m4a",
         lyrics:
           "In the beginning was the Word\nAnd the Word was with and was God\nIn the beginning was the Word\nAnd all things were made by and through him\n\nIn the beginning was the Light\nAnd the Light was life to all me\nIn the beginning was the Light\nThe darkness has not overcome him\n\nHe has made his home here\nHeaven robed in flesh and bone\nAnd we have seen his glory\nThe glory of the only Son of God\n\nIn the beginning was the Word\nAnd the Word was with and was God\nIn the beginning was the Word\nAnd all things were made by and through him\n\nIn the beginning was the Light\nAnd the Light was life to all me\nIn the beginning was the Light\nThe darkness has not overcome him\n\nHe has made his home here\nHeaven robed in flesh and bone\nAnd we have seen his glory\nThe glory of the One and only\nHe has made his home here\nHeaven robed in flesh and bone\nAnd we have seen his glory\nThe glory of the only Son of God\n\nJesus Christ, Light of life\nAncient of days, begotten not made\nJesus Christ, Light of life\nAncient of days, begotten not made\nJesus Christ, Light of life\nAncient of days, begotten not made\nJesus Christ, Light of life\nAncient of days, begotten not made\n\nHe has made his home here\nHeaven robed in flesh and bone\nAnd we have seen his glory\nThe glory of the One and only\nHe has made his home here\nHeaven robed in flesh and bone\nAnd we have seen his glory\nThe glory of the only Son of God\n\nOne and only Son of glory",
       },

@@ -4,10 +4,10 @@ import React from "react";
 import Link from "next/link";
 import styles from "./NavBar.module.css";
 
-export const NavBar: React.FC = () => {
+const NavBar: React.FC = () => {
   return (
     <div className={styles.navBar}>
-      <Link href="/Releases" className={styles.link}>
+      <Link href="/releases" className={styles.link}>
         Releases
       </Link>
       <Link href="/resources" className={styles.link}>
@@ -16,9 +16,11 @@ export const NavBar: React.FC = () => {
       <Link href="/remix" className={styles.link}>
         Remix
       </Link>
-      <Link href="/reminisce" className={styles.link}>
-        Reminisce
+      <Link href="/story" className={styles.link}>
+        Story
       </Link>
     </div>
   );
 };
+
+export default NavBar;

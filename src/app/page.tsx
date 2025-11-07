@@ -19,11 +19,8 @@ export default function Home() {
           >
             Releases
           </Link>
-          <Link
-            href="/reminisce"
-            className={`btn btn-primary ${styles.primary}`}
-          >
-            Reminisce
+          <Link href="/story" className={`btn btn-primary ${styles.primary}`}>
+            Story
           </Link>
         </div>
       </main>

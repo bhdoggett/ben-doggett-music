@@ -1,3 +1,7 @@
+.container {
+  margin-top: var(--navbar-height);
+}
+
 .releasePage {
   padding: var(--spacing-xl) 0;
   min-height: 100vh;

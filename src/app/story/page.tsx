@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import { NavBar } from "../../components/NavBar/NavBar";
+import NavBar from "../../components/NavBar/NavBar";
 import styles from "./page.module.css";
 import Link from "next/link";
 
-export default function ReminiscePage() {
+const StoryPage: React.FC = () => {
   return (
     <div>
       <NavBar />
@@ -134,4 +134,6 @@ export default function ReminiscePage() {
       </main>
     </div>
   );
-}
+};
+
+export default StoryPage;

@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import NavBar from "@/components/NavBar/NavBar";
 import { useRouter } from "next/navigation";
 import { releases } from "@/data/releases";
 import ReleaseCard from "@/components/ReleaseCard";
@@ -22,7 +23,7 @@ export default function ReleasesPage() {
     name: "Artist Portfolio",
     description:
       "Musical works exploring faith, worship, and the depths of God's love",
-    genre: ["Worship", "Christian", "Faith"],
+    genre: ["Worship", "Christian", "Faith", "Devotional"],
     release: releases.map((release) => ({
       "@type": "Musicrelease",
       name: release.title,
@@ -46,7 +47,8 @@ export default function ReleasesPage() {
           __html: JSON.stringify(structuredData),
         }}
       />
-      <div className="container">
+      <NavBar />
+      <div className={styles.container}>
         <header className={styles.header}>
           <h1 className={styles.title}>Releases</h1>
         </header>
@@ -56,11 +58,16 @@ export default function ReleasesPage() {
             className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-lg sm:gap-xl lg:gap-2xl ${styles.releaseGrid}`}
           >
             {releases.map((release) => (
-              <ReleaseCard
+              <div
                 key={release.id}
-                release={release}
                 onClick={() => handlereleaseClick(release.id)}
-              />
+                onKeyDown={() => handlereleaseClick(release.id)}
+                role="button"
+                tabIndex={0}
+                aria-label={`View ${release.title} ${release.type}`}
+              >
+                <ReleaseCard release={release} />
+              </div>
             ))}
           </div>
         </main>
