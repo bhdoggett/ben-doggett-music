@@ -21,15 +21,17 @@ interface SongItemProps {
 const SongItem: React.FC<SongItemProps> = ({
   song,
   release,
-  index,
   isExpanded,
   onToggle,
 }) => {
+  const islastSong = release.songs[release.songs.length - 1].id === song.id;
+
   return (
-    <div className={`${styles.songItem} ${isExpanded ? styles.expanded : ""}`}>
+    <div
+      className={`${islastSong ? styles.lastSongItem : styles.songItem} ${isExpanded ? styles.expanded : ""}`}
+    >
       <div className={styles.songHeader}>
         <div className={styles.songInfo}>
-          <span className={styles.trackNumber}>{index + 1}</span>
           <PlayButton song={song} release={release} size="small" />
           <h3 className={styles.songTitle} onClick={onToggle}>
             {song.title}

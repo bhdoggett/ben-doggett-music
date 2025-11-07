@@ -14,9 +14,9 @@ const StoryPage: React.FC = () => {
           When I started writing songs in high school, a friend of mine who was
           into film-making had the grand idea of pointing his video camera at
           me, scraping the audio from the resulting file, burning it to a CD,
-          and that was my first “release.” I’m not going to share those songs
-          with you. Lol. But it’s fun to look back and see where this journey
-          has taken me since then. Later in high school, and through college, I
+          and that was my first “album.” I’m not going to share those songs with
+          you. Lol. But it’s fun to look back and see where this journey has
+          taken me since then. Later in high school, and through college, I
           spent hours at friends’ houses, using their recording equipment to put
           some tracks down that I could share with family and friends. Nothing
           fancy, just vocals and guitar. This resulted in a few song collections
@@ -24,11 +24,10 @@ const StoryPage: React.FC = () => {
           share those songs here…)
         </p>
         <p>
-          After graduating college, a friend offered to produce an release for
-          me. Much of it was recorded in another friend’s basement, with a
-          studio session to record drums and a session in my parent’s basement
-          to record strings and group vocals. The result of all this was my
-          release{" "}
+          After graduating college, a friend offered to produce an album for me.
+          Much of it was recorded in another friend’s basement, with a studio
+          session to record drums and a session in my parent’s basement to
+          record strings and group vocals. The result of all this was my album{" "}
           <Link
             href="/releases/glad"
             className={`${styles.link} ${styles.releaseLink}`}
@@ -75,19 +74,19 @@ const StoryPage: React.FC = () => {
           , released in 2013. This project is made up of five songs that I wrote
           for my home church at the eager encouragement of my pastor, songs that
           we could sing together in response to the ways were learning and
-          growing collectively. These are songs that I continue to be proud of,
-          with a production that is so creative and excellent that I can enjoy
-          them as something no longer my own.
+          growing as a community. These are songs that I continue to be proud
+          of, with a production that is so creative and excellent that I can
+          enjoy them as something no longer my own.
         </p>
         <p>
           <em>Deep to Deep</em> was not cheap to make. When I pulled the trigger
           on that project, I was young and married and had some ambitious hopes
-          of “making it big” some day. I had some savings, but I <em>didn’t</em>{" "}
-          have a mortgage or children (yet). As life would have it, it would be
-          some time before I was able to invest in music production again, and
-          this time it would be slow and steady, in my own basement, watching
-          YouTube videos on how to use EQ plugins, compressors, and reverb,
-          borrowing mics from friends, purchasing some of my own, etc, etc, etc.
+          of “making it big” some day. I had some savings, but I didn’t (yet)
+          have a mortgage or kids. As life would have it, it would be some time
+          before I was able to invest in music production again, and this time
+          it would be slow and steady, in my own basement, watching YouTube
+          videos on how to use EQ plugins, compressors, and reverb, borrowing
+          mics from friends, purchasing some of my own, etc, etc, etc.
         </p>
         <p>
           In 2022 I released my first-in-a-long-time solo-produced song,{" "}
@@ -130,6 +129,12 @@ const StoryPage: React.FC = () => {
             and Son of Glory (John 1)
           </Link>
           .
+        </p>
+        <p>
+          As you will quickly tell, even just from the titles of many of my
+          songs, my song-writing method is largely the process of digesting some
+          theme or passage of the Bible, and finding a way to sing it for myself
+          and for those who might like to join in.
         </p>
       </main>
     </div>
