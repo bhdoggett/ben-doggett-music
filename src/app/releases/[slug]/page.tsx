@@ -67,7 +67,7 @@ export default async function ReleasePage({ params }: ReleasePageProps) {
           {/* Release Header */}
           <header className={styles.releaseHeader}>
             <ReleaseCard release={release} />
-            <div className={styles.coverArt}>
+            {/* <div className={styles.coverArt}>
               <Image
                 src={release.coverArt}
                 alt={`${release.title} cover art`}
@@ -76,7 +76,7 @@ export default async function ReleasePage({ params }: ReleasePageProps) {
                 className={styles.coverImage}
                 priority
               />
-            </div>
+            </div> */}
 
             <div className={styles.releaseInfo}>
               <div className={styles.titleRow}>

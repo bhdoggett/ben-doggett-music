@@ -1,6 +1,4 @@
 .ReleaseCard {
-  display: flex;
-  flex-direction: column;
   background-color: var(--surface);
   padding: var(--spacing-xs);
   box-shadow: var(--shadow-lg);

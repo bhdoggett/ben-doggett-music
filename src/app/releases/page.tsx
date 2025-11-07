@@ -66,7 +66,9 @@ export default function ReleasesPage() {
                 tabIndex={0}
                 aria-label={`View ${release.title} ${release.type}`}
               >
-                <ReleaseCard release={release} />
+                <div className={styles.cardContainer}>
+                  <ReleaseCard release={release} />
+                </div>
               </div>
             ))}
           </div>
