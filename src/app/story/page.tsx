@@ -133,8 +133,9 @@ const StoryPage: React.FC = () => {
         <p>
           As you will quickly tell, even just from the titles of many of my
           songs, my song-writing method is largely the process of digesting some
-          theme or passage of the Bible, and finding a way to sing it for myself
-          and for those who might like to join in.
+          theme or passage from Scripture, and finding a way to sing it for
+          myself and for those who might like to join in. Please consider
+          yourself invited to the sing-along.
         </p>
       </main>
     </div>

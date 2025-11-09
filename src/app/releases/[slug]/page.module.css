@@ -1,10 +1,19 @@
 .container {
-  margin-top: var(--navbar-height);
+  margin: var(--navbar-height);
+  padding: var(--spacing-2xl);
 }
 
 .releasePage {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 40px 400px;
   padding: var(--spacing-xl) 0;
   min-height: 100vh;
+}
+
+.releaseCard {
+  aspect-ratio: 1;
 }
 
 /* Navigation */
@@ -157,8 +166,8 @@
 /* release Content */
 .releaseContent {
   background-color: var(--surface);
-  border-radius: var(--radius-2xl);
-  padding: var(--spacing-2xl);
+  /* border-radius: var(--radius-2xl); */
+  /* padding: var(--spacing-2xl); */
   box-shadow: var(--shadow-md);
 }
 

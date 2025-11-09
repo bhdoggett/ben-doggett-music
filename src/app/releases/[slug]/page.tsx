@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import NavBar from "@/components/NavBar/NavBar";
 import ReleaseCard from "@/components/ReleaseCard";
 import { getReleaseById, getAllReleases } from "@/data/releases";
@@ -65,39 +64,36 @@ export default async function ReleasePage({ params }: ReleasePageProps) {
       <div className={styles.container}>
         <div className={styles.releasePage}>
           {/* Release Header */}
-          <header className={styles.releaseHeader}>
-            <ReleaseCard release={release} />
-            {/* <div className={styles.coverArt}>
-              <Image
-                src={release.coverArt}
-                alt={`${release.title} cover art`}
-                width={400}
-                height={400}
-                className={styles.coverImage}
-                priority
-              />
-            </div> */}
-
-            <div className={styles.releaseInfo}>
-              <div className={styles.titleRow}>
-                <h1 className={styles.releaseTitle}>{release.title}</h1>
-                <StreamingLinks streamingLinks={release.streamingLinks} />
-              </div>
-              {release.description && (
-                <p className={styles.releaseDescription}>
-                  {release.description}
-                </p>
-              )}
-              <div className={styles.releaseMeta}>
-                <span className={styles.trackCount}>
-                  {release.songs.length}{" "}
-                  {release.songs.length === 1 ? "track" : "tracks"}
-                </span>
-              </div>
+          <div>
+            <div className={styles.releaseCard}>
+              <ReleaseCard release={release} />
             </div>
-          </header>
+
+            <header className={styles.releaseHeader}>
+              <div className={styles.releaseInfo}>
+                <div className={styles.titleRow}>
+                  <h1 className={styles.releaseTitle}>{release.title}</h1>
+                  <StreamingLinks streamingLinks={release.streamingLinks} />
+                </div>
+                {release.description && (
+                  <p className={styles.releaseDescription}>
+                    {release.description}
+                  </p>
+                )}
+                <div className={styles.releaseMeta}>
+                  {/* <span className={styles.trackCount}>
+                    {release.songs.length}{" "}
+                    {release.songs.length === 1 ? "track" : "tracks"}
+                  </span> */}
+                </div>
+              </div>
+            </header>
+          </div>
 
           {/* Release Content - Different layouts for Singles vs EPs */}
+        </div>
+
+        <div>
           <main className={styles.releaseContent}>
             {release.type === "single" ? (
               <SingleLayout release={release} />

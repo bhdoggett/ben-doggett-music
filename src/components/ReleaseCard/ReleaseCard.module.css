@@ -6,12 +6,11 @@
   cursor: pointer;
   transition: all var(--transition-base);
   position: relative;
-  aspect-ratio: 1;
+
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   border-radius: var(--radius-sm);
-  width: 100%;
-  height: auto;
+  aspect-ratio: 1;
   max-width: 400px;
   transition: transform var(--transition-slow);
 }
