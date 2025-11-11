@@ -15,7 +15,7 @@
   z-index: 1000;
   pointer-events: none;
   animation: fadeIn 0.3s ease-in-out;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); */
   border-radius: 8px;
   overflow: hidden;
 }

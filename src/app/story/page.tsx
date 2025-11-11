@@ -27,11 +27,11 @@ const StoryPage: React.FC = () => {
           file, burning it to a CD, and that was my first “album.” I’m not going
           to share those songs with you.{" "}
           <HoverWord
-            image="/assets/images/story/lol.png"
+            image="/assets/images/story/lol2.png"
             alt="Laughing Emoji"
             position={{ top: "25%", right: "60%" }}
-            rotation={-40}
-            size={{ width: 200, height: 200 }}
+            rotation={-20}
+            size={{ width: 300, height: 300 }}
           >
             Lol
           </HoverWord>
@@ -39,9 +39,17 @@ const StoryPage: React.FC = () => {
           since then. Later in high school, and through college, I spent hours
           at friends’ houses, using their recording equipment to put some tracks
           down that I could share with family and friends. Nothing fancy, just
-          vocals and guitar. This resulted in a few song collections that I
-          burned onto CD’s and passed around. (I’m also not planning to share
-          those songs here…)
+          vocals and guitar. This resulted in a few song collections that I{" "}
+          <HoverWord
+            image="/assets/images/story/burning-cd.jpg"
+            alt="Image of Burning CD-ROM with caption: This is not how burning cd's works"
+            position={{ top: "40%", right: "20%" }}
+            rotation={3}
+            size={{ width: 285, height: 350 }}
+          >
+            burned onto cd's
+          </HoverWord>{" "}
+          and passed around. (I’m also not planning to share those songs here…)
         </p>
         <p>
           After graduating college, a friend offered to produce an album for me.
@@ -74,7 +82,16 @@ const StoryPage: React.FC = () => {
           >
             Soundcloud playlist
           </Link>{" "}
-          where I continued to upload “songs I recorded in my room.”
+          where I continued to upload{" "}
+          <HoverWord
+            image="/assets/images/story/songs-I-recorded-in-my-room.jpg"
+            alt="Image of Soundcloud playlist description"
+            position={{ top: "10%", right: "10%" }}
+            rotation={0}
+            size={{ width: 700, height: 200 }}
+          >
+            “songs I recorded in my room.”
+          </HoverWord>{" "}
         </p>
         <p>
           One year after <em>Glad</em>, I mustered up the gumption to cold-email
@@ -92,11 +109,21 @@ const StoryPage: React.FC = () => {
             Deep to Deep
           </Link>
           , released in 2013. This project is made up of five songs that I wrote
-          for my home church at the eager encouragement of my pastor, songs that
-          we could sing together in response to the ways were learning and
-          growing as a community. These are songs that I continue to be proud
-          of, with a production that is so creative and excellent that I can
-          enjoy them as something no longer my own.
+          for my home{" "}
+          <HoverWord
+            image="/assets/images/story/church.jpg"
+            alt="Image of a church"
+            position={{ top: "50%", right: "60%" }}
+            rotation={0}
+            size={{ width: 150, height: 300 }}
+          >
+            church
+          </HoverWord>{" "}
+          at the eager encouragement of my pastor, songs that we could sing
+          together in response to the ways were learning and growing as a
+          community. These are songs that I continue to be proud of, with a
+          production that is so creative and excellent that I can enjoy them as
+          something no longer my own.
         </p>
         <p>
           <em>Deep to Deep</em> was not cheap to make. When I pulled the trigger
@@ -104,9 +131,19 @@ const StoryPage: React.FC = () => {
           of “making it big” some day. I had some savings, but I didn’t (yet)
           have a mortgage or kids. As life would have it, it would be some time
           before I was able to invest in music production again, and this time
-          it would be slow and steady, in my own basement, watching YouTube
-          videos on how to use EQ plugins, compressors, and reverb, borrowing
-          mics from friends, purchasing some of my own, etc, etc, etc.
+          it would be{" "}
+          <HoverWord
+            image="/assets/images/story/turtles.jpg"
+            alt="Image of turtles with caption: wins the race"
+            position={{ top: "50%", right: "30%" }}
+            rotation={5}
+            size={{ width: 300, height: 200 }}
+          >
+            slow and steady
+          </HoverWord>
+          , in my own basement, watching YouTube videos on how to use EQ
+          plugins, compressors, and reverb, borrowing mics from friends,
+          purchasing some of my own, etc, etc, etc.
         </p>
         <p>
           In 2022 I released my first-in-a-long-time solo-produced song,{" "}
@@ -155,7 +192,17 @@ const StoryPage: React.FC = () => {
           songs, my song-writing method is largely the process of digesting some
           theme or passage from Scripture, and finding a way to sing it for
           myself and for those who might like to join in. Please consider
-          yourself invited to the sing-along.
+          yourself invited to the{" "}
+          <HoverWord
+            image="/assets/images/story/sing-along.jpg"
+            alt="Image of turtles with caption: wins the race"
+            position={{ top: "50%", right: "60%" }}
+            rotation={-5}
+            size={{ width: 425, height: 275 }}
+          >
+            sing-along
+          </HoverWord>
+          .
         </p>
       </main>
     </div>
