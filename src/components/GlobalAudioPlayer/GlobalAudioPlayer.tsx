@@ -1,13 +1,20 @@
 "use client";
 
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import Image from "next/image";
 import { useAudio } from "@/contexts/AudioContext";
 import styles from "./GlobalAudioPlayer.module.css";
 
 export const GlobalAudioPlayer: React.FC = () => {
-  const { state, playTrack, pauseTrack, seekTo, stopTrack } = useAudio();
-  const [isVisible, setIsVisible] = useState(true);
+  const {
+    state,
+    playTrack,
+    pauseTrack,
+    seekTo,
+    stopTrack,
+    playerIsVisible,
+    setPlayerIsVisible,
+  } = useAudio();
 
   // Format time display
   const formatTime = useCallback((seconds: number): string => {
@@ -35,11 +42,11 @@ export const GlobalAudioPlayer: React.FC = () => {
   // Handle close button
   const handleClose = useCallback(() => {
     stopTrack();
-    setIsVisible(false);
+    setPlayerIsVisible(false);
   }, [stopTrack]);
 
   // Don't render if no track is loaded or if closed
-  if (!state.currentTrack || !isVisible) {
+  if (!state.currentTrack || !playerIsVisible) {
     return null;
   }
 

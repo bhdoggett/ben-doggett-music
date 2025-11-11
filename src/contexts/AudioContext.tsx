@@ -2,6 +2,7 @@
 
 import React, {
   createContext,
+  useState,
   useContext,
   useReducer,
   useCallback,
@@ -39,6 +40,8 @@ type AudioAction =
 // Audio context interface
 interface AudioContextType {
   state: GlobalAudioState;
+  playerIsVisible: boolean;
+  setPlayerIsVisible: (visible: boolean) => void;
   playTrack: (song: Song, release: Release) => void;
   pauseTrack: () => void;
   stopTrack: () => void;
@@ -128,6 +131,7 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [state, dispatch] = useReducer(audioReducer, initialState);
+  const [playerIsVisible, setPlayerIsVisible] = useState<boolean>(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -241,6 +245,9 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({
   // Public methods
   const playTrack = useCallback(
     async (song: Song, release: Release) => {
+      // Show the player when playing a track
+      setPlayerIsVisible(true);
+
       // If it's a different track, set it up
       if (!state.currentTrack || state.currentTrack.song.id !== song.id) {
         dispatch({ type: "SET_TRACK", payload: { song, release } });
@@ -336,6 +343,8 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const contextValue: AudioContextType = {
     state,
+    playerIsVisible,
+    setPlayerIsVisible,
     playTrack,
     pauseTrack,
     stopTrack,
