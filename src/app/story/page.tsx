@@ -127,11 +127,20 @@ const StoryPage: React.FC = () => {
         </p>
         <p>
           <em>Deep to Deep</em> was not cheap to make. When I pulled the trigger
-          on that project, I was young and married and had some ambitious hopes
-          of “making it big” some day. I had some savings, but I didn’t (yet)
-          have a mortgage or kids. As life would have it, it would be some time
-          before I was able to invest in music production again, and this time
-          it would be{" "}
+          on that project, I was{" "}
+          <HoverWord
+            image="/assets/images/story/married.jpg"
+            alt="Image of bride and groom walking"
+            position={{ top: "23%", right: "60%" }}
+            rotation={-2}
+            size={{ width: 300, height: 200 }}
+          >
+            young and married
+          </HoverWord>{" "}
+          and had some ambitious hopes of “making it big” some day. I had some
+          savings, but I didn’t (yet) have a mortgage or kids. As life would
+          have it, it would be some time before I was able to invest in music
+          production again, and this time it would be{" "}
           <HoverWord
             image="/assets/images/story/turtles.jpg"
             alt="Image of turtles with caption: wins the race"
