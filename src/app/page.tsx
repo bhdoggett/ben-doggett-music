@@ -1,28 +1,24 @@
-import Link from "next/link";
 import styles from "./page.module.css";
 import NavBar from "../components/NavBar/NavBar";
+import FeaturedRelease from "@/components/FeaturedRelease";
+import { getReleaseById } from "@/data/releases";
 
 export default function Home() {
+  const featuredRelease = getReleaseById("son-of-glory-john-1");
+
+  if (!featuredRelease) {
+    return null;
+  }
+
   return (
     <div>
       <NavBar />
       <main className={styles.main}>
-        <div className={styles.intro}>
-          <h1>Ben Doggett</h1>
-          <p></p>
-        </div>
+        <header className={styles.header}>
+          <h1 className={styles.title}>Happy Advent</h1>
+        </header>
 
-        <div className={styles.ctas}>
-          <Link
-            href="/Releases"
-            className={`btn btn-primary ${styles.primary}`}
-          >
-            Releases
-          </Link>
-          <Link href="/story" className={`btn btn-primary ${styles.primary}`}>
-            Story
-          </Link>
-        </div>
+        <FeaturedRelease release={featuredRelease} />
       </main>
     </div>
   );

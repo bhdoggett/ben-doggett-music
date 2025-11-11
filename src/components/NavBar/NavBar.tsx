@@ -7,17 +7,17 @@ import styles from "./NavBar.module.css";
 const NavBar: React.FC = () => {
   return (
     <div className={styles.navBar}>
+      <Link href="/" className={styles.link}>
+        Home
+      </Link>
       <Link href="/releases" className={styles.link}>
-        Releases
-      </Link>
-      <Link href="/resources" className={styles.link}>
-        Resources
-      </Link>
-      <Link href="/remix" className={styles.link}>
-        Remix
+        Music
       </Link>
       <Link href="/story" className={styles.link}>
         Story
+      </Link>
+      <Link href="/support" className={styles.link}>
+        Support
       </Link>
     </div>
   );

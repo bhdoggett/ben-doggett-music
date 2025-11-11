@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import NavBar from "@/components/NavBar/NavBar";
 import ReleaseCard from "@/components/ReleaseCard";
 import { getReleaseById, getAllReleases } from "@/data/releases";
-import { SingleLayout } from "@/components/ReleaseLayouts";
 import TracksList from "@/components/TracksList";
 import LyricsDisplay from "@/components/LyricsDisplay";
 import { Song } from "@/types";
@@ -65,41 +64,33 @@ export default async function ReleasePage({ params }: ReleasePageProps) {
     <>
       <NavBar />
       <div className={styles.container}>
-        {release.type === "ep" ? (
-          <>
-            <div className={styles.releasePage}>
-              {/* Cover Area */}
-              <div className={styles.releaseCard}>
-                <ReleaseCard release={release} />
-              </div>
+        <div className={styles.releasePage}>
+          {/* Cover Area */}
+          <div className={styles.releaseCard}>
+            <ReleaseCard release={release} />
+          </div>
 
-              {/* Header Area */}
-              <header className={styles.releaseHeader}>
-                <div className={styles.releaseInfo}>
-                  <div className={styles.titleRow}>
-                    <h1 className={styles.releaseTitle}>{release.title}</h1>
-                    <StreamingLinks streamingLinks={release.streamingLinks} />
-                  </div>
-                  {release.description && (
-                    <p className={styles.releaseDescription}>
-                      {release.description}
-                    </p>
-                  )}
-                  <TracksList songs={release.songs} release={release} />
-                </div>
-              </header>
-
-              {/* Lyrics Area */}
-              <div className={styles.lyricsArea}>
-                <LyricsDisplay />
+          {/* Header Area */}
+          <header className={styles.releaseHeader}>
+            <div className={styles.releaseInfo}>
+              <div className={styles.titleRow}>
+                <h1 className={styles.releaseTitle}>{release.title}</h1>
+                <StreamingLinks streamingLinks={release.streamingLinks} />
               </div>
+              {release.description && (
+                <p className={styles.releaseDescription}>
+                  {release.description}
+                </p>
+              )}
+              <TracksList songs={release.songs} release={release} />
             </div>
-          </>
-        ) : (
-          <main className={styles.releaseContent}>
-            <SingleLayout release={release} />
-          </main>
-        )}
+          </header>
+
+          {/* Lyrics Area */}
+          <div className={styles.lyricsArea}>
+            <LyricsDisplay />
+          </div>
+        </div>
       </div>
     </>
   );

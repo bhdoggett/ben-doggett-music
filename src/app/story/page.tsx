@@ -2,6 +2,7 @@
 
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
+import HoverWord from "@/components/HoverWord";
 import styles from "./page.module.css";
 import Link from "next/link";
 
@@ -11,17 +12,36 @@ const StoryPage: React.FC = () => {
       <NavBar />
       <main className={styles.main}>
         <p>
-          When I started writing songs in high school, a friend of mine who was
-          into film-making had the grand idea of pointing his video camera at
-          me, scraping the audio from the resulting file, burning it to a CD,
-          and that was my first “album.” I’m not going to share those songs with
-          you. Lol. But it’s fun to look back and see where this journey has
-          taken me since then. Later in high school, and through college, I
-          spent hours at friends’ houses, using their recording equipment to put
-          some tracks down that I could share with family and friends. Nothing
-          fancy, just vocals and guitar. This resulted in a few song collections
-          that I burned onto CD’s and passed around. (I’m also not planning to
-          share those songs here…)
+          When I started writing songs in{" "}
+          <HoverWord
+            image="/assets/images/story/high-school.jpg"
+            alt="Me in High School"
+            position={{ top: "15%", right: "15%" }}
+            rotation={5}
+            size={{ width: 220, height: 350 }}
+          >
+            high school
+          </HoverWord>
+          , a friend of mine who was into film-making had the grand idea of
+          pointing his video camera at me, scraping the audio from the resulting
+          file, burning it to a CD, and that was my first “album.” I’m not going
+          to share those songs with you.{" "}
+          <HoverWord
+            image="/assets/images/story/lol.png"
+            alt="Laughing Emoji"
+            position={{ top: "25%", right: "60%" }}
+            rotation={-40}
+            size={{ width: 200, height: 200 }}
+          >
+            Lol
+          </HoverWord>
+          . But it’s fun to look back and see where this journey has taken me
+          since then. Later in high school, and through college, I spent hours
+          at friends’ houses, using their recording equipment to put some tracks
+          down that I could share with family and friends. Nothing fancy, just
+          vocals and guitar. This resulted in a few song collections that I
+          burned onto CD’s and passed around. (I’m also not planning to share
+          those songs here…)
         </p>
         <p>
           After graduating college, a friend offered to produce an album for me.

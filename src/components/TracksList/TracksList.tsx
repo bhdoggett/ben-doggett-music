@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Song, Release } from "@/types";
 import { useAudio } from "@/contexts/AudioContext";
 import PlayButton from "@/components/PlayButton";
@@ -13,6 +13,13 @@ interface TracksListProps {
 
 const TracksList: React.FC<TracksListProps> = ({ songs, release }) => {
   const { state, selectSong } = useAudio();
+
+  // Auto-select first song whenever the release changes
+  useEffect(() => {
+    if (songs.length > 0) {
+      selectSong(songs[0]);
+    }
+  }, [release.id, songs, selectSong]);
 
   const handleSongClick = (song: Song) => {
     selectSong(song);
