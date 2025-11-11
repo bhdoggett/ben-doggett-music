@@ -29,7 +29,7 @@
 }
 
 .main {
-  padding-bottom: var(--spacing-3xl);
+  padding: var(--spacing-xl);
 }
 
 .releaseGrid {

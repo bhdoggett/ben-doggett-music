@@ -10,10 +10,6 @@
   cursor: pointer;
 }
 
-.featuredRelease:hover {
-  transform: translateY(-8px);
-}
-
 .coverArtWrapper {
   position: relative;
   width: 100%;
@@ -22,11 +18,13 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  box-shadow: 0.2s ease;
 }
 
-.featuredRelease:hover .coverArtWrapper {
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+.coverArtWrapper:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); */
 }
 
 .coverArt {
@@ -39,7 +37,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  /* gap: 0.75rem; */
 }
 
 .releaseTitle {
@@ -47,7 +45,7 @@
   font-weight: 700;
   color: var(--neutral-charcoal);
   margin: 0;
-  transition: color 0.3s ease;
+  transition: color 0.1s ease;
 }
 
 .featuredRelease:hover .releaseTitle {

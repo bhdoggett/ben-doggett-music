@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
+import Image from "next/image";
 import { useAudio } from "@/contexts/AudioContext";
 import styles from "./GlobalAudioPlayer.module.css";
 
 export const GlobalAudioPlayer: React.FC = () => {
-  const { state, playTrack, pauseTrack, seekTo } = useAudio();
+  const { state, playTrack, pauseTrack, seekTo, stopTrack } = useAudio();
+  const [isVisible, setIsVisible] = useState(true);
 
   // Format time display
   const formatTime = useCallback((seconds: number): string => {
@@ -30,18 +32,36 @@ export const GlobalAudioPlayer: React.FC = () => {
     [state.duration, seekTo]
   );
 
-  // Don't render if no track is loaded
-  if (!state.currentTrack) {
+  // Handle close button
+  const handleClose = useCallback(() => {
+    stopTrack();
+    setIsVisible(false);
+  }, [stopTrack]);
+
+  // Don't render if no track is loaded or if closed
+  if (!state.currentTrack || !isVisible) {
     return null;
   }
 
   return (
     <div className={styles.globalPlayer}>
+      <button
+        className={styles.closeButton}
+        onClick={handleClose}
+        aria-label="Close player"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+        </svg>
+      </button>
       <div className={styles.trackInfo}>
         <div className={styles.releaseCover}>
-          <img
+          <Image
             src={state.currentTrack.release.coverArt}
             alt={state.currentTrack.release.title}
+            width={48}
+            height={48}
+            className={styles.coverImage}
           />
         </div>
         <div className={styles.trackDetails}>

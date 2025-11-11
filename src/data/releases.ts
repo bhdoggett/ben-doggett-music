@@ -7,7 +7,7 @@ export const releases: Release[] = [
     id: "glad",
     title: "Glad",
     type: "ep",
-    coverArt: "/assets/images/glad.jpeg",
+    coverArt: "/assets/images/album-covers/glad.jpeg",
     description: "Songs that mark a season of fighting for joy",
     streamingLinks: {
       // bandcamp: "https://bendoggett.bandcamp.com/release/glad",
@@ -104,7 +104,7 @@ export const releases: Release[] = [
     id: "deep-to-deep",
     title: "Deep to Deep",
     type: "ep",
-    coverArt: "/assets/images/deep_to_deep.jpg",
+    coverArt: "/assets/images/album-covers/deep_to_deep.jpg",
     description: "An EP exploring the depths of faith and worship",
     streamingLinks: {
       bandcamp: "https://bendoggett.bandcamp.com/release/deep-to-deep",
@@ -164,7 +164,7 @@ export const releases: Release[] = [
     id: "love-1-corinthians-13",
     title: "Love (1 Corinthians 13)",
     type: "single",
-    coverArt: "/assets/images/love_1_corinthians_13.jpg",
+    coverArt: "/assets/images/album-covers/love_1_corinthians_13.jpg",
     description: "A musical meditation on the love chapter",
     streamingLinks: {
       bandcamp: "https://bendoggett.bandcamp.com/track/love-1-corinthians-13",
@@ -188,7 +188,7 @@ export const releases: Release[] = [
     id: "one-thing-psalm-27",
     title: "One Thing (Psalm 27)",
     type: "single",
-    coverArt: "/assets/images/psalm_27.jpg",
+    coverArt: "/assets/images/album-covers/psalm_27.jpg",
     description: "One thing I ask from the Lord, this only do I seek",
     streamingLinks: {
       bandcamp: "https://bendoggett.bandcamp.com/track/psalm-27-one-thing",
@@ -211,7 +211,7 @@ export const releases: Release[] = [
     id: "psalm-23-shepherd-me",
     title: "Psalm 23 (Shepherd Me)",
     type: "single",
-    coverArt: "/assets/images/psalm_23.jpg",
+    coverArt: "/assets/images/album-covers/psalm_23.jpg",
     description: "The Lord is my shepherd, I shall not want",
     streamingLinks: {
       bandcamp: "https://bendoggett.bandcamp.com/track/psalm-23-shepherd-me",
@@ -235,7 +235,7 @@ export const releases: Release[] = [
     id: "psalm-63-better-than-life",
     title: "Psalm 63 (Better Than Life)",
     type: "single",
-    coverArt: "/assets/images/psalm_63.jpg",
+    coverArt: "/assets/images/album-covers/psalm_63.jpg",
     description: "Your love is better than life, my lips will glorify you",
     streamingLinks: {
       bandcamp:
@@ -260,7 +260,7 @@ export const releases: Release[] = [
     id: "son-of-glory-john-1",
     title: "Son of Glory (John 1)",
     type: "single",
-    coverArt: "/assets/images/son_of_glory.jpg",
+    coverArt: "/assets/images/album-covers/son_of_glory.jpg",
     description: "In the beginning was the Word, and the Word was with God",
     streamingLinks: {
       bandcamp: "https://bendoggett.bandcamp.com/track/son-of-glory-john-1",

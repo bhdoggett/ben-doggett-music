@@ -49,9 +49,9 @@ export default function ReleasesPage() {
       />
       <NavBar />
       <div className={styles.container}>
-        <header className={styles.header}>
+        {/* <header className={styles.header}>
           <h1 className={styles.title}>Releases</h1>
-        </header>
+        </header> */}
 
         <main className={styles.main}>
           <div
