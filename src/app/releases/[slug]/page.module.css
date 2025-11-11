@@ -5,15 +5,26 @@
 
 .releasePage {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 40px 40px 400px;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  grid-template-areas:
+    "cover header"
+    "lyrics lyrics";
   padding: var(--spacing-xl) 0;
   min-height: 100vh;
 }
 
 .releaseCard {
-  aspect-ratio: 1;
+  grid-area: cover;
+}
+
+.releaseHeader {
+  grid-area: header;
+}
+
+.lyricsArea {
+  grid-area: lyrics;
 }
 
 /* Navigation */
@@ -172,8 +183,22 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .releasePage {
+    grid-template-columns: 300px 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .releasePage {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "cover"
+      "header"
+      "lyrics";
+    gap: 1.5rem;
     padding: var(--spacing-lg) 0;
   }
 
@@ -194,7 +219,9 @@
   .coverImage {
     max-width: 300px;
   }
+}
 
+@media (max-width: 640px) {
   .backLink {
     padding: var(--spacing-md) var(--spacing-lg);
     font-size: var(--font-size-base);

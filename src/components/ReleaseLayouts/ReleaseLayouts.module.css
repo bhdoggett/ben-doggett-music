@@ -88,12 +88,6 @@
   margin: 0;
 }
 
-/* EP Layout - Interactive track listing design */
-.epLayout {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 /* Mobile optimizations */
 @media (max-width: 640px) {
   .singleLayout {
@@ -127,9 +121,5 @@
 
   .singleLyricsContent {
     font-size: var(--font-size-base);
-  }
-
-  .epLayout {
-    max-width: 100%;
   }
 }

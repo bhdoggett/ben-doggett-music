@@ -18,26 +18,32 @@ src/
 │   ├── globals.css             # Global CSS variables and base styles
 │   └── releases/
 │       └── [slug]/
-│           └── page.tsx        # Dynamic release pages
+│           ├── page.tsx        # Dynamic release pages with CSS Grid layout
+│           └── page.module.css # Grid layout styles
 ├── components/
 │   ├── ReleaseCard/
 │   │   ├── ReleaseCard.tsx       # Reusable release card component
 │   │   └── ReleaseCard.module.css
 │   ├── AudioPlayer/
-│   │   ├── AudioPlayer.tsx     # Tone.js-powered audio player
+│   │   ├── AudioPlayer.tsx     # Audio player component
 │   │   └── AudioPlayer.module.css
-│   ├── SongList/
-│   │   ├── SongList.tsx        # Interactive song list for EPs
-│   │   └── SongList.module.css
+│   ├── TracksList/
+│   │   ├── TracksList.tsx      # Simplified track list for EPs
+│   │   └── TracksList.module.css
+│   ├── LyricsDisplay/
+│   │   ├── LyricsDisplay.tsx   # Lyrics display component
+│   │   └── LyricsDisplay.module.css
 │   └── Layout/
 │       ├── Navigation.tsx      # Site navigation
 │       └── Navigation.module.css
+├── contexts/
+│   └── AudioContext.tsx        # Global audio state with selected song tracking
 ├── data/
 │   └── releases.ts               # release metadata and configuration
 ├── types/
 │   └── index.ts                # TypeScript type definitions
 └── utils/
-    └── audio.ts                # Tone.js utilities and helpers
+    └── audio.ts                # Audio utilities and helpers
 ```
 
 ### Technology Stack
@@ -82,19 +88,32 @@ interface AudioPlayerProps {
 - Progress tracking and seek functionality
 - Maintains playback state across navigation
 
-#### SongList Component
+#### TracksList Component
 
 ```typescript
-interface SongListProps {
+interface TracksListProps {
   songs: Song[];
-  releaseType: "single" | "ep";
+  release: Release;
 }
 ```
 
-- Expandable song items for EPs
-- Integrated lyrics and copyright display
-- Embedded AudioPlayer for each track
-- Smooth animations for expand/collapse
+- Displays clickable list of song titles for EPs
+- Updates global audio state when a song is clicked
+- Visual indication of currently selected song
+- No embedded lyrics or player (simplified component)
+
+#### LyricsDisplay Component
+
+```typescript
+interface LyricsDisplayProps {
+  selectedSong: Song | null;
+}
+```
+
+- Displays lyrics and copyright for the currently selected song
+- Reads selected song from global audio context
+- Positioned below the release information in a full-width grid area
+- Gracefully handles no selection state
 
 ### Data Models
 
@@ -196,6 +215,66 @@ const releases: release[] = [
 - Audio loading and playback performance metrics
 - Image optimization and loading speed analysis
 - Bundle size optimization for Tone.js integration
+
+## Page Layout Architecture
+
+### EP Release Page Grid Layout
+
+The EP release page uses CSS Grid to organize content into a clear, hierarchical structure:
+
+```css
+.releasePageGrid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  grid-template-areas:
+    "cover header"
+    "lyrics lyrics";
+}
+
+.coverArea {
+  grid-area: cover;
+}
+.headerArea {
+  grid-area: header;
+}
+.lyricsArea {
+  grid-area: lyrics;
+}
+```
+
+**Layout Areas:**
+
+- **Upper Left (cover)**: ReleaseCard component displaying album artwork
+- **Upper Right (header)**: Release header information and TracksList component
+- **Bottom Full Width (lyrics)**: LyricsDisplay component showing selected song lyrics
+
+**Responsive Behavior:**
+
+- Desktop (>1024px): Two-column grid as described above
+- Tablet (768px-1024px): Narrower columns with adjusted spacing
+- Mobile (<768px): Single column stack (cover → header → lyrics)
+
+### Global Audio State Management
+
+The AudioContext has been enhanced to track the currently selected song:
+
+```typescript
+interface GlobalAudioState {
+  currentTrack: { song: Song; release: Release } | null;
+  selectedSong: Song | null; // NEW: Tracks selected song for lyrics display
+  isPlaying: boolean;
+  // ... other state properties
+}
+```
+
+**State Flow:**
+
+1. User clicks a song in TracksList → Updates `selectedSong` in global state
+2. LyricsDisplay component reads `selectedSong` from context
+3. PlayButton can trigger audio playback independently
+4. Both `selectedSong` and `currentTrack` can be different (selection vs playback)
 
 ## Visual Design System
 

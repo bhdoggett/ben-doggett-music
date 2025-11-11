@@ -1,0 +1,76 @@
+.lyricsDisplay {
+  background-color: var(--surface-warm);
+  border-radius: 12px;
+  padding: 2rem;
+  min-height: 200px;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--neutral-cream);
+  padding-bottom: 1rem;
+}
+
+.songTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--neutral-charcoal);
+  margin: 0;
+}
+
+.lyricsContent {
+  margin-bottom: 2rem;
+}
+
+.lyrics {
+  font-family: var(--font-geist-sans);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--neutral-charcoal);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.copyright {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--neutral-cream);
+}
+
+.copyright p {
+  font-size: 0.875rem;
+  color: var(--primary-earth);
+  font-style: italic;
+  margin: 0;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.emptyState p {
+  font-size: 1.125rem;
+  color: var(--primary-earth);
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lyricsDisplay {
+    padding: 1.5rem;
+  }
+
+  .songTitle {
+    font-size: 1.5rem;
+  }
+
+  .lyrics {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+}

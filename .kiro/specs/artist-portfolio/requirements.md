@@ -10,7 +10,8 @@ An artist portfolio website showcasing musical works with a modern organic desig
 - **Releases_Page**: Main page displaying all releases as clickable cards
 - **release_Card**: Interactive component displaying release cover art that navigates to release details
 - **release_Page**: Dedicated page for individual releases with track listings and playback
-- **Song_Component**: Interactive element that expands to show lyrics and audio player
+- **TracksList_Component**: Interactive list component displaying song titles that updates global state when clicked
+- **LyricsDisplay_Component**: Component that displays lyrics and copyright information for the currently selected song
 - **Audio_Player**: Component that plays .m4a audio files using Tone.js library
 - **EP**: Extended Play release with multiple tracks
 - **Single**: release with one primary track
@@ -51,11 +52,11 @@ An artist portfolio website showcasing musical works with a modern organic desig
 
 #### Acceptance Criteria
 
-1. WHEN displaying an EP release_Page, THE Portfolio_System SHALL render a list of all song titles
-2. THE Portfolio_System SHALL make each song title clickable
-3. WHEN a song title is clicked, THE Portfolio_System SHALL expand to show additional song details
+1. WHEN displaying an EP release_Page, THE Portfolio_System SHALL render a TracksList component with all song titles
+2. THE Portfolio_System SHALL make each song title clickable in the TracksList component
+3. WHEN a song title is clicked, THE Portfolio_System SHALL update the global audio state with the selected song
 4. THE Portfolio_System SHALL display song titles in a clear, readable format
-5. THE Portfolio_System SHALL indicate which songs are interactive through visual cues
+5. THE Portfolio_System SHALL indicate which song is currently selected through visual cues
 
 ### Requirement 4
 
@@ -63,11 +64,11 @@ An artist portfolio website showcasing musical works with a modern organic desig
 
 #### Acceptance Criteria
 
-1. WHEN a song title is clicked, THE Portfolio_System SHALL display an expanded section with lyrics
-2. THE Portfolio_System SHALL show copyright information alongside the lyrics
-3. THE Portfolio_System SHALL format lyrics in a readable, well-structured layout
-4. THE Portfolio_System SHALL allow users to collapse the expanded section
-5. THE Portfolio_System SHALL maintain the expanded state until explicitly closed by the user
+1. WHEN a song title is clicked, THE Portfolio_System SHALL update the global audio state with the selected song
+2. WHEN a song is selected, THE Portfolio_System SHALL display lyrics in a dedicated LyricsDisplay component
+3. THE Portfolio_System SHALL show copyright information alongside the lyrics in the LyricsDisplay component
+4. THE Portfolio_System SHALL format lyrics in a readable, well-structured layout
+5. THE Portfolio_System SHALL display the LyricsDisplay component below the release information on EP pages
 
 ### Requirement 5
 
@@ -107,15 +108,28 @@ An artist portfolio website showcasing musical works with a modern organic desig
 
 ### Requirement 8
 
+**User Story:** As a visitor viewing an EP page, I want the layout to be organized in a clear grid structure, so that I can easily navigate between the cover art, track list, and lyrics
+
+#### Acceptance Criteria
+
+1. THE Portfolio_System SHALL use CSS Grid to organize the EP release page layout
+2. THE Portfolio_System SHALL position the ReleaseCard component in the upper left grid area
+3. THE Portfolio_System SHALL position the release header and TracksList component together in the upper right grid area
+4. THE Portfolio_System SHALL position the LyricsDisplay component horizontally across the full width below the upper grid areas
+5. THE Portfolio_System SHALL maintain responsive behavior across different viewport sizes
+
+### Requirement 9
+
 **User Story:** As a developer, I want comprehensive Jest testing for all components, so that the application maintains reliability and prevents regressions
 
 #### Acceptance Criteria
 
 1. THE Portfolio_System SHALL include Jest unit tests for the release_Card component that verify rendering, click interactions, and navigation behavior
-2. THE Portfolio_System SHALL include Jest unit tests for the Song_Component that verify expansion/collapse functionality, lyrics display, and audio player integration
-3. THE Portfolio_System SHALL include Jest unit tests for the Audio_Player component that verify Tone.js integration, playback controls, and state management
-4. THE Portfolio_System SHALL include Jest integration tests for release_Pages that verify correct rendering based on release type (Single vs EP)
-5. THE Portfolio_System SHALL include Jest tests for the Releases_Page that verify release card rendering and grid layout functionality
-6. THE Portfolio_System SHALL achieve minimum 80% code coverage across all tested components
-7. THE Portfolio_System SHALL include Jest snapshot tests for component rendering consistency
-8. THE Portfolio_System SHALL include Jest tests that verify responsive design behavior and CSS module integration
+2. THE Portfolio_System SHALL include Jest unit tests for the TracksList_Component that verify song selection and global state updates
+3. THE Portfolio_System SHALL include Jest unit tests for the LyricsDisplay_Component that verify lyrics rendering based on selected song
+4. THE Portfolio_System SHALL include Jest unit tests for the Audio_Player component that verify audio playback controls and state management
+5. THE Portfolio_System SHALL include Jest integration tests for release_Pages that verify correct rendering based on release type (Single vs EP)
+6. THE Portfolio_System SHALL include Jest tests for the Releases_Page that verify release card rendering and grid layout functionality
+7. THE Portfolio_System SHALL achieve minimum 80% code coverage across all tested components
+8. THE Portfolio_System SHALL include Jest snapshot tests for component rendering consistency
+9. THE Portfolio_System SHALL include Jest tests that verify responsive design behavior and CSS module integration

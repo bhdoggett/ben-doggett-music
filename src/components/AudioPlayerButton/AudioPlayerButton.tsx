@@ -2,12 +2,12 @@
 
 import React from "react";
 import { useAudio } from "@/contexts/AudioContext";
-import { Song, release } from "@/types";
+import { Song, Release } from "@/types";
 import styles from "./AudioPlayerButton.module.css";
 
 interface AudioPlayerButtonProps {
   song: Song;
-  release: release;
+  release: Release;
   title: string;
   showTitle?: boolean;
 }

@@ -2,7 +2,10 @@ import { notFound } from "next/navigation";
 import NavBar from "@/components/NavBar/NavBar";
 import ReleaseCard from "@/components/ReleaseCard";
 import { getReleaseById, getAllReleases } from "@/data/releases";
-import { SingleLayout, EPLayout } from "@/components/ReleaseLayouts";
+import { SingleLayout } from "@/components/ReleaseLayouts";
+import TracksList from "@/components/TracksList";
+import LyricsDisplay from "@/components/LyricsDisplay";
+import { Song } from "@/types";
 import StreamingLinks from "@/components/StreamingLinks";
 import styles from "./page.module.css";
 
@@ -62,46 +65,41 @@ export default async function ReleasePage({ params }: ReleasePageProps) {
     <>
       <NavBar />
       <div className={styles.container}>
-        <div className={styles.releasePage}>
-          {/* Release Header */}
-          <div>
-            <div className={styles.releaseCard}>
-              <ReleaseCard release={release} />
-            </div>
-
-            <header className={styles.releaseHeader}>
-              <div className={styles.releaseInfo}>
-                <div className={styles.titleRow}>
-                  <h1 className={styles.releaseTitle}>{release.title}</h1>
-                  <StreamingLinks streamingLinks={release.streamingLinks} />
-                </div>
-                {release.description && (
-                  <p className={styles.releaseDescription}>
-                    {release.description}
-                  </p>
-                )}
-                <div className={styles.releaseMeta}>
-                  {/* <span className={styles.trackCount}>
-                    {release.songs.length}{" "}
-                    {release.songs.length === 1 ? "track" : "tracks"}
-                  </span> */}
-                </div>
+        {release.type === "ep" ? (
+          <>
+            <div className={styles.releasePage}>
+              {/* Cover Area */}
+              <div className={styles.releaseCard}>
+                <ReleaseCard release={release} />
               </div>
-            </header>
-          </div>
 
-          {/* Release Content - Different layouts for Singles vs EPs */}
-        </div>
+              {/* Header Area */}
+              <header className={styles.releaseHeader}>
+                <div className={styles.releaseInfo}>
+                  <div className={styles.titleRow}>
+                    <h1 className={styles.releaseTitle}>{release.title}</h1>
+                    <StreamingLinks streamingLinks={release.streamingLinks} />
+                  </div>
+                  {release.description && (
+                    <p className={styles.releaseDescription}>
+                      {release.description}
+                    </p>
+                  )}
+                  <TracksList songs={release.songs} release={release} />
+                </div>
+              </header>
 
-        <div>
+              {/* Lyrics Area */}
+              <div className={styles.lyricsArea}>
+                <LyricsDisplay />
+              </div>
+            </div>
+          </>
+        ) : (
           <main className={styles.releaseContent}>
-            {release.type === "single" ? (
-              <SingleLayout release={release} />
-            ) : (
-              <EPLayout release={release} />
-            )}
+            <SingleLayout release={release} />
           </main>
-        </div>
+        )}
       </div>
     </>
   );

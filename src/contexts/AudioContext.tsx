@@ -8,14 +8,15 @@ import React, {
   useRef,
   useEffect,
 } from "react";
-import { Song, release } from "@/types";
+import { Song, Release } from "@/types";
 
 // Global audio state interface
 export interface GlobalAudioState {
   currentTrack: {
     song: Song;
-    release: release;
+    release: Release;
   } | null;
+  selectedSong: Song | null;
   isPlaying: boolean;
   isLoading: boolean;
   currentTime: number;
@@ -25,7 +26,8 @@ export interface GlobalAudioState {
 
 // Audio actions
 type AudioAction =
-  | { type: "SET_TRACK"; payload: { song: Song; release: release } }
+  | { type: "SET_TRACK"; payload: { song: Song; release: Release } }
+  | { type: "SET_SELECTED_SONG"; payload: Song | null }
   | { type: "PLAY" }
   | { type: "PAUSE" }
   | { type: "STOP" }
@@ -37,16 +39,18 @@ type AudioAction =
 // Audio context interface
 interface AudioContextType {
   state: GlobalAudioState;
-  playTrack: (song: Song, release: release) => void;
+  playTrack: (song: Song, release: Release) => void;
   pauseTrack: () => void;
   stopTrack: () => void;
   seekTo: (time: number) => void;
   isCurrentTrack: (songId: string) => boolean;
+  selectSong: (song: Song | null) => void;
 }
 
 // Initial state
 const initialState: GlobalAudioState = {
   currentTrack: null,
+  selectedSong: null,
   isPlaying: false,
   isLoading: false,
   currentTime: 0,
@@ -68,6 +72,11 @@ function audioReducer(
         currentTime: 0,
         duration: 0,
         error: undefined,
+      };
+    case "SET_SELECTED_SONG":
+      return {
+        ...state,
+        selectedSong: action.payload,
       };
     case "PLAY":
       return {
@@ -231,7 +240,7 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({
 
   // Public methods
   const playTrack = useCallback(
-    async (song: Song, release: release) => {
+    async (song: Song, release: Release) => {
       // If it's a different track, set it up
       if (!state.currentTrack || state.currentTrack.song.id !== song.id) {
         dispatch({ type: "SET_TRACK", payload: { song, release } });
@@ -288,6 +297,10 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({
     [state.currentTrack]
   );
 
+  const selectSong = useCallback((song: Song | null) => {
+    dispatch({ type: "SET_SELECTED_SONG", payload: song });
+  }, []);
+
   // Auto-play when track is set and audio is ready
   useEffect(() => {
     if (
@@ -328,6 +341,7 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({
     stopTrack,
     seekTo,
     isCurrentTrack,
+    selectSong,
   };
 
   return (

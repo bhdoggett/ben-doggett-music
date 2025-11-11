@@ -42,9 +42,3 @@ export interface AudioPlayerState {
 export interface ReleaseCardProps {
   release: Release;
 }
-
-export interface SongListProps {
-  songs: Song[];
-  releaseType: "single" | "ep";
-  release: Release;
-}
