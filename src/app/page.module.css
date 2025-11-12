@@ -10,15 +10,33 @@
 }
 
 .header {
+  display: inline-block;
   text-align: center;
 }
 
 .title {
+  display: inherit;
   font-size: 3.5rem;
   font-weight: 700;
   color: var(--neutral-charcoal);
   margin-top: var(--spacing-md);
   letter-spacing: -0.02em;
+}
+
+.imageLeft,
+.imageRight {
+  font-size: 4rem;
+  margin: 0 10px;
+  display: inline-block;
+  transition: rotate 0.3s ease;
+}
+
+.title:hover .imageLeft {
+  rotate: -30deg;
+}
+
+.title:hover .imageRight {
+  rotate: 30deg;
 }
 
 /* Responsive adjustments */
