@@ -21,6 +21,7 @@
   color: var(--neutral-charcoal);
   margin-top: var(--spacing-md);
   letter-spacing: -0.02em;
+  transition: color 0.3s ease;
 }
 
 .imageLeft,
@@ -37,6 +38,10 @@
 
 .title:hover .imageRight {
   rotate: 30deg;
+}
+
+.title:hover {
+  color: var(--accent-terracotta);
 }
 
 /* Responsive adjustments */
@@ -57,6 +62,12 @@
   }
 
   .title {
+    font-size: 1.8rem;
+  }
+
+  .imageLeft,
+  .imageRight {
     font-size: 2rem;
+    margin: 0 4px;
   }
 }
