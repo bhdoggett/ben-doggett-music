@@ -38,7 +38,7 @@ const TracksList: React.FC<TracksListProps> = ({ songs, release }) => {
             className={`${styles.track} ${isSelected(song.id) ? styles.selected : ""}`}
           >
             <div className={styles.trackContent}>
-              <PlayButton song={song} release={release} />
+              <PlayButton song={song} release={release} size="small" />
               <button
                 className={styles.trackTitle}
                 onClick={() => handleSongClick(song)}

@@ -88,7 +88,7 @@ export default async function ReleasePage({ params }: ReleasePageProps) {
 
           {/* Lyrics Area */}
           <div className={styles.lyricsArea}>
-            <LyricsDisplay />
+            <LyricsDisplay releaseType={release.type} />
           </div>
         </div>
       </div>

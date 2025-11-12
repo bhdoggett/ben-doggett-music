@@ -4,7 +4,11 @@ import React from "react";
 import { useAudio } from "@/contexts/AudioContext";
 import styles from "./LyricsDisplay.module.css";
 
-const LyricsDisplay: React.FC = () => {
+interface LyricsDisplayProps {
+  releaseType?: "single" | "ep";
+}
+
+const LyricsDisplay: React.FC<LyricsDisplayProps> = ({ releaseType }) => {
   const { state } = useAudio();
   const selectedSong = state.selectedSong;
 
@@ -21,7 +25,9 @@ const LyricsDisplay: React.FC = () => {
   return (
     <div className={styles.lyricsDisplay}>
       <div className={styles.header}>
-        <h3 className={styles.songTitle}>{selectedSong.title}</h3>
+        <h3 className={styles.songTitle}>
+          {releaseType === "ep" ? selectedSong.title : "Lyrics"}
+        </h3>
       </div>
 
       {selectedSong.lyrics && (
