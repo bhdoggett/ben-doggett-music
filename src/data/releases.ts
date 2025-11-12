@@ -8,7 +8,8 @@ export const releases: Release[] = [
     title: "Glad",
     type: "ep",
     coverArt: "/assets/images/album-covers/glad.jpeg",
-    description: "Songs that mark a season of fighting for joy",
+    description:
+      "Make us glad for as many days as you have afflicted us, for as many years as we have seen trouble. (Psalm 90:15)",
     streamingLinks: {
       // bandcamp: "https://bendoggett.bandcamp.com/release/glad",
       // spotify: "https://open.spotify.com/release/glad-ep",
@@ -105,12 +106,12 @@ export const releases: Release[] = [
     title: "Deep to Deep",
     type: "ep",
     coverArt: "/assets/images/album-covers/deep_to_deep.jpg",
-    description: "An EP exploring the depths of faith and worship",
+    description:
+      "Deep calls to deep in the roar of your waterfalls (Psalm 42:7)",
     streamingLinks: {
-      bandcamp: "https://bendoggett.bandcamp.com/release/deep-to-deep",
-      spotify: "https://open.spotify.com/release/5X8Ch1ppAUAh78pX4y3b0a",
-      appleMusic:
-        "https://music.apple.com/us/release/deep-to-deep-ep/681212945",
+      bandcamp: "https://bendoggett.bandcamp.com/album/deep-to-deep",
+      spotify: "https://open.spotify.com/album/5X8Ch1ppAUAh78pX4y3b0a",
+      appleMusic: "https://music.apple.com/us/album/deep-to-deep-ep/681212945",
     },
     songs: [
       {
@@ -162,14 +163,17 @@ export const releases: Release[] = [
   // Singles
   {
     id: "love-1-corinthians-13",
-    title: "Love (1 Corinthians 13)",
+    title: "Love (1 Co. 13)",
     type: "single",
     coverArt: "/assets/images/album-covers/love_1_corinthians_13.jpg",
-    description: "A musical meditation on the love chapter",
+    description:
+      "If I speak in the tongues of men or of angels, but do not have love, I am only a resounding gong or a clanging cymbal. (1 Corinthians 13:1)",
     streamingLinks: {
-      bandcamp: "https://bendoggett.bandcamp.com/track/love-1-corinthians-13",
-      spotify: "https://open.spotify.com/track/love-1-corinthians-13",
-      appleMusic: "https://music.apple.com/song/love-1-corinthians-13",
+      bandcamp: "https://bendoggett.bandcamp.com/track/love-1-co-13",
+      spotify:
+        "https://open.spotify.com/track/21odbfjYfDO5CHufIPKjY9?si=ed0ad199b43b4a2f",
+      appleMusic:
+        "https://music.apple.com/us/album/love-1-co-13-single/1679202315",
     },
     songs: [
       {
@@ -189,11 +193,14 @@ export const releases: Release[] = [
     title: "One Thing (Psalm 27)",
     type: "single",
     coverArt: "/assets/images/album-covers/psalm_27.jpg",
-    description: "One thing I ask from the Lord, this only do I seek",
+    description:
+      "My heart says of you, “Seek his face!” Your face, Lord, I will seek. (Psalm 27:8)",
     streamingLinks: {
-      bandcamp: "https://bendoggett.bandcamp.com/track/psalm-27-one-thing",
-      spotify: "https://open.spotify.com/track/psalm-27-one-thing",
-      appleMusic: "https://music.apple.com/song/psalm-27-one-thing",
+      bandcamp: "https://bendoggett.bandcamp.com/track/one-thing-psalm-27",
+      spotify:
+        "https://open.spotify.com/track/7flE2sePs0aaUNQcgvAhnK?si=9e32bb01515e424d",
+      appleMusic:
+        "https://music.apple.com/us/song/one-thing-psalm-27/1679579693",
     },
     songs: [
       {
@@ -212,11 +219,14 @@ export const releases: Release[] = [
     title: "Psalm 23 (Shepherd Me)",
     type: "single",
     coverArt: "/assets/images/album-covers/psalm_23.jpg",
-    description: "The Lord is my shepherd, I shall not want",
+    description:
+      "Surely your goodness and love will follow me all the days of my life, and I will dwell in the house of the Lord forever. (Psalm 23:6)",
     streamingLinks: {
       bandcamp: "https://bendoggett.bandcamp.com/track/psalm-23-shepherd-me",
-      spotify: "https://open.spotify.com/track/psalm-23-shepherd-me",
-      appleMusic: "https://music.apple.com/song/psalm-23-shepherd-me",
+      spotify:
+        "https://open.spotify.com/track/2F4AIOv7IJrWE320KMPsnK?si=e61edcfae7c04939",
+      appleMusic:
+        "https://music.apple.com/us/song/psalm-23-shepherd-me/1723623573",
     },
     songs: [
       {
@@ -240,8 +250,10 @@ export const releases: Release[] = [
     streamingLinks: {
       bandcamp:
         "https://bendoggett.bandcamp.com/track/psalm-63-better-than-life",
-      spotify: "https://open.spotify.com/track/psalm-63-better-than-life",
-      appleMusic: "https://music.apple.com/song/psalm-63-better-than-life",
+      spotify:
+        "https://open.spotify.com/album/5JGufj7Ee89hbBJThBAJgL?si=i6F2eB-yR6CsMq18HpQ7zQ",
+      appleMusic:
+        "https://music.apple.com/us/album/psalm-63-better-than-life-single/1775925109",
     },
     songs: [
       {
@@ -261,7 +273,8 @@ export const releases: Release[] = [
     title: "Son of Glory (John 1)",
     type: "single",
     coverArt: "/assets/images/album-covers/son_of_glory.jpg",
-    description: "In the beginning was the Word, and the Word was with God",
+    description:
+      "In the beginning was the Word, and the Word was with God, and the Word was God (John 1:1)",
     streamingLinks: {
       bandcamp: "https://bendoggett.bandcamp.com/track/son-of-glory-john-1",
       spotify: "https://open.spotify.com/track/son-of-glory-john-1",

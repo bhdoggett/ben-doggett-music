@@ -31,7 +31,6 @@ const TracksList: React.FC<TracksListProps> = ({ songs, release }) => {
 
   return (
     <div className={styles.tracksList}>
-      {/* <h2 className={styles.title}>Tracks</h2> */}
       <ul className={styles.tracks}>
         {songs.map((song) => (
           <li

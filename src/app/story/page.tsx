@@ -72,6 +72,8 @@ const StoryPage: React.FC = () => {
           <Link
             href="https://bendoggettmusic.blogspot.com/"
             className={styles.link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             blog
           </Link>{" "}
@@ -79,6 +81,8 @@ const StoryPage: React.FC = () => {
           <Link
             href="https://soundcloud.com/bendoggett/sets/music-meditations"
             className={styles.link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Soundcloud playlist
           </Link>{" "}
@@ -96,7 +100,12 @@ const StoryPage: React.FC = () => {
         <p>
           One year after <em>Glad</em>, I mustered up the gumption to cold-email
           some{" "}
-          <Link href="https://edcash.com/home" className={styles.link}>
+          <Link
+            href="https://edcash.com/home"
+            className={styles.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             well-known producers
           </Link>{" "}
           in Nashville to see if they would be interested in producing my next
