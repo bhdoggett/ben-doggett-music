@@ -14,12 +14,12 @@ export default function Home() {
     <div>
       <NavBar />
       <main className={styles.main}>
-        <header className={styles.header}>
+        {/* <header className={styles.header}>
           <h1 className={styles.title}>
             <span className={styles.imageLeft}>🎄</span>Happy Advent
             <span className={styles.imageRight}>🎄</span>
           </h1>
-        </header>
+        </header> */}
 
         <FeaturedRelease release={featuredRelease} />
       </main>

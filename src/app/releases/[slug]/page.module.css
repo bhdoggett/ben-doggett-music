@@ -11,8 +11,8 @@
 
 .releasePage {
   display: grid;
-  grid-template-columns: 400px 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-columns: 400px auto;
+  grid-template-rows: auto auto;
   gap: 2rem;
   grid-template-areas:
     "cover header"
@@ -33,6 +33,7 @@
 
 .releaseHeader {
   grid-area: header;
+  align-self: start;
 }
 
 .lyricsArea {
@@ -48,15 +49,21 @@
 .releaseHeader {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  max-height: 400px;
-  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .releaseHeader {
+    overflow: hidden;
+    align-items: start;
+    max-height: 300px;
     grid-template-columns: auto 1fr;
     gap: var(--spacing-2xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .releaseHeader {
+    max-height: 400px;
   }
 }
 
@@ -122,8 +129,8 @@
 } */
 
 .releaseTitle {
-  /* font-size: var(--font-size-4xl); */
-  font-size: 1rem;
+  font-size: calc(var(--font-size-4xl) * 1.2);
+  /* font-size: 1rem; */
   /* font-size: 5cqw; */
   font-weight: 700;
   color: var(--text-primary);
@@ -133,7 +140,13 @@
 
 @media (min-width: 768px) {
   .releaseTitle {
-    font-size: calc(var(--font-size-4xl) * 1.2);
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .releaseTitle {
+    font-size: var(--font-size-4xl);
   }
 }
 
@@ -147,11 +160,23 @@
 }
 
 .releaseDescription {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   color: var(--text-primary);
   line-height: 1.6;
   margin-bottom: var(--spacing-lg);
   font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .releaseDescription {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (min-width: 1024px) {
+  .releaseDescription {
+    font-size: var(--font-size-md);
+  }
 }
 
 .releaseMeta {

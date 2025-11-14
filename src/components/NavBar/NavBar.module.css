@@ -1,5 +1,7 @@
 .navBar {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -7,14 +9,46 @@
   right: 0;
   z-index: 1000;
   height: var(--navbar-height);
-  padding: var(--spacing-sm) 0;
   background-color: var(--foreground);
+  color: var(--surface);
+}
+
+.title {
+  align-items: center;
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  letter-spacing: 0.04em;
+  position: relative;
+  color: var(--neutral-cream);
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  border-bottom: 1px solid #414141;
+  transition: 0.3s ease;
+}
+
+.title:hover::after {
+  width: 40%;
+}
+
+.linkList {
+  display: flex;
+  padding: 0 0 0 var(--spacing-sm);
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 .link {
-  color: var(--surface);
   font-weight: bold;
+  color: #d7d1c8;
   margin: 0 var(--spacing-md);
-  padding: var(--spacing-sm) var(--spacing-sm);
+  padding: 0 var(--spacing-sm);
   display: inline-block;
 }
