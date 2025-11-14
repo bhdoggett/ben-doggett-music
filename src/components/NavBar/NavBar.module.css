@@ -11,13 +11,15 @@
   height: var(--navbar-height);
   background-color: var(--foreground);
   color: var(--surface);
+  font-family: "Momo Trust Display", sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .title {
   align-items: center;
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--font-size-xl);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.07em;
   position: relative;
   color: var(--neutral-cream);
 }
@@ -46,7 +48,7 @@
 }
 
 .link {
-  font-weight: bold;
+  font-weight: 300;
   color: #d7d1c8;
   margin: 0 var(--spacing-md);
   padding: 0 var(--spacing-sm);
