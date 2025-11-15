@@ -1,16 +1,22 @@
-/* .container {
-  margin-top: var(--navbar-height);
-} */
+.container {
+  margin: var(--navbar-height);
+}
 
 .main {
   padding-top: var(--spacing-lg);
   display: block;
   margin: 0 auto;
   margin-top: var(--navbar-height);
-  width: 500px;
   font-size: var(--font-size-lg);
   font-weight: 300;
   color: var(--primary-earth);
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: var(--spacing-lg) 0 0;
+    width: 500px;
+  }
 }
 
 .link {
