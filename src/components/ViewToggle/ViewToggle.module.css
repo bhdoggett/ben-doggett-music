@@ -1,38 +1,65 @@
-.container {
-  display: flex;
-  gap: 0;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--border-color, #ddd);
-  width: fit-content;
+.viewToggle {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.button {
-  padding: 10px 20px;
-  background-color: var(--background-color, #fff);
-  color: var(--text-color, #333);
+.toggleButton {
+  padding: 8px 20px;
   border: none;
-  cursor: pointer;
-  font-size: 14px;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.2s ease;
-  border-right: 1px solid var(--border-color, #ddd);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-geist-sans);
+  position: relative;
+  overflow: hidden;
 }
 
-.button:last-child {
-  border-right: none;
+.toggleButton:hover {
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
 }
 
-.button:hover {
-  background-color: var(--hover-background, #f5f5f5);
-}
-
-.button.active {
-  background-color: var(--active-background, #007bff);
-  color: var(--active-text-color, #fff);
-}
-
-.button:focus {
-  outline: 2px solid var(--focus-color, #007bff);
+.toggleButton:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.3);
   outline-offset: 2px;
+}
+
+.toggleButton.active {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggleButton.active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .viewToggle {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .toggleButton {
+    flex: 1;
+    padding: 10px 16px;
+  }
 }

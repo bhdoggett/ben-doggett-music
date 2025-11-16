@@ -1,60 +1,37 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { notFound } from "next/navigation";
 import NavBar from "@/components/NavBar/NavBar";
 import ReleaseCard from "@/components/ReleaseCard";
-import { getReleaseById, getAllReleases } from "@/data/releases";
+import { getReleaseById } from "@/data/releases";
 import TracksList from "@/components/TracksList";
 import LyricsDisplay from "@/components/LyricsDisplay";
 import ChordDisplay from "@/components/ChordDisplay";
-import { Song } from "@/types";
+import ViewToggle from "@/components/ViewToggle";
+import { useAudio } from "@/contexts/AudioContext";
 import StreamingLinks from "@/components/StreamingLinks";
 import styles from "./page.module.css";
-
-// Generate static params for all releases at build time
-export async function generateStaticParams() {
-  const releases = getAllReleases();
-
-  return releases.map((release) => ({
-    slug: release.id,
-  }));
-}
-
-// Generate metadata for each release page
-export async function generateMetadata({ params }: ReleasePageProps) {
-  const { slug } = await params;
-  const release = getReleaseById(slug);
-
-  if (!release) {
-    return {
-      title: "Release Not Found",
-    };
-  }
-
-  return {
-    title: `${release.title} - Artist Portfolio`,
-    description:
-      release.description ||
-      `${release.type === "ep" ? "Extended Play" : "Single"} by Artist Portfolio`,
-    openGraph: {
-      title: release.title,
-      description: release.description,
-      images: [
-        {
-          url: release.coverArt,
-          width: 400,
-          height: 400,
-          alt: `${release.title} cover art`,
-        },
-      ],
-    },
-  };
-}
 
 interface ReleasePageProps {
   params: Promise<{ slug: string }>;
 }
 
-export default async function ReleasePage({ params }: ReleasePageProps) {
-  const { slug } = await params;
+export default function ReleasePage({ params }: ReleasePageProps) {
+  const [slug, setSlug] = useState<string | null>(null);
+  const [currentView, setCurrentView] = useState<"lyrics" | "chords">("lyrics");
+  const { state } = useAudio();
+  const { selectedSong } = state;
+
+  // Unwrap params promise
+  useEffect(() => {
+    params.then((p) => setSlug(p.slug));
+  }, [params]);
+
+  if (!slug) {
+    return null;
+  }
+
   const release = getReleaseById(slug);
 
   if (!release) {
@@ -89,8 +66,20 @@ export default async function ReleasePage({ params }: ReleasePageProps) {
 
           {/* Lyrics Area */}
           <div className={styles.lyricsArea}>
-            <LyricsDisplay releaseType={release.type} />
-            <ChordDisplay chordProUrl="/assets/chordpro/example-song.txt" />
+            {selectedSong && selectedSong.chordProUrl && (
+              <ViewToggle
+                currentView={currentView}
+                onViewChange={setCurrentView}
+                hasChords={!!selectedSong.chordProUrl}
+              />
+            )}
+            {currentView === "lyrics" ? (
+              <LyricsDisplay releaseType={release.type} />
+            ) : (
+              selectedSong?.chordProUrl && (
+                <ChordDisplay chordProUrl={selectedSong.chordProUrl} />
+              )
+            )}
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@
   - Use standard ChordPro format with chords in square brackets
   - _Requirements: 5.3, 5.4, 5.5_
 
-- [ ] 4. Create faithful-one.txt ChordPro file
+- [x] 4. Create faithful-one.txt ChordPro file
 
   - Create public/assets/chordpro/faithful-one.txt matching the song referenced in releases.ts
   - Include title, artist, key metadata directives
@@ -85,8 +85,8 @@
   - Preserve chord quality (major, minor, seventh, etc.) during transposition
   - _Requirements: 2.3, 2.4, 2.5_
 
-- [ ] 7. Build ViewToggle component
-- [ ] 7.1 Create ViewToggle component structure
+- [x] 7. Build ViewToggle component
+- [x] 7.1 Create ViewToggle component structure
 
   - Create src/components/ViewToggle directory
   - Create ViewToggle.tsx with component structure
@@ -96,7 +96,7 @@
   - Create index.ts export barrel file
   - _Requirements: 3.1, 3.2_
 
-- [ ] 7.2 Implement toggle functionality and styling
+- [x] 7.2 Implement toggle functionality and styling
 
   - Add click handlers to switch between "lyrics" and "chords" views
   - Highlight active view with visual indicator
@@ -104,8 +104,8 @@
   - Ensure accessibility with keyboard navigation and ARIA labels
   - _Requirements: 3.2, 3.3, 3.4_
 
-- [ ] 8. Integrate ChordDisplay and ViewToggle into release page
-- [ ] 8.1 Update release page with view state management
+- [x] 8. Integrate ChordDisplay and ViewToggle into release page
+- [x] 8.1 Update release page with view state management
 
   - Convert src/app/releases/[slug]/page.tsx to client component with "use client" directive
   - Add useState hook for currentView state
@@ -114,7 +114,7 @@
   - Determine hasChords based on selectedSong.chordProUrl availability
   - _Requirements: 3.5, 6.2, 6.3_
 
-- [ ] 8.2 Implement conditional rendering of lyrics and chords
+- [x] 8.2 Implement conditional rendering of lyrics and chords
 
   - Import ViewToggle and ChordDisplay components
   - Render ViewToggle component when hasChords is true
