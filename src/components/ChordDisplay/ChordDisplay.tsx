@@ -7,11 +7,13 @@ import styles from "./ChordDisplay.module.css";
 interface ChordDisplayProps {
   chordProUrl: string;
   releaseType?: "single" | "ep";
+  prefetchedData?: string;
 }
 
 const ChordDisplay: React.FC<ChordDisplayProps> = ({
   chordProUrl,
   releaseType,
+  prefetchedData,
 }) => {
   const [chordSheet, setChordSheet] = useState<Song | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -28,16 +30,23 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
       setError(null);
 
       try {
-        const response = await fetch(chordProUrl);
+        let chordProText: string;
 
-        if (!response.ok) {
-          if (response.status === 404) {
-            throw new Error("Chord sheet not available");
+        // Use prefetched data if available
+        if (prefetchedData) {
+          chordProText = prefetchedData;
+        } else {
+          const response = await fetch(chordProUrl);
+
+          if (!response.ok) {
+            if (response.status === 404) {
+              throw new Error("Chord sheet not available");
+            }
+            throw new Error("Failed to load chord sheet");
           }
-          throw new Error("Failed to load chord sheet");
-        }
 
-        const chordProText = await response.text();
+          chordProText = await response.text();
+        }
 
         // Parse ChordPro file using chordsheetjs
         const parser = new ChordProParser();
@@ -74,7 +83,7 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
     };
 
     fetchAndParseChordPro();
-  }, [chordProUrl, retryCount]);
+  }, [chordProUrl, retryCount, prefetchedData]);
 
   const handleRetry = () => {
     setRetryCount((prev) => prev + 1);

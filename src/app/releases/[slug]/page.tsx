@@ -20,6 +20,9 @@ interface ReleasePageProps {
 export default function ReleasePage({ params }: ReleasePageProps) {
   const [slug, setSlug] = useState<string | null>(null);
   const [currentView, setCurrentView] = useState<"lyrics" | "chords">("lyrics");
+  const [chordDataCache, setChordDataCache] = useState<Record<string, string>>(
+    {}
+  );
   const { state } = useAudio();
   const { selectedSong } = state;
 
@@ -27,6 +30,38 @@ export default function ReleasePage({ params }: ReleasePageProps) {
   useEffect(() => {
     params.then((p) => setSlug(p.slug));
   }, [params]);
+
+  // Prefetch chord data when a song with chordProUrl is selected
+  useEffect(() => {
+    if (
+      selectedSong?.chordProUrl &&
+      !chordDataCache[selectedSong.chordProUrl]
+    ) {
+      fetch(selectedSong.chordProUrl)
+        .then((response) => {
+          if (response.ok) {
+            return response.text();
+          }
+          throw new Error("Failed to fetch");
+        })
+        .then((text) => {
+          setChordDataCache((prev) => ({
+            ...prev,
+            [selectedSong.chordProUrl!]: text,
+          }));
+        })
+        .catch(() => {
+          // Silently fail - ChordDisplay will handle the error
+        });
+    }
+  }, [selectedSong, chordDataCache]);
+
+  // Reset view to lyrics when a new song is selected
+  useEffect(() => {
+    if (selectedSong) {
+      setCurrentView("lyrics");
+    }
+  }, [selectedSong]);
 
   if (!slug) {
     return null;
@@ -73,12 +108,25 @@ export default function ReleasePage({ params }: ReleasePageProps) {
                 hasChords={!!selectedSong.chordProUrl}
               />
             )}
-            {currentView === "lyrics" ? (
+            <div
+              style={{
+                display: currentView === "lyrics" ? "block" : "none",
+              }}
+            >
               <LyricsDisplay releaseType={release.type} />
-            ) : (
-              selectedSong?.chordProUrl && (
-                <ChordDisplay chordProUrl={selectedSong.chordProUrl} />
-              )
+            </div>
+            {selectedSong?.chordProUrl && (
+              <div
+                style={{
+                  display: currentView === "chords" ? "block" : "none",
+                }}
+              >
+                <ChordDisplay
+                  chordProUrl={selectedSong.chordProUrl}
+                  releaseType={release.type}
+                  prefetchedData={chordDataCache[selectedSong.chordProUrl]}
+                />
+              </div>
             )}
           </div>
         </div>
