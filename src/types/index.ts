@@ -7,6 +7,7 @@ export interface Song {
   lyrics?: string;
   copyright?: string;
   duration?: number;
+  chordProUrl?: string;
 }
 
 export interface Release {

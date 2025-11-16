@@ -252,4 +252,8 @@
   .trackInfo {
     min-width: auto;
   }
+
+  .duration {
+    padding-right: 32px;
+  }
 }

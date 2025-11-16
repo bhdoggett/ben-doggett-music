@@ -121,6 +121,7 @@ export const releases: Release[] = [
         lyrics:
           "Faithful One, we will hope in your unfailing love\nFrom the rising to the setting sun\nWe will hope in Jesus' name\nYou have never failed us\n\nRich in compassion, lavish in love\nHope of the nations, beautiful God\nFull of new mercy day after day\nYou come to save me, Lamb who was slain\n\nAnd for eternity we'll sing this song:\nOur God is love, Our God is love\nThe One who was and is and is to come\nOur God is love, Our God is love\nOur God is love, Our God is love\n\nFaithful One, we will hope in your unfailing love\nFrom the rising to the setting sun\nWe will hope in Jesus' name\nYou have never failed us\nYou have never failed us\nYou will Neve fail us",
         copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
+        chordProUrl: "/assets/chordpro/faithful-one.txt",
       },
 
       {
