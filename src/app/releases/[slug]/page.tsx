@@ -4,6 +4,7 @@ import ReleaseCard from "@/components/ReleaseCard";
 import { getReleaseById, getAllReleases } from "@/data/releases";
 import TracksList from "@/components/TracksList";
 import LyricsDisplay from "@/components/LyricsDisplay";
+import ChordDisplay from "@/components/ChordDisplay";
 import { Song } from "@/types";
 import StreamingLinks from "@/components/StreamingLinks";
 import styles from "./page.module.css";
@@ -89,6 +90,7 @@ export default async function ReleasePage({ params }: ReleasePageProps) {
           {/* Lyrics Area */}
           <div className={styles.lyricsArea}>
             <LyricsDisplay releaseType={release.type} />
+            <ChordDisplay chordProUrl="/assets/chordpro/example-song.txt" />
           </div>
         </div>
       </div>

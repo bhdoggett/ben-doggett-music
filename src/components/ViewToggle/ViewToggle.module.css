@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  gap: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color, #ddd);
+  width: fit-content;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: var(--background-color, #fff);
+  color: var(--text-color, #333);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-right: 1px solid var(--border-color, #ddd);
+}
+
+.button:last-child {
+  border-right: none;
+}
+
+.button:hover {
+  background-color: var(--hover-background, #f5f5f5);
+}
+
+.button.active {
+  background-color: var(--active-background, #007bff);
+  color: var(--active-text-color, #fff);
+}
+
+.button:focus {
+  outline: 2px solid var(--focus-color, #007bff);
+  outline-offset: 2px;
+}

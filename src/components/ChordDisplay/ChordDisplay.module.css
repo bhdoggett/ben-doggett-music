@@ -1,0 +1,220 @@
+.chordDisplay {
+  background-color: var(--surface-warm);
+  border-radius: var(--radius-sm);
+  padding: 2rem;
+  min-height: 200px;
+  box-shadow: 5px 5px 12px #cdcdcd;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--neutral-cream);
+  padding-bottom: 1rem;
+}
+
+.songTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--neutral-charcoal);
+  margin: 0;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.emptyState p {
+  font-size: 1.125rem;
+  color: var(--primary-earth);
+  opacity: 0.7;
+  margin: 0;
+}
+
+.loadingSpinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.loadingSpinner p {
+  font-size: 1.125rem;
+  color: var(--primary-earth);
+  margin: 0;
+}
+
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  gap: 1rem;
+}
+
+.errorState p {
+  font-size: 1.125rem;
+  color: var(--primary-earth);
+  margin: 0;
+}
+
+.retryButton {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-earth);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.retryButton:hover {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chordDisplay {
+    padding: 1.5rem;
+  }
+
+  .songTitle {
+    font-size: 1.5rem;
+  }
+
+  .transpositionControls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .keySelect {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .transpositionControls {
+    gap: 0.5rem;
+  }
+
+  .keySelect {
+    min-width: 120px;
+  }
+}
+
+.artist {
+  font-size: 1rem;
+  color: var(--primary-earth);
+  margin: 0.5rem 0 0 0;
+}
+
+.key {
+  font-size: 0.875rem;
+  color: var(--primary-earth);
+  margin: 0.25rem 0 0 0;
+  font-weight: 500;
+}
+
+.transpositionControls {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.transpositionLabel {
+  font-size: 0.875rem;
+  color: var(--neutral-charcoal);
+  font-weight: 500;
+}
+
+.keySelect {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--neutral-charcoal);
+  background-color: white;
+  border: 2px solid var(--neutral-cream);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-geist-sans);
+  min-width: 140px;
+}
+
+.keySelect:hover {
+  border-color: var(--primary-earth);
+}
+
+.keySelect:focus {
+  outline: none;
+  border-color: var(--primary-earth);
+  box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+}
+
+.chordContent {
+  margin-top: 1.5rem;
+}
+
+/* Style the chordsheetjs HTML output */
+.chordContent :global(table) {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.chordContent :global(tr) {
+  vertical-align: top;
+}
+
+.chordContent :global(td) {
+  padding: 0.25rem 0.5rem 0.25rem 0;
+  vertical-align: top;
+}
+
+.chordContent :global(.chord) {
+  font-family: var(--font-geist-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-earth);
+  white-space: nowrap;
+}
+
+.chordContent :global(.lyrics) {
+  font-family: var(--font-geist-sans);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--neutral-charcoal);
+  white-space: pre-wrap;
+}
+
+.chordContent :global(.row) {
+  margin-bottom: 0.5rem;
+}
+
+.chordContent :global(.paragraph) {
+  margin-bottom: 1.5rem;
+}
+
+.chordContent :global(.comment) {
+  font-style: italic;
+  color: var(--primary-earth);
+  opacity: 0.8;
+  margin: 1rem 0;
+}
+
+/* Responsive adjustments for chord content */
+@media (max-width: 768px) {
+  .chordContent :global(.chord) {
+    font-size: 0.8125rem;
+  }
+
+  .chordContent :global(.lyrics) {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+}
