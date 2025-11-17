@@ -27,6 +27,7 @@ const StoryPage: React.FC = () => {
             so inclined to do so with your dollars, is to head over to my{" "}
             <Link
               href="https://bendoggett.bandcamp.com/"
+              target="_blank"
               className={styles.link}
             >
               bandcamp page
@@ -34,12 +35,14 @@ const StoryPage: React.FC = () => {
             and purchase my music like in the old days. You can also{" "}
             <Link
               href="https://bendoggett.bandcamp.com/community"
+              target="_blank"
               className={styles.link}
             >
               follow
             </Link>{" "}
             me there to stay up to date on what I'm up to.
           </p>
+          <h3 className={styles.thankyou}>Thank you!</h3>
         </main>
       </div>
     </>

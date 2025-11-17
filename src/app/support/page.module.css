@@ -4,6 +4,8 @@
 
 .main {
   padding-top: var(--spacing-lg);
+  /* width: 90%; */
+  /* width: 400px; */
   display: block;
   margin: 0 auto;
   margin-top: var(--navbar-height);
@@ -12,10 +14,24 @@
   color: var(--primary-earth);
 }
 
+/* Tablet */
 @media (min-width: 768px) {
   .main {
-    padding: var(--spacing-lg) 0 0;
-    width: 500px;
+    width: 600px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .main {
+    width: 700px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .main {
+    width: 800px;
   }
 }
 
@@ -26,6 +42,7 @@
 
 .link {
   color: var(--accent-terracotta);
+
   font-weight: 700;
 }
 
@@ -33,8 +50,8 @@
   color: var(--accent-secondary);
 }
 
-/* @media (min-width: 768px) {
-  .main {
-    width: 750px;
-  }
-} */
+.thankyou {
+  margin-top: var(--spacing-lg);
+  font-weight: bold;
+  text-align: center;
+}
