@@ -1,6 +1,6 @@
 # Music Artist Portfolio
 
-A modern website for showcasing worship music releases with interactive features for listeners and musicians.
+A modern website for showcasing Ben Doggett's releases with interactive features for listeners and musicians.
 
 ## Purpose
 
