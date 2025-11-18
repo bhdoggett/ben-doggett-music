@@ -159,12 +159,14 @@
 
 .chordContent {
   margin-top: 1.5rem;
+  max-width: 800px;
 }
 
 /* Style the chordsheetjs HTML output */
 .chordContent :global(table) {
-  width: 100%;
+  width: auto;
   border-collapse: collapse;
+  table-layout: auto;
 }
 
 .chordContent :global(tr) {

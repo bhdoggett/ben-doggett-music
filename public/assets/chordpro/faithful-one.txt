@@ -1,35 +1,43 @@
 {title: Faithful One}
 {artist: Ben Doggett}
-{key: G}
+{key: D}
+{time: 4/4}
+{tempo: 70}
 {capo: 0}
 
-{start_of_verse}
-[G]Faithful One, we will [C]hope in your un[G]failing love
-From the [Em]rising to the [C]setting [D]sun
-We will [G]hope in [C]Jesus' [G]name
-You have [Em]never [C]failed [D]us
-{end_of_verse}
+{comment: Chorus 1}
+[D]Faithful [G]One, 
+[D]we will [Asus]hope in your un[D]failing [G]love
+[D]From the [Asus]rising to the [Bm7]setting [G]sun
+[D]We will [Asus]hope in Jesus' [Em7]name
+You have never [G]failed us[Asus]
 
-{start_of_chorus}
-[G]Rich in compassion, [C]lavish in love
-[Em]Hope of the nations, [D]beautiful God
-[G]Full of new mercy [C]day after day
-You [Em]come to save me, [D]Lamb who was slain
-{end_of_chorus}
+{comment: Instrumental}
+[|] [D]  [|] [Em7]  [|] [G]  [|] [Asus]  [|]
 
-{start_of_bridge}
-And for e[G]ternity we'll [C]sing this song:
-Our [Em]God is love, Our [D]God is love
-The [G]One who was and [C]is and is to come
-Our [Em]God is love, Our [D]God is love
-Our [Em]God is love, Our [D]God is love
-{end_of_bridge}
+{comment: Verse}
+[D]Rich in com[Em7]passion, [G]lavish in [Asus]love
+[D]Hope of the [Em7]nations, [G]beautiful [Asus]God
+[D]Full of new [Em7]mercy [G]day after [Asus]day
+[D]You come to [Em7]save me, [G]Lamb who was [Asus]slain
 
-{start_of_verse}
-[G]Faithful One, we will [C]hope in your un[G]failing love
-From the [Em]rising to the [C]setting [D]sun
-We will [G]hope in [C]Jesus' [G]name
-You have [Em]never [C]failed [D]us
-You have [Em]never [C]failed [D]us
-You will [Em]never [C]fail [D]us
-{end_of_verse}
+{comment: Chorus 1, Instrumental 2x, Verse, Chorus 1}
+
+{comment: Bridge}
+[Bm7]  And for eternity we'll [A/C#]sing this song:
+Our [G]God is love, Our God is love
+[Bm7]  The One who was and is and [A/C#]is to come
+Our [G]God is love, Our God is love
+Our [Em7]God is love, Our [Asus]God is love
+
+{comment: Chorus 2}
+[D]Faithful [G]One, 
+[D]we will [Asus]hope in your un[D]failing [G]love
+[D]From the [Asus]rising to the [Bm7]setting [G]sun
+[D]We will [Asus]hope in Jesus' [Em7]name
+You have never [G]failed us
+[Em7]  You have never [G]failed us
+[Em7]  You will never [G]fail us[Asus]
+
+{comment: Outro}
+[||:] [D]  [|] [Em7]  [|] [G]  [|] [Asus]  [:||] [D]
