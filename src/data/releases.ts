@@ -131,6 +131,7 @@ export const releases: Release[] = [
         lyrics:
           "Jesus, You are God among us\nYou are God's own radience, Light of the world\nJesus, how you condescended\nHoly God of heaven, You are the Lord\n\nYou became nothing, broken to love me\nEven to death on a cross\n\nYou are the Name above all names\nYou are the one Ancient of Days\nYou are the one my heart will praise\nJesus I love you\nAt your name every knee will bow\nAll of creation will cry out\nYou are the one my heart will crown\nJesus I love you, Jesus I love you\n\nJesus, you took on my weakness\nMade in human likeness, servant of all\nJesus, risen and victorious\nGlory in the highest, you are enthroned\n\nYou became nothing, broken to love me\nEven to death on a cross\nTempted as I am, You were obedient\nFaithful and true Son of God\n\nJesus I love you, I want to be like you\nHaving this attitude, serving beside you\nJesus I love you, I want to be with you\nHaving this attitude, in dying I find you",
         copyright: "Words & Music by Ben Doggett © 2012 Ben Doggett",
+        chordProUrl: "/assets/chordpro/name-above-all-names.txt",
       },
       {
         id: "more-than-watchmen",

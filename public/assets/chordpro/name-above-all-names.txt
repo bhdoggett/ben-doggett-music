@@ -1,0 +1,65 @@
+{title: Name Above All Names}
+{artist: Ben Doggett}
+{key: Bb}
+{time: 4/4}
+{tempo: 67}
+{capo: 0}
+
+{comment: Verse 1}
+[Bb]Jesus, [Eb]You are God a[Bb]mong us
+[Eb]You are God’s own [Gm7]radiance
+[Eb]Light of the world[Fsus]   [F]
+[Bb]Jesus, [Eb]how you conde[Bb]scended
+[Eb]Holy God of [Gm7]heaven
+[Eb]You are the Lord[Fsus]   [F]
+
+{comment: Prechorus 1}
+[Cm7]You became [Bb/D]nothing, [Eb]broken to [F]love me
+[Cm7]Even to [Bb/D]death on a [C]cross
+
+{comment: Chorus}
+You are the [Bb]Name above all [F/A]names
+You are the [Gm7]one Ancient of [Eb]Days
+You are the [Bb]One my heart will [F/A]praise
+Jesus I [Gm7]love You[Eb]
+At Your Name [Bb]every knee will [F/A]bow
+All of cre[Gm7]ation will cry [Eb]out
+You are the [Bb]One my heart will [F/A]crown
+Jesus I [Gm7]love You[Eb]     
+Jesus I [Bb]love You[F/A]  [|]  [Gm7]  [|]  [Eb]  [|]                    
+
+{comment: Verse 2}
+[Bb]Jesus, [Eb]You took on my [Bb]weakness
+[Eb]Made in human [Gm7]likeness
+[Eb]Servant of all[Fsus]   [F]
+[Bb]Jesus, [Eb]risen and vic[Bb]torious
+[Eb]Glory in the [Gm7]highest
+[Eb]You are enthroned[Fsus]   [F]
+
+{comment: Prechorus 2}
+[Cm7]You became [Bb/D]nothing, [Eb]broken to [F]love me
+[Cm7]Even to [Bb/D]death on a [C]cross
+[Cm7]Tempted as [Bb/D]I am, [Eb]You were o[F]bedient
+[Cm7]Faithful and [Bb/D]true Son of [Eb]God
+
+{comment: Chorus}
+
+{comment: Chorus 1, Instrumental 2x, Verse, Chorus 1}
+
+{comment: Bridge}
+Bridge:
+Jesus I [Bb]love You,[F/A] I want to be [Bb/D]like You[Eb]
+Having this [Bb]attitude:[F/A] serving be[Bb/D]side You[Eb]
+Jesus I [Bb]love You,[F/A] I want to be [Bb/D]with You[Eb]
+Having this [Bb]attitude:[F/A] in dying I [Bb/D]find You[Eb]
+
+{comment: Chorus}
+
+{commenbt: Tag}
+At Your Name [Bb]every knee will [F/A]bow
+All of cre[Gm7]ation will cry [Eb]out
+You are the [Bb]One my heart will [F/A]crown
+Jesus I [Gm7]love You[Eb]     
+Jesus I [Bb]love You,[F/A] I want to be [Bb/D]with You[Eb]
+Having this [Bb]attitude:[F/A] in dying I [Bb/D]find You[Eb]
+Jesus I [Bb]love You
