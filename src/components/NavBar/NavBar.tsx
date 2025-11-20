@@ -18,9 +18,6 @@ const NavBar: React.FC = () => {
         <Link href="/story" className={styles.link}>
           Story
         </Link>
-        <Link href="/support" className={styles.link}>
-          Support
-        </Link>
       </div>
     </div>
   );

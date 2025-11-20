@@ -44,8 +44,6 @@ Jesus I [Bb]love You[F/A]  [|]  [Gm7]  [|]  [Eb]  [|]
 
 {comment: Chorus}
 
-{comment: Chorus 1, Instrumental 2x, Verse, Chorus 1}
-
 {comment: Bridge}
 Bridge:
 Jesus I [Bb]love You,[F/A] I want to be [Bb/D]like You[Eb]
