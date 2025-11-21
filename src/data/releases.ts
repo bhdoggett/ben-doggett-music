@@ -79,6 +79,7 @@ export const releases: Release[] = [
         lyrics:
           "I brought my alabaster Jar, but it's not broken yet\nAnd there's still time for me to give you something less extravagant\n\nA whole year's wages\nA whole life's praises\nAre you worth this?\nAre you worth this Lord?\n\nI hear the murmors of the crowd\nBut still I venture in\nWhen my Jesus is before me\nShould I stop for fear of men?\n\nA whole year's wages\nAnd all their faces\nAre you worth this?\nAre you worth this, Lord?\n\nHow can I give what costs me nothing\nWhen you gave up your life\nAnd so I bring this costly offering\nA living sacrifice\n\nAnd so I pour upon your head\nThe contents of my broken heart\nAnd there is no turning back now\nI am forever yours, O God\n\nA whole year's wages\nA whole life's praisesYou are worth this\nYou are worth this, Lord",
         copyright: "Words & Music by Ben Doggett © 2012 Ben Doggett",
+        chordProUrl: "/assets/chordpro/a-whole-years-wages.txt",
       },
 
       {

@@ -1,0 +1,24 @@
+{title: Speak to Me}
+{artist: Ben Doggett}
+{key: }
+{time: 4/4}
+{tempo: }
+{capo: 0}
+
+{comment: Verse 1}
+I am full of anxiety so come and search me
+You are the giver of a peace that surpasses understanding
+I have been suffocating in this dark and lonely sea
+You would come and comfort if I would only ask you to speak to me
+
+{comment: Chorus}
+Come and Speak to me
+Come and Speak to me
+Come and Speak to me
+Come and Speak to me
+
+{comment: Verse 2}
+I would come in prayer and petition the God who saves
+You have always been ready to hear what I've got to say
+I will come with thanks in my heart for the One who bled
+You are the very thing I need, I need a Word made flesh

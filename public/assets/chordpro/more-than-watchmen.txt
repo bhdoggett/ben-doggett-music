@@ -1,0 +1,34 @@
+{title: More Than Watchmen}
+{artist: Ben Doggett}
+{key: }
+{time: 4/4}
+{tempo: }
+{capo: 0}
+
+{comment: Verse 1}
+Out of the depths I call to you, listen to my plea
+Out of the depths I cry the name of Jesus
+Battered by my circumstance, broken at your feet
+But voice enough to sigh the name of Jesus
+
+{comment: Pre-Chorus}
+Where else would I go?
+You're my only hope
+
+{comment: Chorus}
+More than watchmen wait for morning
+I will wait for you my God
+In your promise I will glory
+All my hope is in your love
+
+{comment: Verse 2}
+If you kept a record of, all our sinful ways
+Who, O Lord, could stand to face your glory
+But full of mercy, rich in love, you have come to save
+So in my weary bones I whisper "worthy, you are worthy"
+
+{comment: Bridge}
+My soul waits for the break of day
+You will surely come, as the rising sun
+My soul longs for the coming dawn
+You will surely come to us

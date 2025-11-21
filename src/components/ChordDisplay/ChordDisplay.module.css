@@ -183,7 +183,7 @@
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--primary-earth);
-  white-space: nowrap;
+  white-space: pre;
 }
 
 .chordContent :global(.lyrics) {
@@ -191,7 +191,7 @@
   font-size: 1rem;
   line-height: 1.8;
   color: var(--neutral-charcoal);
-  white-space: pre-wrap;
+  white-space: preserve nowrap;
 }
 
 .chordContent :global(.row) {

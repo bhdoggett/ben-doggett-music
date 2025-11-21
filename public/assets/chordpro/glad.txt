@@ -1,0 +1,11 @@
+{title: Glad}
+{artist: Ben Doggett}
+{key: }
+{time: 4/4}
+{tempo: }
+{capo: 0}
+
+Make me glad for as many days as I have known pain an sorrow
+Make me glad for as many years as I have known fear and doubt
+Jesus my friend, Jesus my Savior
+Jesus, the only hope I have of being glad

@@ -1,0 +1,28 @@
+{title: Abba Father}
+{artist: Ben Doggett}
+{key: }
+{time: 4/4}
+{tempo: }
+{capo: 0}
+
+{comment: Verse 1}
+In the midst of all my trouble, You are Father
+In the midst of every trial, You are Abba
+You are Abba, You are Abba
+
+{comment: Verse 2}
+Even in my darkest hour, You are Father
+Even though I trip and falter, You are Abba
+You are Abba, You are Abba
+
+{comment: Chorus}
+Not my will but let yours be done
+Let your will be my own
+Though the pain and the darkness come
+I am never alone
+
+{comment: Bridge}
+You are Abba Father
+You are Abba Father
+You are Abba Father
+You are Abba Father

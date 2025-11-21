@@ -1,0 +1,30 @@
+{title: Love (1 Corinthians 13)}
+{artist: Ben Doggett}
+{key: }
+{time: 4/4}
+{tempo: }
+{capo: 0}
+
+{comment: Verse 1}
+Love is patient, love is kind
+Love lets what I cling to and what I want to die
+Love is full of hope, love will never boast
+Love in purity and all good things delights
+
+{comment: Chorus}
+So love the Lord, Your God
+With all your strength and mind and heart
+Love your neighbor as yourself
+And love your enemy as well
+
+{comment: Verse 2}
+Love is humble, love is strong
+Love can bear all things and love will suffer long
+Love will never fade though the earth give way
+Love will hold you in his everlasting arms
+
+{comment: Bridge}
+If I speak with the tongues of angels (but have not love)
+If I give all I own away (but have not love)
+Even if I could move the mountains
+I am nothing but a resounding noise

@@ -1,0 +1,34 @@
+{title: O My Soul}
+{artist: Ben Doggett}
+{key: }
+{time: 4/4}
+{tempo: }
+{capo: 0}
+
+{comment: Verse 1}
+O my soul, don't forget the way he led you out
+O my soul, don't forget
+O my soul, come repent of sins that ail you now
+O my soul, praise him yet
+
+{comment: Chorus}
+And as you find yourself here in a peaceful land
+Fail not to remember what he did to bring you in my soul
+O my soul, O my soul, O my soul
+
+{comment: Verse 2}
+O my soul, don't forget the long and weary night
+O my soul, don't forget
+O my soul, don't forget the day he saved your life
+O my soul, praise him yet
+
+{comment: Verse 3}
+O my Lord, you remain a Father and a friend
+O my Lord, you remain
+O my Lord, God, you save the dead and dying man
+O my Lord, God you save, you save
+
+{comment: Chorus}
+And as I find myself here in a peaceful land
+Always I'll remember what you did to bring me in my Lord
+O my Lord, O my Lord, O my Lord
