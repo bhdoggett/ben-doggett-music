@@ -1,11 +1,15 @@
 {title: Glad}
 {artist: Ben Doggett}
-{key: }
+{key: Ab}
 {time: 4/4}
 {tempo: }
-{capo: 0}
+{capo: 1}
 
-Make me glad for as many days as I have known pain an sorrow
-Make me glad for as many years as I have known fear and doubt
-Jesus my friend, Jesus my Savior
-Jesus, the only hope I have of being glad
+
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Ab]&nbsp;&nbsp;[]&nbsp;&nbsp;[Ebsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Db]&nbsp;&nbsp;[]&nbsp;&nbsp;[Ab]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Db]&nbsp;&nbsp;[]&nbsp;&nbsp;[Ab]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Ebsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[Eb]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
+[Ab]&nbsp;&nbsp;[]Make me glad[Ebsus] for as [Db]&nbsp;&nbsp;[]many days[Ab] []as I[Db] []have known pain[Ab] an sad[Ebsus]ness
+[Ab]&nbsp;&nbsp;[]Make me glad[Ebsus] for as [Db]&nbsp;&nbsp;[]many years[Ab] as I[Db] have known [Ebsus]fear and doubt[Absus]&nbsp;&nbsp;[][Db]&nbsp;&nbsp;[Ab]
+[Db]&nbsp;&nbsp;[]Jesus my [Ab]friend,&nbsp;&nbsp;[Db]&nbsp;&nbsp;[]Jesus my [Ab]Savi[Eb/G]or
+[Db]&nbsp;&nbsp;[]Jesus, the [Ab]only [Eb/G]hope I [Fm7]have [Bb7]&nbsp;&nbsp;[]of being [Db]glad&nbsp;&nbsp;[Fm7], []of being [Db]glad&nbsp;&nbsp;[Ebsus]
+
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Ab]&nbsp;&nbsp;[]&nbsp;&nbsp;[Ebsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Db]&nbsp;&nbsp;[]&nbsp;&nbsp;[Ab]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Db]&nbsp;&nbsp;[]&nbsp;&nbsp;[Ebsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Absus]&nbsp;&nbsp;[]&nbsp;&nbsp;[Ab]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]

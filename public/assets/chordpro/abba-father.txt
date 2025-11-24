@@ -4,6 +4,7 @@
 {time: 4/4}
 {tempo: }
 {capo: 0}
+{copyright: Words & Music Ben Doggett © 2008 Ben Doggett}
 
 {comment: Intro/Instrumental 1}
 [|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Em]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Em]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]

@@ -21,8 +21,9 @@ export const releases: Release[] = [
         title: "Glad",
         audioUrl: "/assets/music/glad/glad.mp3",
         lyrics:
-          "Make me glad for as many days as I have known pain an sorrow\nMake me glad for as many years as I have known fear and doubt\nJesus my friend, Jesus my Savior\nJesus, the only hope I have of being glad",
+          "Make me glad for as many days as I have known pain an sadness\nMake me glad for as many years as I have known fear and doubt\nJesus my friend, Jesus my Savior\nJesus, the only hope I have of being glad",
         copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
+        chordProUrl: "/assets/chordpro/glad.txt",
       },
       {
         id: "speak-to-me",
