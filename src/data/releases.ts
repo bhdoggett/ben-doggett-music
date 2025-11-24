@@ -55,6 +55,7 @@ export const releases: Release[] = [
         lyrics:
           "In the midst of all my trouble, You are Father\nIn the midst of every trial, You are Abba\nYou are Abba, You are Abba\nEven in my darkest hour, You are Father\nEven though I trip and falter, You are Abba\nYou are Abba, You are Abba\n\nNot my will but let yours be done\nLet your will be my own\nThough the pain and the darkness come\nI am never alone\n\nYou are Abba Father\nYou are Abba Father\nYou are Abba Father\nYou are Abba Father",
         copyright: "Words & Music by Ben Doggett © 2008 Ben Doggett",
+        chordProUrl: "/assets/chordpro/abba-father.txt",
       },
       {
         id: "soul-be-stirred",
