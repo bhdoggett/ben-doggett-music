@@ -143,6 +143,7 @@ export const releases: Release[] = [
         lyrics:
           'Out of the depths I call to you, listen to my plea\nOut of the depths I cry the name of Jesus\nBattered by my circumstance, broken at your feet\nBut voice enough to sigh the name of Jesus\n\nWhere else would I go?\nYou\'re my only hope\n\nMore than watchmen wait for morning\nI will wait for you my God\nIn your promise I will glory\nAll my hope is in your love\n\nIf you kept a record of, all our sinful ways\nWho, O Lord, could stand to face your glory\nBut full of mercy, rich in love, you have come to save\nSo in my weary bones I whisper "worthy, you are worthy"\n\nMy soul waits for the break of day\nYou will surely come, as the rising sun\nMy soul longs for the coming dawn\nYou will surely come to us',
         copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
+        chordProUrl: "/assets/chordpro/more-than-watchmen.txt",
       },
       {
         id: "o-the-fathers-love",

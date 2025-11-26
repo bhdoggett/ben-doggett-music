@@ -1,34 +1,43 @@
 {title: More Than Watchmen}
 {artist: Ben Doggett}
-{key: }
+{key: D}
 {time: 4/4}
-{tempo: }
+{tempo: 130}
 {capo: 0}
 
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[G]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Asus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[G]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Asus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
+
 {comment: Verse 1}
-Out of the depths I call to you, listen to my plea
-Out of the depths I cry the name of Jesus
-Battered by my circumstance, broken at your feet
-But voice enough to sigh the name of Jesus
+[Bm]Out of the depths I ca[G]ll to you, [D]listen to my plea[Asus]
+[Bm7]Out of the depths I cr[G]y the name of J[D]esus&nbsp;&nbsp;[Asus]
+[Bm7]Battered by my ci[G]rcumstance, [D]broken at your fee[Asus]t
+But [Bm7]voice enough to sigh[G] the name of J[D]esus&nbsp;&nbsp;[Asus]
 
 {comment: Pre-Chorus}
-Where else would I go?
-You're my only hope
+[Em7]Where else would I go?[D/F#]
+[G]You're my only hope[Asus]
 
 {comment: Chorus}
-More than watchmen wait for morning
-I will wait for you my God
-In your promise I will glory
-All my hope is in your love
+[Bm7]More than watchmen wait[G] for morning
+[D]I will wait for [Asus]you my God
+[Bm7]In your promise I[G] will glory
+[D]All my hope is [Asus]in your love
 
+{comment: Instrumental}
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[G]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Asus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[G]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Asus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
 {comment: Verse 2}
-If you kept a record of, all our sinful ways
-Who, O Lord, could stand to face your glory
-But full of mercy, rich in love, you have come to save
-So in my weary bones I whisper "worthy, you are worthy"
+[Bm7]If you kept a r[G]ecord of, [D]all our sinful way[Asus]s
+[Bm7]Who, O Lord, could sta[G]nd to face your gl[D]ory&nbsp;&nbsp;[Asus]
+But [Bm7]full of mercy, ri[G]ch in love, [D]you have come to sa[Asus]ve
+So [Bm7]in my weary bo[G]nes I whisper "wo[D]rthy, you are wo[Asus]rthy"
+
+{comment: Pre-Chorus, Chorus 2x, Instrumental}
 
 {comment: Bridge}
-My soul waits for the break of day
-You will surely come, as the rising sun
-My soul longs for the coming dawn
-You will surely come to us
+[Bm7]My soul waits for the [A/C#]break of day
+You will [G]surely come, as the [Bm7]rising [Asus]sun
+[Bm7]My soul longs for the [A/C#]coming dawn
+You will [G]surely come to us[A]
+
+{comment: Chorus 2x, Instrumental}
+[end:][]&nbsp;[D]
