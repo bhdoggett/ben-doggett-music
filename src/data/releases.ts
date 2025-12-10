@@ -64,8 +64,9 @@ export const releases: Release[] = [
         title: "Soul Be Stirred",
         audioUrl: "/assets/music/glad/soul_be_stirred.mp3",
         lyrics:
-          "Soul, be stirred, he is the Lord\nHe is Emmanuel\nSoul, arise to sing and priase\nHe lifted you from hell\nAnd forget not all his benefits\nWho redeems your life from the pit\nWho crowns you with compassion\nAnd loves you all day\nAnd forget not all his benefits\nAnd call back to remembrance\nThat the Lord your God is faithful\nAbounding in grace\n\nI command my soul to sing\nI command my soul to priase\nAnd in light of all I've seen\nI will always love your name",
+          "Soul, be stirred, he is the Lord\nHe is Emmanuel\nSoul, arise to sing and priase\nHe lifted you from hell\n\nAnd forget not all his benefits\nWho redeems your life from the pit\nWho crowns you with compassion\nAnd loves you all day\nAnd forget not all his benefits\nAnd call back to remembrance\nThat the Lord your God is faithful\nAbounding in grace\n\nI command my soul to sing\nI command my soul to priase\nAnd in light of all I've seen\nI will always love your name",
         copyright: "Words & Music by Ben Doggett © 2007 Ben Doggett",
+        chordProUrl: "/assets/chordpro/soul-be-stirred.txt",
       },
       {
         id: "o-my-soul",
