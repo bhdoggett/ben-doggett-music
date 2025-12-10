@@ -1,0 +1,55 @@
+{title: Why Are You Downcast}
+{artist: Ben Doggett}
+{key: E}
+{time: 4/4}
+{tempo: }
+{capo: 0}
+
+{comment: Verse 1}
+[E]&nbsp;&nbsp;[]&nbsp;&nbsp;[]Why are you downcast, O my soul?
+Why so disturbed within[Bsus]&nbsp;&nbsp;[]me?
+[C#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[]Set foot on this rock, [E]&nbsp;&nbsp;[]&nbsp;&nbsp;[]put your hope in God
+[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]he is a sure found[Bsus]ation
+
+{comment: Verse 2}
+[E]&nbsp;&nbsp;[]&nbsp;&nbsp;[]Why are you downcast, O my soul?
+Why so disturbed within[Bsus]&nbsp;&nbsp;[]me?
+[C#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[]Set your weary eyes
+[E]&nbsp;&nbsp;[]&nbsp;&nbsp;[]on the Lord of life
+[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]He is our one salv[Bsus]ation[A]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[]
+
+{comment: Chorus}
+[C#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[]My soul will [A2]boast in the Lord[E]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bsus]
+[C#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[]Let the afflicted [A2]hear and rejoice[E]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bsus]
+[C#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[]My soul will [A2]boast in the [E]Lord[]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bsus]
+[C#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[]Let the afflicted [A2]hear and rejoice[E]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[F#m7]
+
+{comment: Verse 3}
+[E]&nbsp;&nbsp;[]&nbsp;&nbsp;[]Why are you downcast, O my soul?
+Why so disturbed within[Bsus]&nbsp;&nbsp;[]me?
+[C#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[]He is arisen now
+[E]&nbsp;&nbsp;[]&nbsp;&nbsp;[]pouring mercy out
+[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]And you have been forgi[Bsus]ven
+[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]And you have been forgi[Bsus]ven
+[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]And you have been forgi[Bsus]ven
+
+{comment: Chorus}
+
+{comment: Bridge}
+Ho[C#m7]sanna [A2]in the [E]high[Bsus]est
+Ho[C#m7]sanna [A2]to the [E]King[]&nbsp;&nbsp;[Bsus]
+Be[C#m7]hold, O [A2]Daughter of [E]Zi[Bsus]on
+Your [C#m7]Savior [A2]riding [E]in[]&nbsp;&nbsp;[Bsus]
+
+{comment: Bridge, Chorus}
+
+{comment: Tag}
+[C#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[]He is arisen now
+[E]&nbsp;&nbsp;[]&nbsp;&nbsp;[]pouring mercy out
+[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]And you have been forgi[Bsus]ven
+[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]And you have been forgi[Bsus]ven
+[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]And you have been forgi[Bsus]ven
+
+{comment: Vamp}
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;&nbsp;&nbsp;[]&nbsp;&nbsp;[Bsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
+

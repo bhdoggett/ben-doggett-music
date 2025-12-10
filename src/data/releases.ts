@@ -40,6 +40,7 @@ export const releases: Release[] = [
         lyrics:
           "Why are you downcast, O my soul?\nWhy so disturbed within me?\nSet foot on this rock, put your hope in God\nhe is a sure foundation\nWhy are you downcast, O my soul?\nWhy so disturbed within me?\nSet your weary eyes on the Lord of life\nHe is our one salvation\n\nMy soul will boast in the Lord\nLet the afflicted hear and rejoice\nMy soul will boast in the Lord\nLet the afflicted hear and rejoice\n\nWhy are you downcast, O my soul?\nWhy so disturbed within me?\nHe is arisen now, pouring mercy out\nAnd You have been forgiven\nAnd you have been forgiven\nAnd you have been forgiven\n\nHosanna in the highest\nHosanna to the King\nBehold, O Daughter of Zion\nYour Savior riding in",
         copyright: "Words & Music by Ben Doggett © 2006 Ben Doggett",
+        chordProUrl: "/assets/chordpro/why-are-you-downcast.txt",
       },
       {
         id: "hope-of-glory",
