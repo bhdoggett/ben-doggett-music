@@ -93,6 +93,7 @@ export const releases: Release[] = [
         lyrics:
           "Whom have I in heaven beside you?\nAnd the earth has nothing I desire\nBut it is good just to be near you\nIt is good to come and die\n\nWhen I have nothing left to boast in\n'Cause I've got nothing to my name\nThen I'll have something to rejoice in\nAnd you, you can have all my praise\n\n'Cause I am broken and poor, but such is the kingdom, Lord\nYou are our only treasure\nAnd I will set my eyes high on the humble Jesus Christ\nHis riches know no measure\n\nYou are my portion and my refuge\though my heart and flesh grow faint\nWhere have I to run but to you?\nYou are the one thing that remains\n\nHis riches know no measure\nHis riches know no measure",
         copyright: "Words & Music by Ben Doggett © 2011 Ben Doggett",
+        chordProUrl: "/assets/chordpro/poor-in-spirit.txt",
       },
 
       {
