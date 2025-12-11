@@ -87,13 +87,12 @@
   }
 
   .transpositionControls {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 0.5rem;
   }
 
   .keySelect {
-    width: 100%;
+    flex: 1;
+    min-width: 120px;
   }
 }
 

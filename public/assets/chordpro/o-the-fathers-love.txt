@@ -1,0 +1,43 @@
+{title: O The Father's Love}
+{artist: Ben Doggett}
+{key: Bb}
+{time: 4/4}
+{tempo: }
+{capo: 0}
+
+{comment: Intro/Instrumental}
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb/D]&nbsp;&nbsp;[]&nbsp;&nbsp;[Eb]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]&nbsp;&nbsp;[]&nbsp;&nbsp;[Gm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb/D]&nbsp;&nbsp;[]&nbsp;&nbsp;[Eb]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Fsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
+{comment: Verse 1}
+[Bb/D]You kissed my face[Eb] when I[F] was your foe[Gm7]
+[Bb/D]Father you called[Eb] me home[Fsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]
+[Bb/D]I had returned[Eb] to beg[F] at your feet[Gm7]
+Here[Cm7] you embraced[Bb/D] me[Eb]
+
+{comment: Chorus}
+[Bb]O the Father's [Eb]love is [F]over[Gm7]whelming
+[Bb]Covering all[Eb] my shame[Fsus]
+[Bb]See the Father [Eb]run, his [F]arms em[Gm7]brace me
+[Bb]Lifting me up[Eb] in his grace[Fsus]
+
+{comment: Instrumental}
+
+{comment: Verse 2}
+[Bb/D]Riches unheard[Eb] of [F]squandered in sin[Gm7]
+I [Bb/D]spent my inher[Eb]itance[Fsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]
+[Bb/D]Now, at the cost[Eb] of your i[F]nnocent Son[Gm7]
+You[Cm7] made a way[Bb/D] for us[Eb]
+You[Cm7] made a way[Bb/D] for us[Eb]
+
+{comment: Chorus, Instrumental}
+
+{comment: Bridge}
+[Cm7]Heaven and earth, [Bb/D]when have you heard
+[Eb]When have you seen such a thing?
+[Cm7]Wonder of wonders, the heart[Bb/D] of the Father
+You wel[Eb]come the prodigal in[Fsus]
+
+{comment: Chorus 2x}
+
+{comment: Tag}
+He's [Bb]Lifting me up[Eb] in his grace[Fsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb]
+

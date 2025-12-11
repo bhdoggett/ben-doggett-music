@@ -156,6 +156,7 @@ export const releases: Release[] = [
           "You kissed my face when I was your foe\nFather you called me home\nI had returned to beg at your feet\nHere you embraced me\n\nO the Father's love is overwhelming\nCovering all my shame\nSee the Father run, his arms embrace me\nLifting me up in his grace\n\nRiches unheard of, squandered in sin\nI spent my inheritance\nNow at the cost of your innocent Son\nYou made a way for us\nYou made a way for us\n\nHeaven and earth, when have you heard\nWhen have you seen such a thing?\nWonder of wonders, the heart of the Father\nYou welcome the prodigal in",
         copyright:
           "Words & Music by Ben Doggett © 2010 Ben Doggett. All rights reserved.",
+        chordProUrl: "/assets/chordpro/o-the-fathers-love.txt",
       },
       {
         id: "romans-doxology",
