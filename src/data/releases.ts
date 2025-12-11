@@ -166,6 +166,7 @@ export const releases: Release[] = [
           "Oh the depth of the riches of the knowledge and wisdom\nHow unsearchable the judgments of the Lord\nWho has given him counsel? All his ways are untraceable\nWho has known the eternal mind of the Lord\n\nFrom you, Lord, and through you, Lord\nAnd to you, Lord are all things\nYou are the first and you are the last\nAnd yours is all the glory\n\nWhat on earth could we give him, that the Lord should repay it\nAll our rightful obedience is the Lord's\n\nYours is the glory forever and ever\nAnd ever and ever, Amen",
         copyright:
           "Words & Music by Ben Doggett © 2010 Ben Doggett. All rights reserved.",
+        chordProUrl: "/assets/chordpro/romans-doxology.txt",
       },
     ],
   },

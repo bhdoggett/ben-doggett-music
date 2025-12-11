@@ -1,0 +1,41 @@
+{title: Romans Doxology}
+{artist: Ben Doggett}
+{key: Bm}
+{time: 4/4}
+{tempo: }
+{capo: 0}
+
+{comment: Intro/Instrumental 1}
+[|]&nbsp;&nbsp;[Bm]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[G2]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[Asus]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[Bm]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[G2]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[Asus]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
+{comment: Verse 1}
+[Bm]&nbsp;&nbsp;[]Oh the depth [G2]of the [Asus]riches
+[Bm]&nbsp;&nbsp;of the know[G2]ledge and [Asus]wisdom
+[Bm]&nbsp;&nbsp;[]How unsearcha[G2]ble the [Asus]judgments of the Lord[Bm]&nbsp;&nbsp;[]&nbsp;&nbsp;[G2]&nbsp;&nbsp;&nbsp;&nbsp;[]&nbsp;&nbsp;[Asus]
+[Bm]&nbsp;&nbsp;[]Who has gi[G2]ven him [Asus]counsel?
+[Bm]&nbsp;&nbsp;[]All his ways [G2]are un[Asus]traceable
+[Bm]&nbsp;&nbsp;[]Who has known [G2]the e[Asus]ternal mind of the Lord[Bm]&nbsp;&nbsp;[]&nbsp;&nbsp;[G2]&nbsp;&nbsp;&nbsp;&nbsp;[]&nbsp;&nbsp;[Asus]
+
+{comment: Chorus}
+[Bm]From you, Lord, [F#m7]and through[G2] you, Lord
+[A]And to[Bm] you, Lord [F#m7]are all [G2]things&nbsp;&nbsp;[Asus]
+[Bm]You are the first [F#m7]and You[G2] are the last
+[A]And yours[Bm] is all [F#m7]the glo[G2]ry&nbsp;&nbsp;[Asus]
+
+{comment: Instrumental 1}
+
+{comment: Verse 2}
+[Bm]&nbsp;&nbsp;[]What on earth [G2]could we [Asus]give him, 
+[Bm]&nbsp;&nbsp;[]that the Lord [G2]should re[Asus]pay it?
+[Bm]&nbsp;&nbsp;[]All our right[G2]ful o[Asus]bedienceis the Lord's[Bm]&nbsp;&nbsp;[]&nbsp;&nbsp;[G2]&nbsp;&nbsp;&nbsp;&nbsp;[]&nbsp;&nbsp;[Asus]
+
+{comment: Chorus 2x}
+
+{comment: Instrumental 2}
+[|]&nbsp;&nbsp;[Bm]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[F#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[A]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[G2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[Bm]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[F#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[A]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[G2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
+{comment: Bridge}
+[Bm]Yours is the glory fore[F#m7]ver and ever
+And e[A]ver and ever, A[G2]men&nbsp;&nbsp;{comment: (repeat 3x)}
+
+{comment: Chorus 2x, Instrumental 2}
+
+

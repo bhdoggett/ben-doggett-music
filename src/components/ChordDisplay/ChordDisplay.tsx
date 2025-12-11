@@ -92,7 +92,9 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
   // Calculate semitones between two keys
   const calculateSemitones = (fromKey: string, toKey: string): number => {
     // Map both sharps and flats to chromatic scale positions
+    // Handle both major and minor keys
     const keyMap: { [key: string]: number } = {
+      // Major keys
       C: 0,
       "C#": 1,
       Db: 1,
@@ -110,6 +112,24 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
       "A#": 10,
       Bb: 10,
       B: 11,
+      // Minor keys (same chromatic positions as their major counterparts)
+      Cm: 0,
+      "C#m": 1,
+      Dbm: 1,
+      Dm: 2,
+      "D#m": 3,
+      Ebm: 3,
+      Em: 4,
+      Fm: 5,
+      "F#m": 6,
+      Gbm: 6,
+      Gm: 7,
+      "G#m": 8,
+      Abm: 8,
+      Am: 9,
+      "A#m": 10,
+      Bbm: 10,
+      Bm: 11,
     };
 
     const fromIndex = keyMap[fromKey];
@@ -180,8 +200,11 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
     const artist = chordSheet.metadata.artist || "";
     const key = selectedKey || originalKey;
 
-    // All 12 musical keys (using flats for black keys)
-    const musicalKeys = [
+    // Determine if original key is major or minor
+    const isMinorKey = originalKey.endsWith("m");
+
+    // Define major and minor keys separately
+    const majorKeys = [
       "C",
       "Db",
       "D",
@@ -195,6 +218,24 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
       "Bb",
       "B",
     ];
+
+    const minorKeys = [
+      "Cm",
+      "Dbm",
+      "Dm",
+      "Ebm",
+      "Em",
+      "Fm",
+      "Gbm",
+      "Gm",
+      "Abm",
+      "Am",
+      "Bbm",
+      "Bm",
+    ];
+
+    // Only show keys of the same type as the original
+    const musicalKeys = isMinorKey ? minorKeys : majorKeys;
 
     return (
       <div className={styles.chordDisplay}>
