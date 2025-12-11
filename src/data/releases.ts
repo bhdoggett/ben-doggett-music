@@ -248,6 +248,7 @@ export const releases: Release[] = [
           "The LORD is My Shepherd, I shall not want\nIn pastures of green I will rest\nBeside quiet waters my soul is restored\nI drink and my heart is content\nHe leads me in righteousness\n\nYea, though I walk through the dark of death\nEvil I will not fear\nYour rod and your staff are my confidence\nMy God, you are always near\n\nA table you set in the midst of my foes\nA banquet prepared just for me\nMy head drips with oil and my cup overflows\nI sit at your table and feast\nMy shepherd supplies all I need\n\nSurely goodness and mercy will follow me\nAnd I will dwell in the house of God\nThrough the gates of eternity shepherd me\nAnd I will dwell in your house, O God",
         copyright:
           "Words & Music by Ben Doggett © 2015 Ben Doggett. All rights reserved.",
+        chordProUrl: "/assets/chordpro/psalm-23-shepherd-me.txt",
       },
     ],
   },
