@@ -252,7 +252,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 999; /* Below global audio player at 1000 */
+  z-index: 1100; /* Below global audio player at 1000 */
   background-color: #ffffff;
   color: #000000;
   overflow-y: auto;
@@ -307,8 +307,8 @@
 }
 
 .focusModeExit:hover {
-  background-color: #333333;
-  color: #272727;
+  background-color: #cecece;
+  color: #202020;
 }
 
 .focusModeExit:focus {
