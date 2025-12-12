@@ -276,9 +276,10 @@ export const releases: Release[] = [
         title: "Psalm 63 (Better Than Life)",
         audioUrl: "/assets/music/singles/psalm_63_better_than_life.m4a",
         lyrics:
-          "O God, you are my God\nHow earnestly I seek you\nHow desperately I need you\nMy heart and flesh cry out\n\nO God, you are my God\nMy soul is dry and weary\nMy hope is in your mercy\nOh how I need you now\n\nI have seen you in the sanctuary\nI have felt you like a cloud of glory fall\nLet my soul remember\nBread of heaven for the hungry spirit\nHoly presence of an unrelenting love\nLet my soul remember\n\nLet my soul remember\nYour love is better\nLet my soul remember\nYour love is better than life",
+          "O God, you are my God\nHow earnestly I seek you\nHow desperately I need you\nMy heart and flesh cry out\n\nO God, you are my God\nMy soul is dry and weary\nMy hope is in your mercy\nOh how I need you now\n\nI have seen you in the sanctuary\nI have felt you like a cloud of glory fall\nLet my soul remember\nBread of heaven for the hungry spirit\nHoly presence of an unrelenting love\nLet my soul remember\n\nO God, you are my God\nI know your love is better\nthan all this life can offer\nMy soul, rise up to praise!\n\nLet my soul remember\nYour love is better\nLet my soul remember\nYour love is better than life",
         copyright:
           "Words & Music by Ben Doggett © 2024 Ben Doggett. All rights reserved.",
+        chordProUrl: "/assets/chordpro/psalm-63-better-than-life.txt",
       },
     ],
   },

@@ -1,0 +1,36 @@
+{title: Psalm 63 (Better Than Life)}
+{artist: Ben Doggett}
+{key: F}
+{time: 4/4}
+{tempo: 85}
+{capo: 0}
+
+{comment: Verse 1}
+O [Fmaj11]God, you are my God, how [Dm7]earnestly I seek you
+How [Cmaj7]desperately I need you; my [Bb2]heart and flesh cry out
+
+{comment: Verse 2}
+O [Fmaj11]God, you are my God; my [Dm7]soul is dry and weary
+My [Cmaj7]hope is in your mercy; oh [Bb2]how I need you now
+
+{comment: Chorus}
+[Fmaj11]I have seen you in the sanctuary
+[Dm7]I have felt you like a [Cmaj7]cloud of glory fall[Bb2]
+Let my [Bb2]soul remember
+[Fmaj11]Bread of heaven for the hungry spirit
+[Dm7]Holy presence of an [Cmaj7]unrelenting love[Bb2]
+Let my [Bb2]soul remember
+
+{comment: Instrumental}
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Fmaj11]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Fmaj11]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Dm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Cmaj7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb2]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb2]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
+{comment: Verse 2}
+O [Fmaj11]God, you are my God; I [Dm7]know your love is better
+Than [Cmaj7]all this life can offer. My [Bb2]soul, rise up to praise!
+
+{comment: Chorus, Instrumental}
+
+{comment: Bridge}
+Let my [F]soul remember
+Your [Dm7]love is better
+Let my [Bb2]soul remember
+Your [Gm7]love is better than life {comment: (repeat)}
