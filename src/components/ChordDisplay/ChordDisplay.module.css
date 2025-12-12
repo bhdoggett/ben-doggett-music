@@ -219,3 +219,192 @@
     line-height: 1.7;
   }
 }
+
+/* Focus Mode Button */
+.focusModeButton {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-earth);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-family: var(--font-geist-sans);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.focusModeButton:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.focusModeButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.3);
+}
+
+/* Focus Mode Overlay */
+.focusModeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999; /* Below global audio player at 1000 */
+  background-color: #ffffff;
+  color: #000000;
+  overflow-y: auto;
+  padding: 2rem;
+  font-family: var(--font-geist-sans);
+}
+
+.focusModeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #333333;
+}
+
+.focusModeTitle h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 0.5rem 0;
+}
+
+.focusModeArtist {
+  font-size: 1.25rem;
+  color: #3a3a3a;
+  margin: 0 0 0.25rem 0;
+}
+
+.focusModeKey {
+  font-size: 1rem;
+  color: #000000; /* Gold for key emphasis */
+  margin: 0;
+  font-weight: 500;
+}
+
+.focusModeExit {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  line-height: 1;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.focusModeExit:hover {
+  background-color: #333333;
+  color: #272727;
+}
+
+.focusModeExit:focus {
+  outline: none;
+  background-color: #333333;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+}
+
+.focusModeContent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Focus Mode Chord Content Styles */
+.focusModeContent :global(table) {
+  width: auto;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.focusModeContent :global(tr) {
+  vertical-align: top;
+}
+
+.focusModeContent :global(td) {
+  padding: 0;
+  vertical-align: top;
+}
+
+.focusModeContent :global(.chord) {
+  font-family: var(--font-geist-mono);
+  font-size: 1.25rem; /* Larger for readability */
+  font-weight: 600;
+  color: #3e3e3e; /* Gold for chords */
+  white-space: pre;
+}
+
+.focusModeContent :global(.lyrics) {
+  font-family: var(--font-geist-sans);
+  font-size: 1.5rem; /* Larger for readability */
+  line-height: 2;
+  color: #000000;
+  white-space: preserve nowrap;
+}
+
+.focusModeContent :global(.row) {
+  margin-bottom: 0.75rem;
+}
+
+.focusModeContent :global(.paragraph) {
+  margin-bottom: 2rem;
+}
+
+.focusModeContent :global(.comment) {
+  font-style: italic;
+  font-weight: 800;
+  color: #434343;
+  opacity: 0.9;
+  margin: 1.5rem 0;
+  font-size: 1.25rem;
+}
+
+/* Responsive adjustments for focus mode */
+@media (max-width: 768px) {
+  .focusModeOverlay {
+    padding: 1rem;
+  }
+
+  .focusModeTitle h2 {
+    font-size: 1.5rem;
+  }
+
+  .focusModeArtist {
+    font-size: 1rem;
+  }
+
+  .focusModeContent :global(.chord) {
+    font-size: 1rem;
+  }
+
+  .focusModeContent :global(.lyrics) {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .focusModeContent :global(.comment) {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .focusModeContent :global(.chord) {
+    font-size: 1.125rem;
+  }
+
+  .focusModeContent :global(.lyrics) {
+    font-size: 1.375rem;
+  }
+}

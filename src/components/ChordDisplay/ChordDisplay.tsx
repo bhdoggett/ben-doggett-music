@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { ChordProParser, HtmlTableFormatter, Song } from "chordsheetjs";
 import styles from "./ChordDisplay.module.css";
 
@@ -23,6 +24,7 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
   const [isFocusMode, setIsFocusMode] = useState<boolean>(false);
   const [retryCount, setRetryCount] = useState<number>(0);
   const [transposedSheet, setTransposedSheet] = useState<Song | null>(null);
+  const scrollPositionRef = useRef<number>(0);
 
   useEffect(() => {
     const fetchAndParseChordPro = async () => {
@@ -87,6 +89,24 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
 
   const handleRetry = () => {
     setRetryCount((prev) => prev + 1);
+  };
+
+  const enterFocusMode = () => {
+    // Store current scroll position
+    scrollPositionRef.current = window.scrollY;
+    setIsFocusMode(true);
+    // Prevent body scroll when focus mode is active
+    document.body.style.overflow = "hidden";
+  };
+
+  const exitFocusMode = () => {
+    setIsFocusMode(false);
+    // Restore body scroll
+    document.body.style.overflow = "";
+    // Restore scroll position
+    setTimeout(() => {
+      window.scrollTo(0, scrollPositionRef.current);
+    }, 0);
   };
 
   // Calculate semitones between two keys
@@ -160,6 +180,22 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
       setTransposedSheet(transposed);
     }
   }, [chordSheet, originalKey, selectedKey]);
+
+  // Handle keyboard events for focus mode
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isFocusMode) {
+        exitFocusMode();
+      }
+    };
+
+    if (isFocusMode) {
+      document.addEventListener("keydown", handleKeyDown);
+      return () => {
+        document.removeEventListener("keydown", handleKeyDown);
+      };
+    }
+  }, [isFocusMode]);
 
   // Render loading state
   if (isLoading) {
@@ -264,6 +300,15 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
                 </option>
               ))}
             </select>
+
+            {/* Focus Mode Button */}
+            <button
+              className={styles.focusModeButton}
+              onClick={enterFocusMode}
+              title="Enter focus mode for performance"
+            >
+              Focus Mode
+            </button>
           </div>
         </div>
 
@@ -271,6 +316,33 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
           className={styles.chordContent}
           dangerouslySetInnerHTML={{ __html: formattedHtml }}
         />
+
+        {/* Focus Mode Overlay */}
+        {isFocusMode &&
+          typeof window !== "undefined" &&
+          createPortal(
+            <div className={styles.focusModeOverlay}>
+              <div className={styles.focusModeHeader}>
+                <div className={styles.focusModeTitle}>
+                  <h2>{title}</h2>
+                  {artist && <p className={styles.focusModeArtist}>{artist}</p>}
+                  <p className={styles.focusModeKey}>Key: {key}</p>
+                </div>
+                <button
+                  className={styles.focusModeExit}
+                  onClick={exitFocusMode}
+                  title="Exit focus mode (ESC)"
+                >
+                  ✕
+                </button>
+              </div>
+              <div
+                className={styles.focusModeContent}
+                dangerouslySetInnerHTML={{ __html: formattedHtml }}
+              />
+            </div>,
+            document.body
+          )}
       </div>
     );
   }
