@@ -1,34 +1,38 @@
 {title: Poor in Spirit}
 {artist: Ben Doggett}
-{key: }
+{key: F}
 {time: 4/4}
-{tempo: }
+{tempo: 68}
 {capo: 0}
 
+{comment: Intro}
+[|]&nbsp;&nbsp;[F/A]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[Dm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[F/A]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[Fsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
 {comment: Verse 1}
-Whom have I in heaven beside you?
-And the earth has nothing I desire
-But it is good just to be near you
-It is good to come and die
+[F/A]&nbsp;&nbsp;[]Whom have I[Bb] in heaven be[C]side you?[Dm7]
+[F/A]&nbsp;&nbsp;[]And the earth has [Bb]nothing I desire[Fsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]
+[F/A]&nbsp;&nbsp;[]But it is good[Bb] just to be near[C] you[Dm7]
+[F/A]&nbsp;&nbsp;[]It is [Bb]good to come and die[Fsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]{comment: (repeat)}
 
-{comment: Verse 2}
-When I have nothing left to boast in
-'Cause I've got nothing to my name
-Then I'll have something to rejoice in
-And you, you can have all my praise
+{comment: Pre-Chorus}
+When [C]I have [Dm7]nothing left to [F/A]boast in[Bb]
+'Cause [C]I've got [Dm7]nothing to my [Bb]name
+Then [C]I'll have [Dm7]something to re[F/A]joice in[Bb]
+And [C]you, you can [Dm7]have all my [Bb]praise
 
 {comment: Chorus}
-'Cause I am broken and poor, but such is the kingdom, Lord
-You are our only treasure
-And I will set my eyes high on the humble Jesus Christ
-His riches know no measure
+'Cause I am[F] broken [Bb]and poor, [Gm7]&nbsp;&nbsp;[]but such is the [Csus]kingdom, [C]Lord
+[F]&nbsp;&nbsp;[]You are our [Bb]on - [F/A]ly treasure[Gm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]
+And I will[F] set my [Bb]eyes high on[Gm7]&nbsp;&nbsp;[]the humble [Csus]Jesus [C]Christ
+[F]&nbsp;&nbsp;[]His riches [Bb]know [F/A]no measure[Gm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]
 
-{comment: Verse 3}
-You are my portion and my refuge
-though my heart and flesh grow faint
-Where have I to run but to you?
-You are the one thing that remains
+{comment: Verse 2}
+[F/A]&nbsp;&nbsp;[]You are my [Bb]portion and my [C]refuge[Dm7]
+[F/A]&nbsp;&nbsp;[]though my [Bb]heart and flesh grow faint[Fsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]
+[F/A]&nbsp;&nbsp;[]Where have [Bb]I to run but [C]to you?[Dm7]
+[F/A]&nbsp;&nbsp;[]You are the [Bb]one thing that remains[Fsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]
+
+{comment: Pre-Chorus, Chorus 3x}
 
 {comment: Tag}
-His riches know no measure
-His riches know no measure
+[F]&nbsp;&nbsp;[]His riches [Bb]know [F/A]no measure[Gm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]
+[F]&nbsp;&nbsp;[]His riches [Bb]know [F/A]no measure[Gm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]

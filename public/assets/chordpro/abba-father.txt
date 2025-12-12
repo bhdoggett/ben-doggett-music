@@ -1,28 +1,38 @@
 {title: Abba Father}
 {artist: Ben Doggett}
-{key: }
+{key: G}
 {time: 4/4}
 {tempo: }
 {capo: 0}
+{copyright: Words & Music Ben Doggett © 2008 Ben Doggett}
 
+{comment: Intro/Instrumental 1}
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Em]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Em]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
 {comment: Verse 1}
-In the midst of all my trouble, You are Father
-In the midst of every trial, You are Abba
-You are Abba, You are Abba
+[Em]In the midst of [D]all my trouble, [C]You are Father
+[Em]In the midst of [D]every trial, [C]You are Abba
+[Am7]You are Abba, [C]You are Abba
 
 {comment: Verse 2}
-Even in my darkest hour, You are Father
-Even though I trip and falter, You are Abba
-You are Abba, You are Abba
+[Em]Even in my [D]darkest hour, [C]You are Father
+[Em]Even though I [D]trip and falter, [C]You are Abba
+[Am7]You are Abba, [C]You are Abba
 
 {comment: Chorus}
-Not my will but let yours be done
-Let your will be my own
-Though the pain and the darkness come
-I am never alone
+[G/B]&nbsp;&nbsp;[]Not my will[C] but let yours[D] be done[Em]&nbsp;&nbsp;[]&nbsp;&nbsp;[D/F#]
+[G/B]&nbsp;&nbsp;[]Let your will[C] be my own[Dsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]
+[G/B]&nbsp;&nbsp;[]Though the pain[C] and the dark[D][]ness come[Em]&nbsp;&nbsp;[]&nbsp;&nbsp;[D/F#]
+[G/B]&nbsp;&nbsp;[]I am ne[C][]ver alone[Dsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]
 
+{comment: Instrumental 1, Verse 1, Verse 2, Chorus}
+
+{comment: Instrumental 2}
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[G/B]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[G/B]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
 {comment: Bridge}
-You are Abba Father
-You are Abba Father
-You are Abba Father
-You are Abba Father
+[G/B]&nbsp;&nbsp;[]You are [C]Abba Father[Dsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]
+[G/B]&nbsp;&nbsp;[]You are [C]Abba Father[Dsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]
+[G/B]&nbsp;&nbsp;[]You are [C]Abba Father[Dsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]
+[G/B]&nbsp;&nbsp;[]You are [C]Abba Father[Dsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]
+
+{comment: Chorus, Bridge 3x}
+

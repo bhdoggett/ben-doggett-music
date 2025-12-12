@@ -1,26 +1,32 @@
 {title: Soul Be Stirred}
 {artist: Ben Doggett}
-{key: }
+{key: G}
 {time: 4/4}
 {tempo: }
 {capo: 0}
 
 {comment: Verse}
-Soul, be stirred, he is the Lord
-He is Emmanuel
-Soul, arise to sing and priase
-He lifted you from hell
-And forget not all his benefits
-Who redeems your life from the pit
-Who crowns you with compassion
-And loves you all day
-And forget not all his benefits
-And call back to remembrance
-That the Lord your God is faithful
-Abounding in grace
+[Cadd9]Soul, be [G]stirred, he [Dsus]is the [Em7]Lord
+He [Cadd9]is Em[G]manu[Dsus]el
+[Cadd9]Soul, a[G]rise to [Dsus]sing and [Em7]priase
+He [Cadd9]lifted [G]you from [Dsus]hell
 
 {comment: Chorus}
-I command my soul to sing
-I command my soul to priase
-And in light of all I've seen
-I will always love your name
+And forget not all his [G]benefits
+Who re[D/F#]deems your life [Em7]from the pit
+Who [Dsus]crowns you with com[Cadd9]passion
+And [G/B]loves you all [Dsus]day[]&nbsp;&nbsp;[D]
+And forget not all his [G]benefits
+And [D/F#]call back to re[Em7]membrance
+That the [Dsus]Lord your God is [Cadd9]faithful
+A[G/B]bounding in [Dsus]grace[]&nbsp;&nbsp;[D]
+
+{comment: Verse, Chorus}
+
+{comment: Instrumental}
+[|]&nbsp;&nbsp;[Cadd9]&nbsp;&nbsp;[]&nbsp;&nbsp;[G/B]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[Dsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[Cadd9]&nbsp;&nbsp;[]&nbsp;&nbsp;[G/B]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[Dsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
+{comment: Bridge}
+[Cadd9]&nbsp;&nbsp;[]I command my [G/B]soul to sing
+[Dsus]&nbsp;&nbsp;[]I command my soul to priase
+[Cadd9]&nbsp;&nbsp;[]And in light of [G/B]all I've seen
+[Dsus]&nbsp;&nbsp;[]I will always love your name

@@ -21,8 +21,9 @@ export const releases: Release[] = [
         title: "Glad",
         audioUrl: "/assets/music/glad/glad.mp3",
         lyrics:
-          "Make me glad for as many days as I have known pain an sorrow\nMake me glad for as many years as I have known fear and doubt\nJesus my friend, Jesus my Savior\nJesus, the only hope I have of being glad",
+          "Make me glad for as many days as I have known pain an sadness\nMake me glad for as many years as I have known fear and doubt\nJesus my friend, Jesus my Savior\nJesus, the only hope I have of being glad",
         copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
+        chordProUrl: "/assets/chordpro/glad.txt",
       },
       {
         id: "speak-to-me",
@@ -39,6 +40,7 @@ export const releases: Release[] = [
         lyrics:
           "Why are you downcast, O my soul?\nWhy so disturbed within me?\nSet foot on this rock, put your hope in God\nhe is a sure foundation\nWhy are you downcast, O my soul?\nWhy so disturbed within me?\nSet your weary eyes on the Lord of life\nHe is our one salvation\n\nMy soul will boast in the Lord\nLet the afflicted hear and rejoice\nMy soul will boast in the Lord\nLet the afflicted hear and rejoice\n\nWhy are you downcast, O my soul?\nWhy so disturbed within me?\nHe is arisen now, pouring mercy out\nAnd You have been forgiven\nAnd you have been forgiven\nAnd you have been forgiven\n\nHosanna in the highest\nHosanna to the King\nBehold, O Daughter of Zion\nYour Savior riding in",
         copyright: "Words & Music by Ben Doggett © 2006 Ben Doggett",
+        chordProUrl: "/assets/chordpro/why-are-you-downcast.txt",
       },
       {
         id: "hope-of-glory",
@@ -55,14 +57,16 @@ export const releases: Release[] = [
         lyrics:
           "In the midst of all my trouble, You are Father\nIn the midst of every trial, You are Abba\nYou are Abba, You are Abba\nEven in my darkest hour, You are Father\nEven though I trip and falter, You are Abba\nYou are Abba, You are Abba\n\nNot my will but let yours be done\nLet your will be my own\nThough the pain and the darkness come\nI am never alone\n\nYou are Abba Father\nYou are Abba Father\nYou are Abba Father\nYou are Abba Father",
         copyright: "Words & Music by Ben Doggett © 2008 Ben Doggett",
+        chordProUrl: "/assets/chordpro/abba-father.txt",
       },
       {
         id: "soul-be-stirred",
         title: "Soul Be Stirred",
         audioUrl: "/assets/music/glad/soul_be_stirred.mp3",
         lyrics:
-          "Soul, be stirred, he is the Lord\nHe is Emmanuel\nSoul, arise to sing and priase\nHe lifted you from hell\nAnd forget not all his benefits\nWho redeems your life from the pit\nWho crowns you with compassion\nAnd loves you all day\nAnd forget not all his benefits\nAnd call back to remembrance\nThat the Lord your God is faithful\nAbounding in grace\n\nI command my soul to sing\nI command my soul to priase\nAnd in light of all I've seen\nI will always love your name",
+          "Soul, be stirred, he is the Lord\nHe is Emmanuel\nSoul, arise to sing and priase\nHe lifted you from hell\n\nAnd forget not all his benefits\nWho redeems your life from the pit\nWho crowns you with compassion\nAnd loves you all day\nAnd forget not all his benefits\nAnd call back to remembrance\nThat the Lord your God is faithful\nAbounding in grace\n\nI command my soul to sing\nI command my soul to priase\nAnd in light of all I've seen\nI will always love your name",
         copyright: "Words & Music by Ben Doggett © 2007 Ben Doggett",
+        chordProUrl: "/assets/chordpro/soul-be-stirred.txt",
       },
       {
         id: "o-my-soul",
@@ -89,6 +93,7 @@ export const releases: Release[] = [
         lyrics:
           "Whom have I in heaven beside you?\nAnd the earth has nothing I desire\nBut it is good just to be near you\nIt is good to come and die\n\nWhen I have nothing left to boast in\n'Cause I've got nothing to my name\nThen I'll have something to rejoice in\nAnd you, you can have all my praise\n\n'Cause I am broken and poor, but such is the kingdom, Lord\nYou are our only treasure\nAnd I will set my eyes high on the humble Jesus Christ\nHis riches know no measure\n\nYou are my portion and my refuge\though my heart and flesh grow faint\nWhere have I to run but to you?\nYou are the one thing that remains\n\nHis riches know no measure\nHis riches know no measure",
         copyright: "Words & Music by Ben Doggett © 2011 Ben Doggett",
+        chordProUrl: "/assets/chordpro/poor-in-spirit.txt",
       },
 
       {
@@ -97,6 +102,7 @@ export const releases: Release[] = [
         audioUrl: "/assets/music/glad/whatever_was_to_my_profit.mp3",
         lyrics:
           "Whatever was to my profit, I now consider loss\nAnd everything self-righteous, I nail it to the cross\nTo know you in your death, O Lord, and rise with you again\nTo know you in your suffering and then my life begins\n\nEvery other lover cannot compare\nAnd anything this world offers will perish and pale\nIn the light of your glory\nIn the glow of your beauty\n\nOnly one thing remains now, to know you all the more\nThere's only one place to be found, abiding in the Lord\nI throw off every hindrance, I'm giving you my eyes\nI run the race before me 'cause Jesus is the prize ",
+        chordProUrl: "/assets/chordpro/whatever-was-to-my-profit.txt",
       },
     ],
   },
@@ -141,6 +147,7 @@ export const releases: Release[] = [
         lyrics:
           'Out of the depths I call to you, listen to my plea\nOut of the depths I cry the name of Jesus\nBattered by my circumstance, broken at your feet\nBut voice enough to sigh the name of Jesus\n\nWhere else would I go?\nYou\'re my only hope\n\nMore than watchmen wait for morning\nI will wait for you my God\nIn your promise I will glory\nAll my hope is in your love\n\nIf you kept a record of, all our sinful ways\nWho, O Lord, could stand to face your glory\nBut full of mercy, rich in love, you have come to save\nSo in my weary bones I whisper "worthy, you are worthy"\n\nMy soul waits for the break of day\nYou will surely come, as the rising sun\nMy soul longs for the coming dawn\nYou will surely come to us',
         copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
+        chordProUrl: "/assets/chordpro/more-than-watchmen.txt",
       },
       {
         id: "o-the-fathers-love",
@@ -150,6 +157,7 @@ export const releases: Release[] = [
           "You kissed my face when I was your foe\nFather you called me home\nI had returned to beg at your feet\nHere you embraced me\n\nO the Father's love is overwhelming\nCovering all my shame\nSee the Father run, his arms embrace me\nLifting me up in his grace\n\nRiches unheard of, squandered in sin\nI spent my inheritance\nNow at the cost of your innocent Son\nYou made a way for us\nYou made a way for us\n\nHeaven and earth, when have you heard\nWhen have you seen such a thing?\nWonder of wonders, the heart of the Father\nYou welcome the prodigal in",
         copyright:
           "Words & Music by Ben Doggett © 2010 Ben Doggett. All rights reserved.",
+        chordProUrl: "/assets/chordpro/o-the-fathers-love.txt",
       },
       {
         id: "romans-doxology",
@@ -159,6 +167,7 @@ export const releases: Release[] = [
           "Oh the depth of the riches of the knowledge and wisdom\nHow unsearchable the judgments of the Lord\nWho has given him counsel? All his ways are untraceable\nWho has known the eternal mind of the Lord\n\nFrom you, Lord, and through you, Lord\nAnd to you, Lord are all things\nYou are the first and you are the last\nAnd yours is all the glory\n\nWhat on earth could we give him, that the Lord should repay it\nAll our rightful obedience is the Lord's\n\nYours is the glory forever and ever\nAnd ever and ever, Amen",
         copyright:
           "Words & Music by Ben Doggett © 2010 Ben Doggett. All rights reserved.",
+        chordProUrl: "/assets/chordpro/romans-doxology.txt",
       },
     ],
   },
@@ -187,6 +196,7 @@ export const releases: Release[] = [
           "Love is patient, love is kind\nLove lets what I cling to and what I want to die\nLove is full of hope, love will never boast\nLove in purity and all good things delights\n\nSo love the Lord, Your God\nWith all your strength and mind and heart\nLove your neighbor as yourself\nAnd love your enemy as well\n\nLove is humble, love is strong\nLove can bear all things and love will suffer long\nLove will never fade though the earth give way\nLove will hold you in his everlasting arms\n\nIf I speak with the tongues of angels (but have not love)\nIf I give all I own away (but have not love)\nEven if I could move the mountains\nI am nothing but a resounding noise",
         copyright:
           "Words & Music by Ben Doggett © 2021 Ben Doggett. All rights reserved.",
+        chordProUrl: "/assets/chordpro/love-1-corinthians-13.txt",
       },
     ],
   },
@@ -240,6 +250,7 @@ export const releases: Release[] = [
           "The LORD is My Shepherd, I shall not want\nIn pastures of green I will rest\nBeside quiet waters my soul is restored\nI drink and my heart is content\nHe leads me in righteousness\n\nYea, though I walk through the dark of death\nEvil I will not fear\nYour rod and your staff are my confidence\nMy God, you are always near\n\nA table you set in the midst of my foes\nA banquet prepared just for me\nMy head drips with oil and my cup overflows\nI sit at your table and feast\nMy shepherd supplies all I need\n\nSurely goodness and mercy will follow me\nAnd I will dwell in the house of God\nThrough the gates of eternity shepherd me\nAnd I will dwell in your house, O God",
         copyright:
           "Words & Music by Ben Doggett © 2015 Ben Doggett. All rights reserved.",
+        chordProUrl: "/assets/chordpro/psalm-23-shepherd-me.txt",
       },
     ],
   },

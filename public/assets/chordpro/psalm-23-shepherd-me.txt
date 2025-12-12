@@ -1,32 +1,43 @@
 {title: Psalm 23 (Shepherd Me)}
 {artist: Ben Doggett}
-{key: }
+{key: C}
 {time: 4/4}
 {tempo: }
 {capo: 0}
 
+{comment: Intro}
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
 {comment: Verse 1}
-The LORD is My Shepherd, I shall not want
-In pastures of green I will rest
-Beside quiet waters my soul is restored
-I drink and my heart is content
-He leads me in righteousness
+The [C]LORD is My Shepherd, I [Csus]shall not want
+In [C]pastures of green I will [Csus]rest
+Be[C]side quiet waters my [Csus]soul is restored
+I [C]drink and my heart is con[Csus]tent
+He [F2]leads me in [Gsus]righteousness[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus] {comment: (repeat)}
+
+{comment: Chorus 1}
+[Am7]Yea, though I [F2]walk through the [C]dark of death[Gsus]
+[Am7]Evil I [F2]will not fear[Gsus]
+Your [Am7]rod and your [F2]staff are my [C]confidence[Gsus]
+My [F2]God, you are [Gsus]always near[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]
 
 {comment: Verse 2}
-Yea, though I walk through the dark of death
-Evil I will not fear
-Your rod and your staff are my confidence
-My God, you are always near
+A [C]table you set in the [Csus]midst of my foes
+A [C]banquet prepared just for [Csus]me
+My [C]head drips with oil and my [Csus]cup overflows
+I [C]sit at your table and [Csus]feast
+My [F2]shepherd sup[Gsus]plies all I [C]need&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]
 
-{comment: Verse 3}
-A table you set in the midst of my foes
-A banquet prepared just for me
-My head drips with oil and my cup overflows
-I sit at your table and feast
-My shepherd supplies all I need
+{comment: Chorus 2}
+Surely [Am7]goodness and [F2]mercy will [C]follow me[Gsus]
+And I will [Am7]dwell in the [F2]house of God[Gsus]
+Through the [Am7]gates of e[F2]ternity [C]shepherd me[Gsus]
+And I will [F2]dwell in your [F2]house, O [C]God
 
-{comment: Chorus}
-Surely goodness and mercy will follow me
-And I will dwell in the house of God
-Through the gates of eternity shepherd me
-And I will dwell in your house, O God
+{comment: Chorus 3}
+Surely [Am7]goodness and [F2]mercy will [C]follow me[Gsus]
+And I will [Am7]dwell in the [F2]house of God[Gsus]
+Through the [Am7]gates of e[F2]ternity [C]shepherd me[Gsus]
+And I will [F2]dwell in your [F2]house, O [Am7]God
+
+{comment: Tag}
+I will [F2]dwell in your [Gsus]house, O God[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]
