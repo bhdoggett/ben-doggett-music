@@ -224,6 +224,7 @@ export const releases: Release[] = [
           'The LORD is my light and my salvation\nThe LORD is the strength of my life\nWhen evil men assail me, they will stumble and fall\nThough the host of hell surround me, I will not fear\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings\n\nHear me, O LORD, when I cry out\nShow your great grace and answer me\nHide not your love and mercy, turn me not away\nAnd when the host of hell surround me, my heart will say\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings\n\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings',
         copyright:
           "Words & Music by Ben Doggett © 2017 Ben Doggett. All rights reserved.",
+        chordProUrl: "/assets/chordpro/psalm-27-one-thing.txt",
       },
     ],
   },

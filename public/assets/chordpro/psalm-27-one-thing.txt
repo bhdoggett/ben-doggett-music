@@ -1,0 +1,45 @@
+{title: Psalm 27 (One Thing)}
+{artist: Ben Doggett}
+{key: F}
+{time: 4/4}
+{tempo: 106}
+{capo: 0}
+
+{comment: Intro}
+[||:]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Dm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Dm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb2]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb2]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[:||]
+{comment: Verse 1}
+The [Dm7]LORD is my light[F] and my salv[Bb2]ation
+The [Dm7]LORD is the stre[F]ngth of my life[Bb2]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]
+When [Bb2]evil men ass[Csus]ail me, they will [Dm7]stumb[Csus]le and [Bb2]fall
+Though the [Bb2]host of hell surr[Csus]ound me, I will not [Dm7]fear&nbsp;&nbsp;[Csus]
+
+{comment: Chorus}
+[F]&nbsp;&nbsp;[]&nbsp;&nbsp;[]One thing have I[Csus] as[Dm7]ked of the Lord
+And this I se[Bb2]ek, to see the bea[F]uty of my Ki[Csus]ng
+[F]&nbsp;&nbsp;[]&nbsp;&nbsp;[]One thing does my[Csus] hea[Dm7]rt long to know
+That you will hi[Bb2]de me in the she[F]lter of your wi[Csus]ngs
+
+{comment: Verse 2}
+[Dm7]Hear me, O LORD,[F] when I cry[Bb2] out
+[Dm7]Show your great grace[F] and answer me[Bb2]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]
+Hide [Bb2]not your love and me[Csus]rcy, [Dm7]turn me not[Csus] away[Bb2]
+And when the [Bb2]host of hell surro[Csus]und me, my [Dm7]heart will say[Csus]
+
+{comment: Chorus}
+
+{comment: Instrumental}
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb2]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Dm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[C/E]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb2]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Dm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[C/E]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
+{comment: Bridge}
+My heart[Bb2] says of you,[Csus] "Seek his face"[Dm7]
+LORD, your [C/E]face I seek
+My heart[Bb2] says of you,[Csus] "Seek his face"[Dm7]
+LORD, your [C/E]face I seek
+My heart[Bb2] says of you,[Csus] "Seek his face"[Dm7]
+LORD, your [C/E]face I seek
+My heart[Bb2] says of you,[Csus] "Seek his face"[Dm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[C/E]
+
+{comment: Chorus}
+
+{comment: Tag}
+Father, hide[Bb2] me in the she[F]lter of your wings[Csus]
+Father, hide[Bb2] me in the she[F]lter of your wings[Csus]&nbsp;&nbsp;[]&nbsp;&nbsp;[C]&nbsp;&nbsp;[]&nbsp;&nbsp;[F]
