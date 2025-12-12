@@ -1,0 +1,49 @@
+{title: Son of Glory (John 1)}
+{artist: Ben Doggett}
+{key: Bb}
+{time: 4/4}
+{tempo: 104}
+{capo: 0}
+
+{comment: Intro/Instrumental}
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Bb]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Gm9]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Dm7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[Eb2]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
+{comment: Verse 1}
+[Bb]&nbsp;&nbsp;[]In the beginning was the [Gm9]Word
+[Dm7]&nbsp;&nbsp;[]And the Word was [Eb2]with and was God
+[Bb]&nbsp;&nbsp;[]In the beginning was the [Gm9]Word
+And [Dm7]all things were made [Eb2]by and through him
+
+{comment: Verse 2}
+[Bb]&nbsp;&nbsp;[]In the beginning was the [Gm9]Light
+[Dm7]&nbsp;&nbsp;[]And the Light was [Eb2]life to all men
+[Bb]&nbsp;&nbsp;[]In the beginning was the [Gm9]Light
+The [Dm7]darkness has not [Eb2]overcome him
+
+{comment: Chorus 1}
+[Bb]He has [Gm9]made his [Dm7]home here
+[Eb2]Heaven robed in flesh and bone
+And [Bb]we have [Gm9]seen his [Dm7]glory
+The [Eb2]glory of the only Son of [Bb]God’s
+
+{comment: Instrumental 2x, Verse 1, Verse 2}
+
+{comment: Chorus 2}
+[Bb]He has [Gm9]made his [Dm7]home here
+[Eb2]Heaven robed in flesh and bone
+And [Bb]we have [Gm9]seen his [Dm7]glory
+The [Eb2]glory of the one and only
+[Bb]He has [Gm9]made his [Dm7]home here
+[Eb2]Heaven robed in flesh and bone
+And [Bb]we have [Gm9]seen his [Dm7]glory
+The [Eb2]glory of the only Son of [Bb]God’s
+
+{comment: Instrumental 2x}
+
+{comment: Bridge}
+[Bb]Jesus Christ, [Gm9]Light of life
+[Dm7]Ancient of days, be[Eb2]gotten not made&nbsp;&nbsp;{comment: (repeat 3x)}
+
+{comment: Chorus 2, Bridge}
+
+{comment: Vamp}
+[Bb]&nbsp;&nbsp;[]One and o[Gm9]nly []Son of gl[Dm7]ory&nbsp;&nbsp;[]&nbsp;&nbsp;[Eb2]
