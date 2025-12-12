@@ -102,6 +102,7 @@ export const releases: Release[] = [
         audioUrl: "/assets/music/glad/whatever_was_to_my_profit.mp3",
         lyrics:
           "Whatever was to my profit, I now consider loss\nAnd everything self-righteous, I nail it to the cross\nTo know you in your death, O Lord, and rise with you again\nTo know you in your suffering and then my life begins\n\nEvery other lover cannot compare\nAnd anything this world offers will perish and pale\nIn the light of your glory\nIn the glow of your beauty\n\nOnly one thing remains now, to know you all the more\nThere's only one place to be found, abiding in the Lord\nI throw off every hindrance, I'm giving you my eyes\nI run the race before me 'cause Jesus is the prize ",
+        chordProUrl: "/assets/chordpro/whatever-was-to-my-profit.txt",
       },
     ],
   },

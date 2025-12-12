@@ -1,0 +1,26 @@
+{title: Whatever Was to My Profit}
+{artist: Ben Doggett}
+{key: B}
+{time: 4/4}
+{tempo: }
+{capo: 0}
+
+{comment: Verse 1}
+[B]Whatever was to my profit, I now consider loss
+And [G#m7]everything self-righteous, I [F#sus]nail it to the cross[E9]
+To [B]know you in your death, O Lord, and rise with you again
+To [G#m7]know you in your suffering and [F#sus]then my [E9]life begins[B] {comment: (repeat)}
+
+{comment: Chorus}
+Every [F#sus]other [G#m7]lover [E9]cannot compare[B]
+And anything [F#sus]this world [G#m7]offers will [E9]perish and pale[B]
+In the [F#sus]light of your [G#m7]glory[E9]&nbsp;&nbsp;[]&nbsp;&nbsp;[B]
+In the [F#sus]glow of your [G#m7]beauty[E9]
+
+{comment: Verse 2}
+[B]Only one thing remains now, to know you all the more
+There's [G#m7]only one place to be found, a[F#sus]biding in the [E9]Lord
+I [B]throw off every hindrance, I'm giving you my eyes
+I [G#m7]run the race before me 'cause [F#sus]Jesus [E9]is the prize[B]
+
+{comment: Chorus}
