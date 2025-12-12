@@ -196,6 +196,7 @@ export const releases: Release[] = [
           "Love is patient, love is kind\nLove lets what I cling to and what I want to die\nLove is full of hope, love will never boast\nLove in purity and all good things delights\n\nSo love the Lord, Your God\nWith all your strength and mind and heart\nLove your neighbor as yourself\nAnd love your enemy as well\n\nLove is humble, love is strong\nLove can bear all things and love will suffer long\nLove will never fade though the earth give way\nLove will hold you in his everlasting arms\n\nIf I speak with the tongues of angels (but have not love)\nIf I give all I own away (but have not love)\nEven if I could move the mountains\nI am nothing but a resounding noise",
         copyright:
           "Words & Music by Ben Doggett © 2021 Ben Doggett. All rights reserved.",
+        chordProUrl: "/assets/chordpro/love-1-corinthians-13.txt",
       },
     ],
   },

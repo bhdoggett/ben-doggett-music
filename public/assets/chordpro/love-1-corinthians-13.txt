@@ -1,0 +1,40 @@
+{title: Love (1 Corinthians 13)}
+{artist: Ben Doggett}
+{key: E}
+{time: 4/4}
+{tempo: }
+{capo: 0}
+
+{comment: Intro/Instrumental}
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[F#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[E]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[F#m7]&nbsp;&nbsp;[]&nbsp;&nbsp;[E]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[A2]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
+{comment: Verse 1}
+Love is [F#m7]patient,[E] love is kind[A2]
+Love lets [F#m7]what I cling to and [E]what I want to die[A2]
+Love is [F#m7]full of hope,[E] love will [A2]never boast
+Love in [F#m7]purity and [E]all good things delights[A2]
+
+{comment: Chorus}
+So [F#m7]love the [E]Lord, Your God[A2]
+With all your [F#m7]strength and [E]mind and heart[A2]
+Love your [F#m7]neighbor [E]as yourself[A2]
+And love your e [F#m7]- ne - [E]my as well[A2]
+
+{comment: Instrumental}
+
+{comment: Verse 2}
+Love is [F#m7]humble,[E] love is strong[A2]
+Love can [F#m7]bear all things and love[E] will suffer long[A2]
+Love will [F#m7]never fade[E] though the earth[A2] give way
+Love will [F#m7]hold you in his e[E]verlasting arms[A2]
+
+{comment: Chorus, Instrumental 2x}
+
+{comment: Bridge}
+[F#m7]&nbsp;&nbsp;[]If I spe[E]ak with the tongues of [A2]angels (but have not love)
+[F#m7]&nbsp;&nbsp;[]If I gi[E]ve all I own a[A2]way (but have not love)
+[F#m7&nbsp;&nbsp;[]]Even if[E] I could move the [A2]mountains
+I am [F#m7]nothing[E] []but a re[A2]sounding noise {comment: (repeat)}
+
+{comment: Instrumental 2x, Chorus}
+
+
