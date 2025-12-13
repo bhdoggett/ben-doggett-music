@@ -208,6 +208,19 @@
   margin: 1rem 0;
 }
 
+.copyright {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--neutral-cream);
+}
+
+.copyright p {
+  font-size: 0.875rem;
+  color: var(--primary-earth);
+  font-style: italic;
+  margin: 0;
+}
+
 /* Responsive adjustments for chord content */
 @media (max-width: 768px) {
   .chordContent :global(.chord) {

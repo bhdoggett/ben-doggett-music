@@ -10,6 +10,7 @@ import React, {
   useEffect,
 } from "react";
 import { Song, Release } from "@/types";
+import { captureRejectionSymbol } from "stream";
 
 // Global audio state interface
 export interface GlobalAudioState {
@@ -134,6 +135,20 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({
   const [playerIsVisible, setPlayerIsVisible] = useState<boolean>(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const currentTrackRef = useRef<GlobalAudioState["currentTrack"]>(null);
+
+  const getNextSong = useCallback(
+    (currentSong: Song, songs: Song[]): Song | null => {
+      const currentIndex = songs.findIndex(
+        (song) => song.id === currentSong.id
+      );
+      if (currentIndex === -1 || currentIndex >= songs.length - 1) {
+        return null;
+      }
+      return songs[currentIndex + 1];
+    },
+    []
+  );
 
   // Initialize audio element for a track
   const initializeAudio = useCallback(
@@ -181,8 +196,20 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({
         });
 
         audio.addEventListener("ended", () => {
-          dispatch({ type: "STOP" });
           stopProgressTracking();
+          const current = currentTrackRef.current;
+          if (!current) {
+            dispatch({ type: "STOP" });
+            return;
+          }
+          const nextSong = getNextSong(current.song, current.release.songs);
+
+          if (nextSong) {
+            playTrack(nextSong, current.release);
+          } else {
+            // end of release
+            dispatch({ type: "STOP" });
+          }
         });
 
         audio.addEventListener("play", () => {
@@ -308,6 +335,14 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({
     dispatch({ type: "SET_SELECTED_SONG", payload: song });
   }, []);
 
+  // Update currentTrackRef when currentTrack changes
+  useEffect(() => {
+    currentTrackRef.current = state.currentTrack;
+  }, [state.currentTrack]);
+
+  useEffect(() => {
+    currentTrackRef.current = state.currentTrack;
+  }, [state.currentTrack]);
   // Auto-play when track is set and audio is ready
   useEffect(() => {
     if (

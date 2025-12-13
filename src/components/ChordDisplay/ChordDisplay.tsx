@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { ChordProParser, HtmlTableFormatter, Song } from "chordsheetjs";
 import styles from "./ChordDisplay.module.css";
+import { useAudio } from "@/contexts/AudioContext";
 
 interface ChordDisplayProps {
   chordProUrl: string;
@@ -25,6 +26,8 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
   const [retryCount, setRetryCount] = useState<number>(0);
   const [transposedSheet, setTransposedSheet] = useState<Song | null>(null);
   const scrollPositionRef = useRef<number>(0);
+  const { state } = useAudio();
+  const selectedSong = state.selectedSong;
 
   useEffect(() => {
     const fetchAndParseChordPro = async () => {
@@ -316,6 +319,12 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
           className={styles.chordContent}
           dangerouslySetInnerHTML={{ __html: formattedHtml }}
         />
+
+        {selectedSong.copyright && (
+          <div className={styles.copyright}>
+            <p>{selectedSong.copyright}</p>
+          </div>
+        )}
 
         {/* Focus Mode Overlay */}
         {isFocusMode &&
