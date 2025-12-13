@@ -320,7 +320,7 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
           dangerouslySetInnerHTML={{ __html: formattedHtml }}
         />
 
-        {selectedSong.copyright && (
+        {selectedSong && selectedSong.copyright && (
           <div className={styles.copyright}>
             <p>{selectedSong.copyright}</p>
           </div>
