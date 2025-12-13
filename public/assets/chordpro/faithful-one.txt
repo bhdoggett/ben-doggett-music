@@ -13,8 +13,7 @@
 You have never [G]failed us[Asus]
 
 {comment: Instrumental}
-[|] [D]  [|] [Em7]  [|] [G]  [|] [Asus]  [|]
-
+[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[Em7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[G]&nbsp;&nbsp;[]&nbsp;&nbsp;[Asus]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
 {comment: Verse}
 [D]Rich in com[Em7]passion, [G]lavish in [Asus]love
 [D]Hope of the [Em7]nations, [G]beautiful [Asus]God
@@ -40,4 +39,4 @@ You have never [G]failed us
 [Em7]  You will never [G]fail us[Asus]
 
 {comment: Outro}
-[||:] [D]  [|] [Em7]  [|] [G]  [|] [Asus]  [:||] [D]
+[||:]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]&nbsp;&nbsp;[]&nbsp;&nbsp;[Em7]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[]&nbsp;&nbsp;[G]&nbsp;&nbsp;[]&nbsp;&nbsp;[Asus]&nbsp;&nbsp;[]&nbsp;&nbsp;[:||]&nbsp;&nbsp;[]&nbsp;&nbsp;[D]
