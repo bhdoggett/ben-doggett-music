@@ -146,6 +146,11 @@
   min-width: 140px;
 }
 
+.focusModeKeySelect {
+  /* color: black; */
+  border-color: rgb(100, 100, 100);
+}
+
 .keySelect:hover {
   border-color: var(--primary-earth);
 }
@@ -276,12 +281,21 @@
 }
 
 .focusModeHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  border-bottom: 2px solid black;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid #333333;
+}
+
+.focusModeKeySelect:hover {
+  border-color: rgb(38, 38, 38);
+}
+
+.focusModeKeySelect:focus {
+  outline: none;
+  border-color: rgb(38, 38, 38);
+  box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 /* .focusModeTitle h2 {
@@ -342,8 +356,8 @@
 
 .focusModeExit:focus {
   outline: none;
-  background-color: #333333;
-  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+  background-color: #cecece;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 .focusModeContent {

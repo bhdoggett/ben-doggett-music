@@ -325,13 +325,39 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
           typeof window !== "undefined" &&
           createPortal(
             <div className={styles.focusModeOverlay}>
-              <button
-                className={styles.focusModeExit}
-                onClick={exitFocusMode}
-                title="Exit focus mode (ESC)"
-              >
-                ✕
-              </button>
+              <div className={`${styles.header} ${styles.focusModeHeader}`}>
+                {/* Transposition Controls */}
+                <div className={styles.transpositionControls}>
+                  <label
+                    htmlFor="key-select"
+                    className={styles.transpositionLabel}
+                  >
+                    Transpose to:
+                  </label>
+                  <select
+                    id="key-select"
+                    className={`${styles.keySelect} ${styles.focusModeKeySelect}`}
+                    value={selectedKey}
+                    onChange={(e) => setSelectedKey(e.target.value)}
+                  >
+                    {musicalKeys.map((k) => (
+                      <option key={k} value={k}>
+                        {k}
+                        {k === originalKey ? " (Original)" : ""}
+                      </option>
+                    ))}
+                  </select>
+
+                  {/* Focus Mode Button */}
+                  <button
+                    className={styles.focusModeExit}
+                    onClick={exitFocusMode}
+                    title="Exit focus mode (ESC)"
+                  >
+                    ✕
+                  </button>
+                </div>
+              </div>
               {/* <div className={styles.focusModeHeader}>
                 
               </div> */}
