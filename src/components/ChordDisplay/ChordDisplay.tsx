@@ -279,12 +279,6 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
     return (
       <div className={styles.chordDisplay}>
         <div className={styles.header}>
-          <h3 className={styles.songTitle}>
-            {releaseType === "ep" ? title : "Chords"}
-          </h3>
-          {artist && <p className={styles.artist}>{artist}</p>}
-          {key && <p className={styles.key}>Key: {key}</p>}
-
           {/* Transposition Controls */}
           <div className={styles.transpositionControls}>
             <label htmlFor="key-select" className={styles.transpositionLabel}>
@@ -331,24 +325,25 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
           typeof window !== "undefined" &&
           createPortal(
             <div className={styles.focusModeOverlay}>
-              <div className={styles.focusModeHeader}>
-                <div className={styles.focusModeTitle}>
-                  <h2>{title}</h2>
-                  {artist && <p className={styles.focusModeArtist}>{artist}</p>}
-                  <p className={styles.focusModeKey}>Key: {key}</p>
-                </div>
-                <button
-                  className={styles.focusModeExit}
-                  onClick={exitFocusMode}
-                  title="Exit focus mode (ESC)"
-                >
-                  ✕
-                </button>
-              </div>
+              <button
+                className={styles.focusModeExit}
+                onClick={exitFocusMode}
+                title="Exit focus mode (ESC)"
+              >
+                ✕
+              </button>
+              {/* <div className={styles.focusModeHeader}>
+                
+              </div> */}
               <div
                 className={styles.focusModeContent}
                 dangerouslySetInnerHTML={{ __html: formattedHtml }}
               />
+              {selectedSong && selectedSong.copyright && (
+                <div className={styles.focusModeCopyright}>
+                  <p>{selectedSong.copyright}</p>
+                </div>
+              )}
             </div>,
             document.body
           )}

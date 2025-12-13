@@ -1,7 +1,7 @@
 .chordDisplay {
   background-color: var(--surface-warm);
   border-radius: var(--radius-sm);
-  padding: 2rem;
+  padding: 0.7rem 2rem;
   min-height: 200px;
   box-shadow: 5px 5px 12px #cdcdcd;
 }
@@ -12,12 +12,12 @@
   padding-bottom: 1rem;
 }
 
-.songTitle {
+/* .songTitle {
   font-size: 1.75rem;
   font-weight: 600;
   color: var(--neutral-charcoal);
   margin: 0;
-}
+} */
 
 .emptyState {
   display: flex;
@@ -209,16 +209,18 @@
 }
 
 .copyright {
+  width: auto;
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid var(--neutral-cream);
+  text-align: center;
 }
 
 .copyright p {
   font-size: 0.875rem;
   color: var(--primary-earth);
   font-style: italic;
-  margin: 0;
+  margin: auto;
 }
 
 /* Responsive adjustments for chord content */
@@ -269,7 +271,7 @@
   background-color: #ffffff;
   color: #000000;
   overflow-y: auto;
-  padding: 2rem;
+  padding: 1rem 2rem 5rem 2rem;
   font-family: var(--font-geist-sans);
 }
 
@@ -282,7 +284,7 @@
   border-bottom: 2px solid #333333;
 }
 
-.focusModeTitle h2 {
+/* .focusModeTitle h2 {
   font-size: 2rem;
   font-weight: 600;
   color: #000000;
@@ -293,13 +295,26 @@
   font-size: 1.25rem;
   color: #3a3a3a;
   margin: 0 0 0.25rem 0;
-}
+} */
 
 .focusModeKey {
   font-size: 1rem;
   color: #000000; /* Gold for key emphasis */
   margin: 0;
   font-weight: 500;
+}
+
+.focusModeCopyright {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+.focusModeCopyright p {
+  font-size: 0.875rem;
+  color: rgb(68, 68, 68);
+  font-style: italic;
 }
 
 .focusModeExit {
@@ -317,6 +332,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
 }
 
 .focusModeExit:hover {
