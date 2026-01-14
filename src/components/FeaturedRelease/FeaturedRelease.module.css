@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  max-width: 500px;
-  margin: 3rem auto;
+  gap: var(--spacing-lg);
+  max-width: 31.25rem;
+  margin: var(--spacing-lg) auto;
   text-decoration: none;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -13,9 +13,9 @@
 .coverArtWrapper {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 25rem;
   aspect-ratio: 1;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
@@ -73,11 +73,11 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .featuredRelease {
-    gap: 1.5rem;
+    gap: var(--spacing-lg);
   }
 
   .coverArtWrapper {
-    max-width: 320px;
+    max-width: 20rem;
   }
 
   .releaseTitle {

@@ -1,15 +1,15 @@
 .chordDisplay {
   background-color: var(--surface-warm);
   border-radius: var(--radius-sm);
-  padding: 0.7rem 2rem;
-  min-height: 200px;
+  padding: 0.7rem 1.25rem;
+  min-height: 12.5rem;
   box-shadow: 5px 5px 12px #cdcdcd;
 }
 
 .header {
   margin-bottom: 1.5rem;
   border-bottom: 2px solid var(--neutral-cream);
-  padding-bottom: 1rem;
+  padding-bottom: var(--spacing-md);
 }
 
 /* .songTitle {
@@ -23,11 +23,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
+  min-height: 12.5rem;
 }
 
 .emptyState p {
-  font-size: 1.125rem;
+  font-size: var(--font-size-lg);
   color: var(--primary-earth);
   opacity: 0.7;
   margin: 0;
@@ -37,11 +37,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
+  min-height: 12.5rem;
 }
 
 .loadingSpinner p {
-  font-size: 1.125rem;
+  font-size: var(--font-size-lg);
   color: var(--primary-earth);
   margin: 0;
 }
@@ -51,18 +51,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
-  gap: 1rem;
+  min-height: 12.5rem;
+  gap: var(--spacing-md);
 }
 
 .errorState p {
-  font-size: 1.125rem;
+  font-size: var(--font-size-lg);
   color: var(--primary-earth);
   margin: 0;
 }
 
 .retryButton {
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-sm) var(--spacing-md);
   background-color: var(--primary-earth);
   color: white;
   border: none;
@@ -79,7 +79,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .chordDisplay {
-    padding: 1.5rem;
+    padding: var(--spacing-lg);
   }
 
   .songTitle {
@@ -92,17 +92,17 @@
 
   .keySelect {
     flex: 1;
-    min-width: 120px;
+    min-width: 7.5rem;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .transpositionControls {
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
   }
 
   .keySelect {
-    min-width: 120px;
+    min-width: 7.5rem;
   }
 }
 
@@ -134,8 +134,8 @@
 }
 
 .keySelect {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
+  padding: var(--spacing-sm) 0.75rem;
+  font-size: var(--font-size-sm);
   color: var(--neutral-charcoal);
   background-color: white;
   border: 2px solid var(--neutral-cream);
@@ -143,7 +143,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   font-family: var(--font-geist-sans);
-  min-width: 140px;
+  min-width: 8.75rem;
 }
 
 .focusModeKeySelect {

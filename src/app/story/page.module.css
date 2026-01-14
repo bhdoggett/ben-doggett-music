@@ -15,7 +15,7 @@
 @media (min-width: 768px) {
   .main {
     padding: var(--spacing-lg) 0 0;
-    width: 500px;
+    width: 650px;
   }
 }
 

@@ -1,7 +1,7 @@
 .audioPlayerButton {
   background: var(--surface-warm);
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
   transition: all 0.3s ease;
   border: 1px solid transparent;
 }
@@ -16,12 +16,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
-  gap: 12px;
+  margin-bottom: var(--spacing-sm-lg);
+  gap: var(--spacing-sm-lg);
 }
 
 .title {
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 600;
   color: var(--neutral-charcoal);
   margin: 0;
@@ -31,27 +31,27 @@
 .nowPlayingIndicator {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 4px 8px;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
   background: var(--primary-earth);
   color: white;
-  border-radius: 16px;
-  font-size: 12px;
+  border-radius: 1rem;
+  font-size: var(--font-size-xs);
   font-weight: 500;
 }
 
 .waveform {
   display: flex;
   align-items: center;
-  gap: 2px;
-  height: 12px;
+  gap: var(--spacing-2xs);
+  height: 0.75rem;
 }
 
 .bar {
-  width: 2px;
-  height: 4px;
+  width: 0.125rem;
+  height: 0.25rem;
   background: currentColor;
-  border-radius: 1px;
+  border-radius: 0.0625rem;
   transition: height 0.3s ease;
 }
 
@@ -74,10 +74,10 @@
 @keyframes waveform {
   0%,
   100% {
-    height: 4px;
+    height: 0.25rem;
   }
   50% {
-    height: 12px;
+    height: 0.75rem;
   }
 }
 
@@ -87,12 +87,12 @@
 
 .error {
   color: var(--accent-terracotta);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 500;
-  padding: 4px 8px;
+  padding: var(--spacing-xs) var(--spacing-sm);
   background: rgba(198, 93, 0, 0.1);
-  border-radius: 8px;
-  max-width: 200px;
+  border-radius: var(--radius-md);
+  max-width: 12.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -101,12 +101,12 @@
 .controls {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: var(--spacing-md);
 }
 
 .playButton {
-  width: 48px;
-  height: 48px;
+  width: var(--spacing-2xl);
+  height: var(--spacing-2xl);
   border-radius: 50%;
   border: none;
   background: var(--primary-earth);
@@ -136,13 +136,13 @@
 }
 
 .playButton svg {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .spinner {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-top: 2px solid white;
   border-radius: 50%;
@@ -162,20 +162,20 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-sm);
 }
 
 .progressBar {
-  height: 4px;
+  height: 0.25rem;
   background: var(--neutral-cream);
-  border-radius: 2px;
+  border-radius: 0.125rem;
   overflow: hidden;
   cursor: pointer;
   transition: height 0.2s ease;
 }
 
 .progressBar:hover {
-  height: 6px;
+  height: 0.375rem;
 }
 
 /* When the audio player button is current, use a darker background for the progress bar */
@@ -190,22 +190,22 @@
 .progressFill {
   height: 100%;
   background: var(--primary-earth);
-  border-radius: 2px;
+  border-radius: 0.125rem;
   transition: width 0.1s ease;
 }
 
 .timeDisplay {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 12px;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-xs);
   color: var(--primary-earth);
   font-family: var(--font-geist-mono);
 }
 
 .currentTime,
 .duration {
-  min-width: 35px;
+  min-width: 2.1875rem;
 }
 
 .separator {
@@ -215,21 +215,21 @@
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .audioPlayerButton {
-    padding: 12px;
+    padding: var(--spacing-sm-lg);
   }
 
   .header {
-    margin-bottom: 8px;
-    gap: 8px;
+    margin-bottom: var(--spacing-sm);
+    gap: var(--spacing-sm);
   }
 
   .title {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 
   .nowPlayingIndicator {
-    padding: 3px 6px;
-    font-size: 11px;
+    padding: 0.1875rem 0.375rem;
+    font-size: 0.6875rem;
   }
 
   .nowPlayingText {
@@ -237,26 +237,26 @@
   }
 
   .playButton {
-    width: 44px;
-    height: 44px;
+    width: 2.75rem;
+    height: 2.75rem;
   }
 
   .playButton svg {
-    width: 18px;
-    height: 18px;
+    width: 1.125rem;
+    height: 1.125rem;
   }
 
   .spinner {
-    width: 18px;
-    height: 18px;
+    width: 1.125rem;
+    height: 1.125rem;
   }
 
   .controls {
-    gap: 12px;
+    gap: var(--spacing-sm-lg);
   }
 
   .timeDisplay {
-    font-size: 11px;
+    font-size: 0.6875rem;
   }
 }
 
@@ -264,7 +264,7 @@
   .header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 6px;
+    gap: 0.375rem;
   }
 
   .nowPlayingIndicator {

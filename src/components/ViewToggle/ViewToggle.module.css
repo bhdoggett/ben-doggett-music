@@ -1,21 +1,21 @@
 .viewToggle {
   display: inline-flex;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  padding: 4px;
-  gap: 4px;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xs);
+  gap: var(--spacing-xs);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .toggleButton {
-  padding: 8px 20px;
+  padding: var(--spacing-sm) var(--spacing-md-lg);
   border: none;
   background: transparent;
   color: rgba(0, 0, 0, 0.6);
   font-size: 0.9rem;
   font-weight: 500;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: var(--font-geist-sans);
@@ -60,6 +60,6 @@
 
   .toggleButton {
     flex: 1;
-    padding: 10px 16px;
+    padding: 0.625rem 1rem;
   }
 }

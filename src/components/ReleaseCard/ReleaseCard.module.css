@@ -99,10 +99,6 @@
 
 /* Responsive Design */
 @media (max-width: 767px) {
-  .ReleaseCard {
-    /* min-height removed to respect aspect-ratio: 1 */
-  }
-
   .content {
     padding: var(--spacing-md);
   }
@@ -112,13 +108,13 @@
   }
 
   .playIcon {
-    width: 44px; /* Touch-friendly size */
-    height: 44px;
+    width: 2.75rem; /* Touch-friendly size */
+    height: 2.75rem;
   }
 
   .playIcon svg {
-    width: 22px;
-    height: 22px;
+    width: 1.375rem;
+    height: 1.375rem;
   }
 
   /* Show play icon on mobile without hover */
@@ -127,28 +123,16 @@
   }
 
   .ReleaseCard:active {
-    transform: translateY(0px) scale(0.98);
+    transform: translateY(0) scale(0.98);
   }
 
   /* Reduce hover effects on mobile */
   .ReleaseCard:hover {
-    transform: translateY(-2px);
+    transform: translateY(-0.125rem);
   }
 
   .ReleaseCard:hover .coverImage {
     filter: brightness(1.05);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .ReleaseCard {
-    /* min-height removed to respect aspect-ratio: 1 */
-  }
-}
-
-@media (min-width: 1024px) {
-  .ReleaseCard {
-    /* min-height removed to respect aspect-ratio: 1 */
   }
 }
 
