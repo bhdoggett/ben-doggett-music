@@ -32,7 +32,8 @@ export const releases: Release[] = [
     title: "Psalm 63 (Better Than Life)",
     type: "single",
     coverArt: "/assets/images/album-covers/psalm_63.jpg",
-    description: "Your love is better than life, my lips will glorify you",
+    description:
+      "Because your love is better than life, my lips will glorify you. (Psalm 63:3)",
     streamingLinks: {
       bandcamp:
         "https://bendoggett.bandcamp.com/track/psalm-63-better-than-life",
