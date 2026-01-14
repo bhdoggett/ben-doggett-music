@@ -43,7 +43,7 @@ export const GlobalAudioPlayer: React.FC = () => {
   const handleClose = useCallback(() => {
     stopTrack();
     setPlayerIsVisible(false);
-  }, [stopTrack]);
+  }, [stopTrack, setPlayerIsVisible]);
 
   // Don't render if no track is loaded or if closed
   if (!state.currentTrack || !playerIsVisible) {

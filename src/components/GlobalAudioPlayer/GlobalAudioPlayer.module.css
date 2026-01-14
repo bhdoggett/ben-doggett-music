@@ -20,6 +20,8 @@
   right: 12px;
   width: 24px;
   height: 24px;
+  min-width: 0;
+  min-height: 0;
   border: none;
   background: transparent;
   color: var(--primary-earth);
@@ -30,6 +32,7 @@
   transition: all 0.2s ease;
   border-radius: 4px;
   padding: 0;
+  overflow: hidden;
 }
 
 .closeButton:hover {
@@ -235,12 +238,24 @@
 
   .progressContainer {
     gap: 8px;
+    margin-right: 32px;
   }
 
   .currentTime,
   .duration {
     font-size: 11px;
     min-width: 30px;
+  }
+
+  .closeButton {
+    width: 36px;
+    height: 36px;
+    min-width: 20px;
+    min-height: 20px;
+    margin: auto;
+    /* top: 6px;
+    right: 8px;
+    overflow: hidden; */
   }
 }
 
@@ -255,5 +270,15 @@
 
   .duration {
     padding-right: 32px;
+  }
+
+  .closeButton {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    min-height: 18px;
+    top: 6px;
+    right: 8px;
+    overflow: hidden;
   }
 }
