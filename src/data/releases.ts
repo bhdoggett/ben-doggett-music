@@ -11,8 +11,9 @@ export const releases: Release[] = [
       "In the beginning was the Word, and the Word was with God, and the Word was God (John 1:1)",
     streamingLinks: {
       bandcamp: "https://bendoggett.bandcamp.com/track/son-of-glory-john-1",
-      spotify: "https://open.spotify.com/track/son-of-glory-john-1",
-      appleMusic: "https://music.apple.com/song/son-of-glory-john-1",
+      spotify: "https://open.spotify.com/album/54KQYawFVp5yYfs34vQNZC",
+      appleMusic:
+        "https://music.apple.com/us/album/son-of-glory-john-1-single/1780572961",
     },
     songs: [
       {
@@ -207,9 +208,8 @@ export const releases: Release[] = [
     description:
       "Make us glad for as many days as you have afflicted us, for as many years as we have seen trouble. (Psalm 90:15)",
     streamingLinks: {
-      // bandcamp: "https://bendoggett.bandcamp.com/release/glad",
-      // spotify: "https://open.spotify.com/release/glad-ep",
-      // appleMusic: "https://music.apple.com/release/glad-ep",
+      spotify: "https://open.spotify.com/album/2SsJji1CJzzO15vUnEvQOx",
+      appleMusic: "https://music.apple.com/us/album/glad/6788015855",
     },
     songs: [
       {
