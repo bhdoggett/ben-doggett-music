@@ -215,7 +215,7 @@ export const releases: Release[] = [
       {
         id: "glad",
         title: "Glad",
-        audioUrl: "/assets/music/glad/glad.mp3",
+        audioUrl: "/assets/music/glad/glad.m4a",
         lyrics:
           "Make me glad for as many days as I have known pain and sadness\nMake me glad for as many years as I have known fear and doubt\nJesus my friend, Jesus my Savior\nJesus, the only hope I have of being glad",
         copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
@@ -224,7 +224,7 @@ export const releases: Release[] = [
       {
         id: "speak-to-me",
         title: "Speak to Me",
-        audioUrl: "/assets/music/glad/speak_to_me.mp3",
+        audioUrl: "/assets/music/glad/speak_to_me.m4a",
         lyrics:
           "I am full of anxiety so come and search me\nYou are the giver of a peace that surpasses understanding\nI have been suffocating in this dark and lonely sea\nYou would come and comfort if I would only ask you to speak to me\nCome and Speak to me\nCome and Speak to me\nCome and Speak to me\nCome and Speak to me\n\nI would come in prayer and petition the God who saves\nYou have always been ready to hear what I've got to say\nI will come with thanks in my heart for the One who bled\nYou are the very thing I need, I need a Word made flesh",
         copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
@@ -232,7 +232,7 @@ export const releases: Release[] = [
       {
         id: "why-are-you-downcast",
         title: "Why Are You Downcast",
-        audioUrl: "/assets/music/glad/why_are_you_downcast.mp3",
+        audioUrl: "/assets/music/glad/why_are_you_downcast.m4a",
         lyrics:
           "Why are you downcast, O my soul?\nWhy so disturbed within me?\nSet foot on this rock, put your hope in God\nhe is a sure foundation\nWhy are you downcast, O my soul?\nWhy so disturbed within me?\nSet your weary eyes on the Lord of life\nHe is our one salvation\n\nMy soul will boast in the Lord\nLet the afflicted hear and rejoice\nMy soul will boast in the Lord\nLet the afflicted hear and rejoice\n\nWhy are you downcast, O my soul?\nWhy so disturbed within me?\nHe is arisen now, pouring mercy out\nAnd You have been forgiven\nAnd you have been forgiven\nAnd you have been forgiven\n\nHosanna in the highest\nHosanna to the King\nBehold, O Daughter of Zion\nYour Savior riding in",
         copyright: "Words & Music by Ben Doggett © 2006 Ben Doggett",
@@ -241,7 +241,7 @@ export const releases: Release[] = [
       {
         id: "hope-of-glory",
         title: "Hope of Glory",
-        audioUrl: "/assets/music/glad/hope_of_glory.mp3",
+        audioUrl: "/assets/music/glad/hope_of_glory.m4a",
         lyrics:
           "I can't see more than a foot in front of my face\nI can't stand but for the hope of your mercy\nCan't run 'cause the devil's gettin' in my way\nO for feet fitted with the gospel of your peace\n\nI will press on to take hold\nOf that for which you have won my soul\nI'm not lookin' back behind me\nI've got my eyes fixed on my hope of glory\n\nI can't feel more than a heartbeat of love\nI can't speak much louder than this weak whisper\nAnd how many times have I said I've had enough\nO for the day I am gonna see my Savior",
         copyright: "Words & Music by Ben Doggett © 2008 Ben Doggett",
@@ -249,7 +249,7 @@ export const releases: Release[] = [
       {
         id: "abba-father",
         title: "Abba Father",
-        audioUrl: "/assets/music/glad/abba_father.mp3",
+        audioUrl: "/assets/music/glad/abba_father.m4a",
         lyrics:
           "In the midst of all my trouble, You are Father\nIn the midst of every trial, You are Abba\nYou are Abba, You are Abba\nEven in my darkest hour, You are Father\nEven though I trip and falter, You are Abba\nYou are Abba, You are Abba\n\nNot my will but let yours be done\nLet your will be my own\nThough the pain and the darkness come\nI am never alone\n\nYou are Abba Father\nYou are Abba Father\nYou are Abba Father\nYou are Abba Father",
         copyright: "Words & Music by Ben Doggett © 2008 Ben Doggett",
@@ -258,7 +258,7 @@ export const releases: Release[] = [
       {
         id: "soul-be-stirred",
         title: "Soul Be Stirred",
-        audioUrl: "/assets/music/glad/soul_be_stirred.mp3",
+        audioUrl: "/assets/music/glad/soul_be_stirred.m4a",
         lyrics:
           "Soul, be stirred, he is the Lord\nHe is Emmanuel\nSoul, arise to sing and praise\nHe lifted you from hell\n\nAnd forget not all his benefits\nWho redeems your life from the pit\nWho crowns you with compassion\nAnd loves you all day\nAnd forget not all his benefits\nAnd call back to remembrance\nThat the Lord your God is faithful\nAbounding in grace\n\nI command my soul to sing\nI command my soul to praise\nAnd in light of all I've seen\nI will always love your name",
         copyright: "Words & Music by Ben Doggett © 2007 Ben Doggett",
@@ -267,7 +267,7 @@ export const releases: Release[] = [
       {
         id: "o-my-soul",
         title: "O My Soul",
-        audioUrl: "/assets/music/glad/o_my_soul.mp3",
+        audioUrl: "/assets/music/glad/o_my_soul.m4a",
         lyrics:
           "O my soul, don't forget the way he led you out\nO my soul, don't forget\nO my soul, come repent of sins that ail you now\nO my soul, praise him yet\n\nAnd as you find yourself here in a peaceful land\nFail not to remember what he did to bring you in my soul\nO my soul, O my soul, O my soul\n\nO my soul, don't forget the long and weary night\nO my soul, don't forget\nO my soul, don't forget the day he saved your life\nO my soul, praise him yet\n\nO my Lord, you remain a Father and a friend\nO my Lord, you remain\nO my Lord, God, you save the dead and dying man\nO my Lord, God you save, you save\nAnd as I find myself here in a peaceful land\nAlways I'll remember what you did to bring me in my Lord\nO my Lord, O my Lord, O my Lord",
         copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
@@ -275,7 +275,7 @@ export const releases: Release[] = [
       {
         id: "a-whole-years-wages",
         title: "A Whole Year's Wages",
-        audioUrl: "/assets/music/glad/a_whole_years_wages.mp3",
+        audioUrl: "/assets/music/glad/a_whole_years_wages.m4a",
         lyrics:
           "I brought my alabaster Jar, but it's not broken yet\nAnd there's still time for me to give you something less extravagant\n\nA whole year's wages\nA whole life's praises\nAre you worth this?\nAre you worth this Lord?\n\nI hear the murmurs of the crowd\nBut still I venture in\nWhen my Jesus is before me\nShould I stop for fear of men?\n\nA whole year's wages\nAnd all their faces\nAre you worth this?\nAre you worth this, Lord?\n\nHow can I give what costs me nothing\nWhen you gave up your life\nAnd so I bring this costly offering\nA living sacrifice\n\nAnd so I pour upon your head\nThe contents of my broken heart\nAnd there is no turning back now\nI am forever yours, O God\n\nA whole year's wages\nA whole life's praises\nYou are worth this\nYou are worth this, Lord",
         copyright: "Words & Music by Ben Doggett © 2012 Ben Doggett",
@@ -285,7 +285,7 @@ export const releases: Release[] = [
       {
         id: "poor-in-spirit",
         title: "Poor in Spirit",
-        audioUrl: "/assets/music/glad/poor_in_spirit.mp3",
+        audioUrl: "/assets/music/glad/poor_in_spirit.m4a",
         lyrics:
           "Whom have I in heaven beside you?\nAnd the earth has nothing I desire\nBut it is good just to be near you\nIt is good to come and die\n\nWhen I have nothing left to boast in\n'Cause I've got nothing to my name\nThen I'll have something to rejoice in\nAnd you, you can have all my praise\n\n'Cause I am broken and poor, but such is the kingdom, Lord\nYou are our only treasure\nAnd I will set my eyes high on the humble Jesus Christ\nHis riches know no measure\n\nYou are my portion and my refuge\nThough my heart and flesh grow faint\nWhere have I to run but to you?\nYou are the one thing that remains\n\nHis riches know no measure\nHis riches know no measure",
         copyright: "Words & Music by Ben Doggett © 2011 Ben Doggett",
@@ -295,7 +295,7 @@ export const releases: Release[] = [
       {
         id: "whatever-was-to-my-profit",
         title: "Whatever Was to My Profit",
-        audioUrl: "/assets/music/glad/whatever_was_to_my_profit.mp3",
+        audioUrl: "/assets/music/glad/whatever_was_to_my_profit.m4a",
         lyrics:
           "Whatever was to my profit, I now consider loss\nAnd everything self-righteous, I nail it to the cross\nTo know you in your death, O Lord, and rise with you again\nTo know you in your suffering and then my life begins\n\nEvery other lover cannot compare\nAnd anything this world offers will perish and pale\nIn the light of your glory\nIn the glow of your beauty\n\nOnly one thing remains now, to know you all the more\nThere's only one place to be found, abiding in the Lord\nI throw off every hindrance, I'm giving you my eyes\nI run the race before me 'cause Jesus is the prize ",
         chordProUrl: "/assets/chordpro/whatever-was-to-my-profit.txt",
