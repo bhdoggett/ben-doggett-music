@@ -1,0 +1,34 @@
+.main {
+  margin-top: var(--navbar-height);
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-md);
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  color: var(--text-primary);
+}
+
+.message {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+}
+
+.links {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.link {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
