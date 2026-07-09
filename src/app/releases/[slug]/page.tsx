@@ -1,72 +1,48 @@
-"use client";
-
-import { useState, useEffect } from "react";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import NavBar from "@/components/NavBar/NavBar";
-import ReleaseCard from "@/components/ReleaseCard";
-import { getReleaseById } from "@/data/releases";
-import TracksList from "@/components/TracksList";
-import LyricsDisplay from "@/components/LyricsDisplay";
-import ChordDisplay from "@/components/ChordDisplay";
-import ViewToggle from "@/components/ViewToggle";
-import { useAudio } from "@/contexts/AudioContext";
-import StreamingLinks from "@/components/StreamingLinks";
-import styles from "./page.module.css";
+import { getReleaseById, releases } from "@/data/releases";
+import ReleaseView from "./ReleaseView";
 
 interface ReleasePageProps {
   params: Promise<{ slug: string }>;
 }
 
-export default function ReleasePage({ params }: ReleasePageProps) {
-  const [slug, setSlug] = useState<string | null>(null);
-  const [currentView, setCurrentView] = useState<"lyrics" | "chords">("lyrics");
-  const [chordDataCache, setChordDataCache] = useState<Record<string, string>>(
-    {}
-  );
-  const { state } = useAudio();
-  const { selectedSong } = state;
+export function generateStaticParams() {
+  return releases.map((release) => ({ slug: release.id }));
+}
 
-  // Unwrap params promise
-  useEffect(() => {
-    params.then((p) => setSlug(p.slug));
-  }, [params]);
+export async function generateMetadata({
+  params,
+}: ReleasePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const release = getReleaseById(slug);
 
-  // Prefetch chord data when a song with chordProUrl is selected
-  useEffect(() => {
-    if (
-      selectedSong?.chordProUrl &&
-      !chordDataCache[selectedSong.chordProUrl]
-    ) {
-      fetch(selectedSong.chordProUrl)
-        .then((response) => {
-          if (response.ok) {
-            return response.text();
-          }
-          throw new Error("Failed to fetch");
-        })
-        .then((text) => {
-          setChordDataCache((prev) => ({
-            ...prev,
-            [selectedSong.chordProUrl!]: text,
-          }));
-        })
-        .catch(() => {
-          // Silently fail - ChordDisplay will handle the error
-        });
-    }
-  }, [selectedSong, chordDataCache]);
-
-  // Reset view to lyrics when a new song is selected
-  useEffect(() => {
-    if (selectedSong) {
-      setCurrentView("lyrics");
-    }
-  }, [selectedSong]);
-
-  if (!slug) {
-    return null;
+  if (!release) {
+    return {};
   }
 
+  return {
+    title: release.title,
+    description: release.description,
+    openGraph: {
+      title: release.title,
+      description: release.description,
+      type: "music.album",
+      url: `/releases/${release.id}`,
+      images: [{ url: release.coverArt, alt: `${release.title} cover art` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: release.title,
+      description: release.description,
+      images: [release.coverArt],
+    },
+  };
+}
+
+export default async function ReleasePage({ params }: ReleasePageProps) {
+  const { slug } = await params;
   const release = getReleaseById(slug);
 
   if (!release) {
@@ -76,61 +52,7 @@ export default function ReleasePage({ params }: ReleasePageProps) {
   return (
     <>
       <NavBar />
-      <div className={styles.container}>
-        <div className={styles.releasePage}>
-          {/* Cover Area */}
-          <div className={styles.releaseCard}>
-            <ReleaseCard release={release} />
-          </div>
-
-          {/* Header Area */}
-          <header className={styles.releaseHeader}>
-            <div className={styles.releaseInfo}>
-              <div className={styles.titleRow}>
-                <h1 className={styles.releaseTitle}>{release.title}</h1>
-                <StreamingLinks streamingLinks={release.streamingLinks} />
-              </div>
-              {release.description && (
-                <p className={styles.releaseDescription}>
-                  {release.description}
-                </p>
-              )}
-              <TracksList songs={release.songs} release={release} />
-            </div>
-          </header>
-
-          {/* Lyrics Area */}
-          <div className={styles.lyricsArea}>
-            {selectedSong && selectedSong.chordProUrl && (
-              <ViewToggle
-                currentView={currentView}
-                onViewChange={setCurrentView}
-                hasChords={!!selectedSong.chordProUrl}
-              />
-            )}
-            <div
-              style={{
-                display: currentView === "lyrics" ? "block" : "none",
-              }}
-            >
-              <LyricsDisplay releaseType={release.type} />
-            </div>
-            {selectedSong?.chordProUrl && (
-              <div
-                style={{
-                  display: currentView === "chords" ? "block" : "none",
-                }}
-              >
-                <ChordDisplay
-                  chordProUrl={selectedSong.chordProUrl}
-                  releaseType={release.type}
-                  prefetchedData={chordDataCache[selectedSong.chordProUrl]}
-                />
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
+      <ReleaseView release={release} />
     </>
   );
 }

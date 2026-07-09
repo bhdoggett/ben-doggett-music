@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://music.bendoggett.com"),
   title: {
     default: "Ben Doggett | Worship Music & Faith",
     template: "%s | Ben Doggett",

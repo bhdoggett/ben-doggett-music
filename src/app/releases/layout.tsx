@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Releases",
+  title: {
+    default: "Releases",
+    template: "%s | Ben Doggett",
+  },
   description:
     "Explore worship music by Ben Doggett — songs exploring faith, worship, and the depths of God's love. Listen to EPs, singles, and worship songs.",
   keywords: [
