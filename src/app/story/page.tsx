@@ -217,7 +217,7 @@ const StoryPage: React.FC = () => {
             yourself invited to the{" "}
             <HoverWord
               image="/assets/images/story/sing-along.jpg"
-              alt="Image of turtles with caption: wins the race"
+              alt="Image of people singing together"
               position={{ top: "40%", right: "45%" }}
               rotation={-5}
               size={{ width: 425, height: 275 }}
