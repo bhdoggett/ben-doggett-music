@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { ChordProParser, HtmlTableFormatter, Song } from "chordsheetjs";
 import styles from "./ChordDisplay.module.css";
 import { useAudio } from "@/contexts/AudioContext";
+import { calculateSemitones, transposeSong } from "@/utils/chords";
 
 interface ChordDisplayProps {
   chordProUrl: string;
@@ -112,59 +113,6 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
     }, 0);
   };
 
-  // Calculate semitones between two keys
-  const calculateSemitones = (fromKey: string, toKey: string): number => {
-    // Map both sharps and flats to chromatic scale positions
-    // Handle both major and minor keys
-    const keyMap: { [key: string]: number } = {
-      // Major keys
-      C: 0,
-      "C#": 1,
-      Db: 1,
-      D: 2,
-      "D#": 3,
-      Eb: 3,
-      E: 4,
-      F: 5,
-      "F#": 6,
-      Gb: 6,
-      G: 7,
-      "G#": 8,
-      Ab: 8,
-      A: 9,
-      "A#": 10,
-      Bb: 10,
-      B: 11,
-      // Minor keys (same chromatic positions as their major counterparts)
-      Cm: 0,
-      "C#m": 1,
-      Dbm: 1,
-      Dm: 2,
-      "D#m": 3,
-      Ebm: 3,
-      Em: 4,
-      Fm: 5,
-      "F#m": 6,
-      Gbm: 6,
-      Gm: 7,
-      "G#m": 8,
-      Abm: 8,
-      Am: 9,
-      "A#m": 10,
-      Bbm: 10,
-      Bm: 11,
-    };
-
-    const fromIndex = keyMap[fromKey];
-    const toIndex = keyMap[toKey];
-
-    if (fromIndex === undefined || toIndex === undefined) {
-      return 0;
-    }
-
-    return (toIndex - fromIndex + 12) % 12;
-  };
-
   // Transpose chord sheet when selectedKey changes
   useEffect(() => {
     if (!chordSheet || !originalKey || !selectedKey) {
@@ -178,9 +126,8 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
       // No transposition needed
       setTransposedSheet(chordSheet);
     } else {
-      // Transpose the chord sheet
-      const transposed = chordSheet.transpose(semitones);
-      setTransposedSheet(transposed);
+      // changeKey-based transposition spells chords for the target key
+      setTransposedSheet(transposeSong(chordSheet, selectedKey));
     }
   }, [chordSheet, originalKey, selectedKey]);
 
