@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import { ChordProParser, HtmlTableFormatter, Song } from "chordsheetjs";
 import styles from "./ChordDisplay.module.css";
 import { useAudio } from "@/contexts/AudioContext";
-import { calculateSemitones, transposeSong } from "@/utils/chords";
+import { calculateSemitones, transposeSong, MAJOR_KEYS, MINOR_KEYS } from "@/utils/chords";
 
 interface ChordDisplayProps {
   chordProUrl: string;
@@ -189,39 +189,8 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
     // Determine if original key is major or minor
     const isMinorKey = originalKey.endsWith("m");
 
-    // Define major and minor keys separately
-    const majorKeys = [
-      "C",
-      "Db",
-      "D",
-      "Eb",
-      "E",
-      "F",
-      "Gb",
-      "G",
-      "Ab",
-      "A",
-      "Bb",
-      "B",
-    ];
-
-    const minorKeys = [
-      "Cm",
-      "Dbm",
-      "Dm",
-      "Ebm",
-      "Em",
-      "Fm",
-      "Gbm",
-      "Gm",
-      "Abm",
-      "Am",
-      "Bbm",
-      "Bm",
-    ];
-
     // Only show keys of the same type as the original
-    const musicalKeys = isMinorKey ? minorKeys : majorKeys;
+    const musicalKeys = isMinorKey ? MINOR_KEYS : MAJOR_KEYS;
 
     return (
       <div className={styles.chordDisplay}>

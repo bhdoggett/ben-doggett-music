@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { ChordProParser, Song } from "chordsheetjs";
-import { calculateSemitones, transposeSong } from "./chords";
+import { calculateSemitones, transposeSong, MAJOR_KEYS, MINOR_KEYS, keysFor } from "./chords";
 
 // Collect every chord symbol appearing in a parsed song
 function chordsIn(song: Song): string[] {
@@ -64,5 +64,19 @@ describe("transposeSong", () => {
   it("returns an equivalent song when target equals the original key", () => {
     const transposed = transposeSong(song, "C");
     expect(chordsIn(transposed)).toEqual(["C", "F", "G", "Am"]);
+  });
+});
+
+describe("key lists", () => {
+  it("exposes 12 major and 12 minor keys with flat spellings", () => {
+    expect(MAJOR_KEYS).toEqual([
+      "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B",
+    ]);
+    expect(MINOR_KEYS).toEqual(MAJOR_KEYS.map((k) => `${k}m`));
+  });
+
+  it("picks the list matching the key's mode", () => {
+    expect(keysFor("Am")).toBe(MINOR_KEYS);
+    expect(keysFor("C")).toBe(MAJOR_KEYS);
   });
 });

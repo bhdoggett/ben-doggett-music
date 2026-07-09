@@ -42,3 +42,13 @@ export function calculateSemitones(fromKey: string, toKey: string): number {
 export function transposeSong(song: Song, toKey: string): Song {
   return song.changeKey(toKey);
 }
+
+export const MAJOR_KEYS = [
+  "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B",
+];
+
+export const MINOR_KEYS = MAJOR_KEYS.map((key) => `${key}m`);
+
+export function keysFor(key: string): string[] {
+  return key.endsWith("m") ? MINOR_KEYS : MAJOR_KEYS;
+}
