@@ -20,15 +20,19 @@ export default function ReleasesPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "MusicGroup",
-    name: "Artist Portfolio",
+    name: "Ben Doggett",
     description:
       "Musical works exploring faith, worship, and the depths of God's love",
     genre: ["Worship", "Christian", "Faith", "Devotional"],
-    release: releases.map((release) => ({
-      "@type": "Musicrelease",
+    album: releases.map((release) => ({
+      "@type": "MusicAlbum",
       name: release.title,
       description: release.description,
-      releaseProductionType: release.type === "ep" ? "Studiorelease" : "Single",
+      albumProductionType: "https://schema.org/StudioAlbum",
+      albumReleaseType:
+        release.type === "ep"
+          ? "https://schema.org/EPRelease"
+          : "https://schema.org/SingleRelease",
       numTracks: release.songs.length,
       track: release.songs.map((song, index) => ({
         "@type": "MusicRecording",

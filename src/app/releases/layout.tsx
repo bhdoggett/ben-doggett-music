@@ -3,28 +3,28 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Releases",
   description:
-    "Explore a collection of musical works exploring faith, worship, and the depths of God's love. Listen to EPs, singles, and worship songs.",
+    "Explore worship music by Ben Doggett — songs exploring faith, worship, and the depths of God's love. Listen to EPs, singles, and worship songs.",
   keywords: [
+    "Ben Doggett",
     "worship music",
     "christian music",
     "faith",
-    "Releases",
     "releases",
     "EPs",
     "singles",
   ],
   openGraph: {
-    title: "Releases | Artist Portfolio",
+    title: "Releases | Ben Doggett",
     description:
-      "Explore a collection of musical works exploring faith, worship, and the depths of God's love.",
+      "Explore worship music by Ben Doggett — songs exploring faith, worship, and the depths of God's love.",
     type: "website",
-    url: "/Releases",
+    url: "/releases",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Releases | Artist Portfolio",
+    title: "Releases | Ben Doggett",
     description:
-      "Explore a collection of musical works exploring faith, worship, and the depths of God's love.",
+      "Explore worship music by Ben Doggett — songs exploring faith, worship, and the depths of God's love.",
   },
 };
 

@@ -16,36 +16,36 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Artist Portfolio | Worship Music & Faith",
-    template: "%s | Artist Portfolio",
+    default: "Ben Doggett | Worship Music & Faith",
+    template: "%s | Ben Doggett",
   },
   description:
-    "A collection of musical works exploring faith, worship, and the depths of God's love. Listen to worship songs, EPs, and singles.",
+    "Original worship music by Ben Doggett exploring faith, worship, and the depths of God's love. Listen to worship songs, EPs, and singles.",
 
   keywords: [
+    "Ben Doggett",
     "worship music",
     "christian music",
     "faith",
-    "artist portfolio",
     "releases",
     "EPs",
     "singles",
   ],
-  authors: [{ name: "Artist Portfolio" }],
-  creator: "Artist Portfolio",
+  authors: [{ name: "Ben Doggett" }],
+  creator: "Ben Doggett",
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Artist Portfolio | Worship Music & Faith",
+    title: "Ben Doggett | Worship Music & Faith",
     description:
-      "A collection of musical works exploring faith, worship, and the depths of God's love.",
-    siteName: "Artist Portfolio",
+      "Original worship music by Ben Doggett exploring faith, worship, and the depths of God's love.",
+    siteName: "Ben Doggett",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Artist Portfolio | Worship Music & Faith",
+    title: "Ben Doggett | Worship Music & Faith",
     description:
-      "A collection of musical works exploring faith, worship, and the depths of God's love.",
+      "Original worship music by Ben Doggett exploring faith, worship, and the depths of God's love.",
   },
   robots: {
     index: true,
