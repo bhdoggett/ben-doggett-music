@@ -20,6 +20,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.5,
     },
+    {
+      url: `${BASE_URL}/resources`,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
     ...releases.map((release) => ({
       url: `${BASE_URL}/releases/${release.id}`,
       changeFrequency: "yearly" as const,
