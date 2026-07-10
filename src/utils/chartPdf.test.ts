@@ -25,4 +25,14 @@ describe("buildChartText", () => {
     expect(body).toMatch(/Db\s+Gb\s+Ab\s+Bbm/);
     expect(body).not.toContain("C#");
   });
+
+  it("filters the title even though TextFormatter uppercases it", () => {
+    const chart = buildChartText(
+      "{title: Amazing Grace}\n{key: C}\n[C]How sweet the sound",
+      "C"
+    );
+    expect(chart.bodyLines.join("\n").toLowerCase()).not.toContain(
+      "amazing grace"
+    );
+  });
 });

@@ -26,5 +26,10 @@ describe("chordpro files", () => {
         `${song.chordProUrl} has no {key:} directive`
       ).toBeTruthy();
     });
+
+    it("declares a canonically spelled key (A-G, optional b/#, optional m)", () => {
+      const parsed = new ChordProParser().parse(text);
+      expect(String(parsed.metadata.key)).toMatch(/^[A-G][b#]?m?$/);
+    });
   });
 });

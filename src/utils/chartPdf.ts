@@ -27,7 +27,9 @@ export function buildChartText(
     .split("\n")
     // TextFormatter prints the title as its own header line; the PDF
     // renders title separately, so drop it from the body
-    .filter((line) => line.trim() !== title.trim());
+    .filter(
+      (line) => line.trim().toLowerCase() !== title.trim().toLowerCase()
+    );
 
   // Trim leading/trailing blank lines
   while (bodyLines.length && bodyLines[0].trim() === "") bodyLines.shift();
