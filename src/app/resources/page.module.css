@@ -1,0 +1,217 @@
+.container {
+  margin-top: var(--navbar-height);
+  padding: var(--spacing-xl);
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.usageNote {
+  background: var(--surface-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xl);
+}
+
+.email {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.filterInput {
+  display: block;
+  margin: 0 auto var(--spacing-xl);
+  width: 100%;
+  max-width: 420px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--surface-secondary);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.panes {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+.songList {
+  max-height: 70vh;
+  overflow-y: auto;
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--spacing-md));
+}
+
+.releaseGroup {
+  margin-bottom: var(--spacing-lg);
+}
+
+.releaseTitle {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.songItems {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.songButton {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+}
+
+.songButton:hover {
+  background: var(--surface-secondary);
+}
+
+.songButtonActive {
+  background: var(--surface-secondary);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.chartPane {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.chartControls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.keyLabel {
+  font-weight: 500;
+}
+
+.keySelect {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--surface-secondary);
+}
+
+.downloadButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-lg);
+  background: var(--accent);
+  color: var(--surface-white);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.downloadButton:hover {
+  background: var(--primary-earth);
+}
+
+.pdfError {
+  color: var(--accent-terracotta);
+  margin-bottom: var(--spacing-md);
+}
+
+.chartContent {
+  overflow-x: auto;
+  margin-top: var(--spacing-sm);
+}
+
+/* Style the chordsheetjs HTML output — mirrors
+   src/components/ChordDisplay/ChordDisplay.module.css .chordContent rules
+   so chart tables match the styling used on release pages. */
+.chartContent :global(table) {
+  width: auto;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.chartContent :global(tr) {
+  vertical-align: top;
+}
+
+.chartContent :global(td) {
+  padding: 0;
+  vertical-align: top;
+}
+
+.chartContent :global(.chord) {
+  font-family: var(--font-geist-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-earth);
+  white-space: pre;
+}
+
+.chartContent :global(.lyrics) {
+  font-family: var(--font-geist-sans);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--neutral-charcoal);
+  white-space: preserve nowrap;
+}
+
+.chartContent :global(.row) {
+  margin-bottom: 0.5rem;
+}
+
+.chartContent :global(.paragraph) {
+  margin-bottom: 1.5rem;
+}
+
+.chartContent :global(.comment) {
+  font-style: italic;
+  color: var(--primary-earth);
+  opacity: 0.8;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .chartContent :global(.chord) {
+    font-size: 0.8125rem;
+  }
+
+  .chartContent :global(.lyrics) {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+}
+
+.copyright {
+  margin-top: var(--spacing-lg);
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.emptyList {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 767px) {
+  .panes {
+    grid-template-columns: 1fr;
+  }
+
+  .songList {
+    position: static;
+    max-height: 40vh;
+  }
+}
