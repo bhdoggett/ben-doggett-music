@@ -13,7 +13,12 @@ export function buildChartText(
   targetKey: string,
   copyright?: string
 ): ChartText {
-  const parsed = new ChordProParser().parse(chordProText);
+  // Chart files use &nbsp; (and occasionally the U+00A0 character) as
+  // visual spacers for the HTML preview; the PDF needs real spaces.
+  // Replace before parsing so TextFormatter computes column widths
+  // from the actual rendered characters.
+  const plainText = chordProText.replace(/&nbsp;| /g, " ");
+  const parsed = new ChordProParser().parse(plainText);
   const originalKey = String(parsed.metadata.key ?? "");
   const title = String(parsed.metadata.title ?? "Untitled");
 

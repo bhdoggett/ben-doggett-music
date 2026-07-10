@@ -19,6 +19,24 @@ describe("buildChartText", () => {
     expect(chart.bodyLines.join("\n")).not.toContain("Test Song");
   });
 
+  it("converts &nbsp; entities to plain spaces with alignment intact", () => {
+    // Chart files use &nbsp; as visual spacers for the HTML preview;
+    // the PDF must render real spaces, not the literal entity text
+    const chart = buildChartText(
+      "{title: T}\n{key: C}\n[C]&nbsp;&nbsp;[]Sing to [F]the Lord",
+      "C"
+    );
+    const body = chart.bodyLines.join("\n");
+    expect(body).not.toContain("&nbsp;");
+    expect(body).not.toContain(" ");
+    // Alignment: F must sit directly over "the" in the lyric line
+    const chordLine = chart.bodyLines.find((l) => /^C\s+F\s*$/.test(l));
+    const lyricLine = chart.bodyLines.find((l) => l.includes("Sing to"));
+    expect(chordLine).toBeDefined();
+    expect(lyricLine).toBeDefined();
+    expect(chordLine!.indexOf("F")).toBe(lyricLine!.indexOf("the"));
+  });
+
   it("transposes with the target key's spelling (flats)", () => {
     const chart = buildChartText(CHART, "Db");
     const body = chart.bodyLines.join("\n");
