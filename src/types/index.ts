@@ -43,3 +43,13 @@ export interface AudioPlayerState {
 export interface ReleaseCardProps {
   release: Release;
 }
+
+export interface ChartEntry {
+  songId: string;
+  songTitle: string;
+  releaseId: string;
+  releaseTitle: string;
+  chordProText: string;
+  originalKey: string;
+  copyright?: string;
+}
