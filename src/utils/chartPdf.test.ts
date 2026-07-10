@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { buildChartText } from "./chartPdf";
+import { buildChartText, renderChartPdf } from "./chartPdf";
 
 const CHART = "{title: Test Song}\n{key: C}\n[C]Sing [F]to [G]the [Am]Lord";
 
@@ -34,5 +34,25 @@ describe("buildChartText", () => {
     expect(chart.bodyLines.join("\n").toLowerCase()).not.toContain(
       "amazing grace"
     );
+  });
+});
+
+describe("renderChartPdf", () => {
+  it("produces a PDF document containing every body line", async () => {
+    const chart = buildChartText(CHART, "Db", "© 2024 Ben Doggett");
+    const doc = await renderChartPdf(chart);
+    const out = doc.output(); // string; PDFs start with %PDF
+    expect(out.startsWith("%PDF")).toBe(true);
+    expect(doc.getNumberOfPages()).toBe(1);
+  });
+
+  it("breaks onto multiple pages for long charts", async () => {
+    const longChart = {
+      title: "Long",
+      key: "C",
+      bodyLines: Array.from({ length: 200 }, (_, i) => `line ${i}`),
+    };
+    const doc = await renderChartPdf(longChart);
+    expect(doc.getNumberOfPages()).toBeGreaterThan(1);
   });
 });
