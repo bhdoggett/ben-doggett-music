@@ -8,7 +8,7 @@
 {comment: Verse}
 [Cadd9]Soul, be [G]stirred, he [Dsus]is the [Em7]Lord
 He [Cadd9]is Em[G]manu[Dsus]el
-[Cadd9]Soul, a[G]rise to [Dsus]sing and [Em7]priase
+[Cadd9]Soul, a[G]rise to [Dsus]sing and [Em7]praise
 He [Cadd9]lifted [G]you from [Dsus]hell
 
 {comment: Chorus}
@@ -27,6 +27,6 @@ A[G/B]bounding in [Dsus]grace[]&nbsp;&nbsp;[D]
 [|]&nbsp;&nbsp;[Cadd9]&nbsp;&nbsp;[]&nbsp;&nbsp;[G/B]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[Dsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[Cadd9]&nbsp;&nbsp;[]&nbsp;&nbsp;[G/B]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]&nbsp;&nbsp;[Dsus]&nbsp;&nbsp;[]&nbsp;&nbsp;[]&nbsp;&nbsp;[|]
 {comment: Bridge}
 [Cadd9]&nbsp;&nbsp;[]I command my [G/B]soul to sing
-[Dsus]&nbsp;&nbsp;[]I command my soul to priase
+[Dsus]&nbsp;&nbsp;[]I command my soul to praise
 [Cadd9]&nbsp;&nbsp;[]And in light of [G/B]all I've seen
 [Dsus]&nbsp;&nbsp;[]I will always love your name
