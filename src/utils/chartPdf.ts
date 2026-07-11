@@ -1,94 +1,66 @@
-import { ChordProParser, TextFormatter } from "chordsheetjs";
-import { calculateSemitones, transposeSong } from "./chords";
+import { ChartModel } from "./chartModel";
+import { layoutChart, LAYOUT, FontRole } from "./chartLayout";
 
-export interface ChartText {
-  title: string;
-  key: string;
-  bodyLines: string[];
-  copyright?: string;
+interface FontSpec {
+  family: string;
+  style: "normal" | "italic" | "bold";
 }
 
-export function buildChartText(
-  chordProText: string,
-  targetKey: string,
-  copyright?: string
-): ChartText {
-  // Chart files use &nbsp; (and occasionally the U+00A0 character) as
-  // visual spacers for the HTML preview; the PDF needs real spaces.
-  // Replace before parsing so TextFormatter computes column widths
-  // from the actual rendered characters.
-  const plainText = chordProText.replace(/&nbsp;| /g, " ");
-  const parsed = new ChordProParser().parse(plainText);
-  const originalKey = String(parsed.metadata.key ?? "");
-  const title = String(parsed.metadata.title ?? "Untitled");
+const FONT_FOR: Record<FontRole, FontSpec> = {
+  title: { family: "SourceSans3", style: "bold" },
+  meta: { family: "SourceSans3", style: "bold" },
+  section: { family: "SourceSans3", style: "bold" },
+  chord: { family: "SourceSans3", style: "bold" },
+  lyric: { family: "SourceSerif4", style: "normal" },
+  comment: { family: "SourceSerif4", style: "italic" },
+  copyright: { family: "SourceSerif4", style: "normal" },
+};
 
-  const song =
-    originalKey && calculateSemitones(originalKey, targetKey) !== 0
-      ? transposeSong(parsed, targetKey)
-      : parsed;
+export async function renderChartPdf(model: ChartModel) {
+  const [{ jsPDF }, fonts] = await Promise.all([
+    import("jspdf"),
+    import("./pdfFonts"),
+  ]);
 
-  const bodyLines = new TextFormatter()
-    .format(song)
-    .split("\n")
-    // TextFormatter prints the title as its own header line; the PDF
-    // renders title separately, so drop it from the body
-    .filter(
-      (line) => line.trim().toLowerCase() !== title.trim().toLowerCase()
-    );
-
-  // Trim leading/trailing blank lines
-  while (bodyLines.length && bodyLines[0].trim() === "") bodyLines.shift();
-  while (bodyLines.length && bodyLines[bodyLines.length - 1].trim() === "")
-    bodyLines.pop();
-
-  return { title, key: targetKey, bodyLines, copyright };
-}
-
-const PAGE = { width: 612, height: 792, margin: 54 }; // US Letter, pt
-const LINE_HEIGHT = 12;
-const BODY_FONT_SIZE = 9.5;
-
-export async function renderChartPdf(chart: ChartText) {
-  const { jsPDF } = await import("jspdf");
   const doc = new jsPDF({ unit: "pt", format: "letter" });
-  const bottom = PAGE.height - PAGE.margin;
-  let y = PAGE.margin;
+  doc.addFileToVFS("SourceSerif4-Regular.ttf", fonts.SOURCE_SERIF_REGULAR);
+  doc.addFont("SourceSerif4-Regular.ttf", "SourceSerif4", "normal");
+  doc.addFileToVFS("SourceSerif4-It.ttf", fonts.SOURCE_SERIF_ITALIC);
+  doc.addFont("SourceSerif4-It.ttf", "SourceSerif4", "italic");
+  doc.addFileToVFS("SourceSans3-Bold.ttf", fonts.SOURCE_SANS_BOLD);
+  doc.addFont("SourceSans3-Bold.ttf", "SourceSans3", "bold");
 
-  doc.setFont("courier", "bold");
-  doc.setFontSize(14);
-  doc.text(chart.title, PAGE.margin, y);
-  y += LINE_HEIGHT * 1.5;
-  doc.setFontSize(10);
-  doc.text(`Key: ${chart.key}`, PAGE.margin, y);
-  y += LINE_HEIGHT * 2;
+  const setFont = (role: FontRole) => {
+    const spec = FONT_FOR[role];
+    doc.setFont(spec.family, spec.style);
+    doc.setFontSize(LAYOUT.size[role]);
+  };
 
-  doc.setFont("courier", "normal");
-  doc.setFontSize(BODY_FONT_SIZE);
-  for (const line of chart.bodyLines) {
-    if (y > bottom) {
+  const measure = (text: string, role: FontRole) => {
+    setFont(role);
+    return doc.getTextWidth(text);
+  };
+
+  const ops = layoutChart(model, measure);
+
+  let currentPage = 1;
+  for (const op of ops) {
+    while (currentPage < op.page) {
       doc.addPage();
-      y = PAGE.margin;
+      currentPage += 1;
     }
-    doc.text(line, PAGE.margin, y);
-    y += LINE_HEIGHT;
-  }
-
-  if (chart.copyright) {
-    if (y + LINE_HEIGHT * 2 > bottom) {
-      doc.addPage();
-      y = PAGE.margin;
-    }
-    doc.setFontSize(8);
-    doc.text(chart.copyright, PAGE.margin, y + LINE_HEIGHT * 2);
+    doc.setPage(op.page);
+    setFont(op.font);
+    doc.text(op.text, op.x, op.y);
   }
 
   return doc;
 }
 
 export async function downloadChartPdf(
-  chart: ChartText,
+  model: ChartModel,
   songId: string
 ): Promise<void> {
-  const doc = await renderChartPdf(chart);
-  doc.save(`${songId}-${chart.key}.pdf`);
+  const doc = await renderChartPdf(model);
+  doc.save(`${songId}-${model.key}.pdf`);
 }

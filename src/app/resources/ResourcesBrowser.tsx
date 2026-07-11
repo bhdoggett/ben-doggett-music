@@ -4,7 +4,8 @@ import { useMemo, useRef, useState } from "react";
 import { ChordProParser, HtmlTableFormatter } from "chordsheetjs";
 import { ChartEntry } from "@/types";
 import { calculateSemitones, keysFor, transposeSong } from "@/utils/chords";
-import { buildChartText, downloadChartPdf } from "@/utils/chartPdf";
+import { downloadChartPdf } from "@/utils/chartPdf";
+import { buildChartModel } from "@/utils/chartModel";
 import { filterCharts } from "./filterCharts";
 import styles from "./page.module.css";
 
@@ -48,12 +49,12 @@ export default function ResourcesBrowser({ charts }: ResourcesBrowserProps) {
     if (!selected) return;
     setPdfError(null);
     try {
-      const chart = buildChartText(
+      const model = buildChartModel(
         selected.chordProText,
         selectedKey || selected.originalKey,
         selected.copyright
       );
-      await downloadChartPdf(chart, selected.songId);
+      await downloadChartPdf(model, selected.songId);
     } catch {
       setPdfError("PDF download failed. Please try again.");
     }

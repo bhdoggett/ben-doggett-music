@@ -26,7 +26,7 @@ export function buildChartModel(
 ): ChartModel {
   // Chart files use &nbsp;/U+00A0 as visual spacers for the HTML
   // preview; the PDF needs real spaces, replaced before parsing
-  const plainText = chordProText.replace(/&nbsp;| /g, " ");
+  const plainText = chordProText.replace(/&nbsp;| /g, " ");
   const parsed = new ChordProParser().parse(plainText);
   const originalKey = String(parsed.metadata.key ?? "");
   const title = String(parsed.metadata.title ?? "Untitled");

@@ -60,7 +60,24 @@ describe("buildChartModel", () => {
     for (const s of segs) {
       expect(s.lyrics).not.toContain("&nbsp;");
       expect(s.lyrics).not.toContain(" ");
+      expect(s.lyrics).toBe("");
     }
+  });
+
+  it("normalizes literal U+00A0 characters, not just &nbsp; entities", () => {
+    // U+00A0 embedded inside real lyric content (not whitespace-only,
+    // so .trim() alone won't erase it) must become a plain space, not
+    // be silently dropped by the chord-pro parser's word splitting.
+    const chart = [
+      "{title: NBSP Test}",
+      "{key: C}",
+      "[C]Sing to [F]the Lord",
+    ].join("\n");
+    const t = buildChartModel(chart, "C");
+    const segs = line(t.items[0])!;
+    const lyrics = segs.map((s) => s.lyrics).join("");
+    expect(lyrics).not.toContain(" ");
+    expect(lyrics).toBe("Sing to the Lord");
   });
 
   it("transposes chords with the target key's spelling", () => {
