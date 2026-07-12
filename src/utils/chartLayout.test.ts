@@ -158,3 +158,22 @@ describe("layoutChart", () => {
     expect(c.font).toBe("copyright");
   });
 });
+
+describe("keyless lyrics-only sheets", () => {
+  const measure = (text: string) => text.length * 6;
+
+  it("omits the Key line when the model has no key", () => {
+    const all = layoutChart(
+      {
+        title: "Lyrics Only",
+        key: "",
+        items: [
+          { type: "line", segments: [{ chord: "", lyrics: "Just words" }] },
+        ],
+      },
+      measure
+    );
+    expect(all.find((op) => op.text.startsWith("Key:"))).toBeUndefined();
+    expect(all.find((op) => op.text === "Just words")).toBeDefined();
+  });
+});

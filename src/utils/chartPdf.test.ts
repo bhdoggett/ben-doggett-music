@@ -27,3 +27,15 @@ describe("renderChartPdf", () => {
     expect(doc.getNumberOfPages()).toBeGreaterThan(1);
   });
 });
+
+describe("chartPdfFilename", () => {
+  it("appends the key when present, omits it when empty", async () => {
+    const { chartPdfFilename } = await import("./chartPdf");
+    expect(
+      chartPdfFilename({ title: "T", key: "Eb", items: [] }, "my-song")
+    ).toBe("my-song-Eb.pdf");
+    expect(
+      chartPdfFilename({ title: "T", key: "", items: [] }, "my-song")
+    ).toBe("my-song.pdf");
+  });
+});

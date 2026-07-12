@@ -57,10 +57,14 @@ export async function renderChartPdf(model: ChartModel) {
   return doc;
 }
 
+export function chartPdfFilename(model: ChartModel, songId: string): string {
+  return model.key ? `${songId}-${model.key}.pdf` : `${songId}.pdf`;
+}
+
 export async function downloadChartPdf(
   model: ChartModel,
   songId: string
 ): Promise<void> {
   const doc = await renderChartPdf(model);
-  doc.save(`${songId}-${model.key}.pdf`);
+  doc.save(chartPdfFilename(model, songId));
 }

@@ -228,6 +228,7 @@ export const releases: Release[] = [
         lyrics:
           "I am full of anxiety so come and search me\nYou are the giver of a peace that surpasses understanding\nI have been suffocating in this dark and lonely sea\nYou would come and comfort if I would only ask you to speak to me\nCome and Speak to me\nCome and Speak to me\nCome and Speak to me\nCome and Speak to me\n\nI would come in prayer and petition the God who saves\nYou have always been ready to hear what I've got to say\nI will come with thanks in my heart for the One who bled\nYou are the very thing I need, I need a Word made flesh",
         copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
+        chordProUrl: "/assets/chordpro/speak-to-me.txt",
       },
       {
         id: "why-are-you-downcast",
@@ -245,6 +246,7 @@ export const releases: Release[] = [
         lyrics:
           "I can't see more than a foot in front of my face\nI can't stand but for the hope of your mercy\nCan't run 'cause the devil's gettin' in my way\nO for feet fitted with the gospel of your peace\n\nI will press on to take hold\nOf that for which you have won my soul\nI'm not lookin' back behind me\nI've got my eyes fixed on my hope of glory\n\nI can't feel more than a heartbeat of love\nI can't speak much louder than this weak whisper\nAnd how many times have I said I've had enough\nO for the day I am gonna see my Savior",
         copyright: "Words & Music by Ben Doggett © 2008 Ben Doggett",
+        chordProUrl: "/assets/chordpro/hope-of-glory.txt",
       },
       {
         id: "abba-father",
@@ -271,6 +273,7 @@ export const releases: Release[] = [
         lyrics:
           "O my soul, don't forget the way he led you out\nO my soul, don't forget\nO my soul, come repent of sins that ail you now\nO my soul, praise him yet\n\nAnd as you find yourself here in a peaceful land\nFail not to remember what he did to bring you in my soul\nO my soul, O my soul, O my soul\n\nO my soul, don't forget the long and weary night\nO my soul, don't forget\nO my soul, don't forget the day he saved your life\nO my soul, praise him yet\n\nO my Lord, you remain a Father and a friend\nO my Lord, you remain\nO my Lord, God, you save the dead and dying man\nO my Lord, God you save, you save\nAnd as I find myself here in a peaceful land\nAlways I'll remember what you did to bring me in my Lord\nO my Lord, O my Lord, O my Lord",
         copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
+        chordProUrl: "/assets/chordpro/o-my-soul.txt",
       },
       {
         id: "a-whole-years-wages",

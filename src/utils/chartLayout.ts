@@ -60,14 +60,16 @@ export function layoutChart(model: ChartModel, measure: Measure): DrawOp[] {
 
   // Title block
   ops.push({ page, x: LAYOUT.page.margin, y, text: model.title, font: "title" });
-  y += LAYOUT.size.meta + LAYOUT.lineSpacing * 1.5;
-  ops.push({
-    page,
-    x: LAYOUT.page.margin,
-    y,
-    text: `Key: ${model.key}`,
-    font: "meta",
-  });
+  if (model.key) {
+    y += LAYOUT.size.meta + LAYOUT.lineSpacing * 1.5;
+    ops.push({
+      page,
+      x: LAYOUT.page.margin,
+      y,
+      text: `Key: ${model.key}`,
+      font: "meta",
+    });
+  }
   y += LAYOUT.titleBlockGap;
 
   const lineOps = (segments: ChartSegment[], chordY: number, lyricY: number) => {

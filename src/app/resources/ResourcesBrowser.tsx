@@ -115,22 +115,28 @@ export default function ResourcesBrowser({ charts }: ResourcesBrowserProps) {
           {selected ? (
             <>
               <div className={styles.chartControls}>
-                <label htmlFor="resource-key" className={styles.keyLabel}>
-                  Key:
-                </label>
-                <select
-                  id="resource-key"
-                  className={styles.keySelect}
-                  value={selectedKey}
-                  onChange={(e) => setSelectedKey(e.target.value)}
-                >
-                  {keysFor(selected.originalKey).map((k) => (
-                    <option key={k} value={k}>
-                      {k}
-                      {k === selected.originalKey ? " (Original)" : ""}
-                    </option>
-                  ))}
-                </select>
+                {selected.originalKey ? (
+                  <>
+                    <label htmlFor="resource-key" className={styles.keyLabel}>
+                      Key:
+                    </label>
+                    <select
+                      id="resource-key"
+                      className={styles.keySelect}
+                      value={selectedKey}
+                      onChange={(e) => setSelectedKey(e.target.value)}
+                    >
+                      {keysFor(selected.originalKey).map((k) => (
+                        <option key={k} value={k}>
+                          {k}
+                          {k === selected.originalKey ? " (Original)" : ""}
+                        </option>
+                      ))}
+                    </select>
+                  </>
+                ) : (
+                  <span className={styles.keyLabel}>Lyrics</span>
+                )}
                 <button
                   className={styles.downloadButton}
                   onClick={handleDownload}
