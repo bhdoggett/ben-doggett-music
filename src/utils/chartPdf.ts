@@ -7,28 +7,30 @@ interface FontSpec {
 }
 
 const FONT_FOR: Record<FontRole, FontSpec> = {
-  title: { family: "SourceSans3", style: "bold" },
-  meta: { family: "SourceSans3", style: "bold" },
-  section: { family: "SourceSans3", style: "bold" },
-  chord: { family: "SourceSans3", style: "bold" },
-  lyric: { family: "SourceSerif4", style: "normal" },
-  comment: { family: "SourceSerif4", style: "italic" },
-  copyright: { family: "SourceSerif4", style: "normal" },
+  title: { family: "Geist", style: "bold" },
+  meta: { family: "Geist", style: "bold" },
+  section: { family: "Geist", style: "bold" },
+  chord: { family: "GeistMono", style: "normal" },
+  lyric: { family: "Geist", style: "normal" },
+  comment: { family: "Geist", style: "italic" },
+  copyright: { family: "Geist", style: "italic" },
 };
 
-export async function renderChartPdf(model: ChartModel) {
+export async function renderChartPdf(model: ChartModel, twoColumn = false) {
   const [{ jsPDF }, fonts] = await Promise.all([
     import("jspdf"),
     import("./pdfFonts"),
   ]);
 
   const doc = new jsPDF({ unit: "pt", format: "letter" });
-  doc.addFileToVFS("SourceSerif4-Regular.ttf", fonts.SOURCE_SERIF_REGULAR);
-  doc.addFont("SourceSerif4-Regular.ttf", "SourceSerif4", "normal");
-  doc.addFileToVFS("SourceSerif4-It.ttf", fonts.SOURCE_SERIF_ITALIC);
-  doc.addFont("SourceSerif4-It.ttf", "SourceSerif4", "italic");
-  doc.addFileToVFS("SourceSans3-Bold.ttf", fonts.SOURCE_SANS_BOLD);
-  doc.addFont("SourceSans3-Bold.ttf", "SourceSans3", "bold");
+  doc.addFileToVFS("Geist-Regular.ttf", fonts.GEIST_REGULAR);
+  doc.addFont("Geist-Regular.ttf", "Geist", "normal");
+  doc.addFileToVFS("Geist-Italic.ttf", fonts.GEIST_ITALIC);
+  doc.addFont("Geist-Italic.ttf", "Geist", "italic");
+  doc.addFileToVFS("Geist-Bold.ttf", fonts.GEIST_BOLD);
+  doc.addFont("Geist-Bold.ttf", "Geist", "bold");
+  doc.addFileToVFS("GeistMono-SemiBold.ttf", fonts.GEIST_MONO_SEMIBOLD);
+  doc.addFont("GeistMono-SemiBold.ttf", "GeistMono", "normal");
 
   const setFont = (role: FontRole) => {
     const spec = FONT_FOR[role];
@@ -41,7 +43,7 @@ export async function renderChartPdf(model: ChartModel) {
     return doc.getTextWidth(text);
   };
 
-  const ops = layoutChart(model, measure);
+  const ops = layoutChart(model, measure, twoColumn);
 
   let currentPage = 1;
   for (const op of ops) {
@@ -50,6 +52,12 @@ export async function renderChartPdf(model: ChartModel) {
       currentPage += 1;
     }
     doc.setPage(op.page);
+    if (op.kind === "line") {
+      setFont(op.font);
+      doc.setLineWidth(0.5);
+      doc.line(op.x, op.y, op.x2!, op.y);
+      continue;
+    }
     setFont(op.font);
     doc.text(op.text, op.x, op.y);
   }
@@ -63,8 +71,9 @@ export function chartPdfFilename(model: ChartModel, songId: string): string {
 
 export async function downloadChartPdf(
   model: ChartModel,
-  songId: string
+  songId: string,
+  twoColumn = false
 ): Promise<void> {
-  const doc = await renderChartPdf(model);
+  const doc = await renderChartPdf(model, twoColumn);
   doc.save(chartPdfFilename(model, songId));
 }

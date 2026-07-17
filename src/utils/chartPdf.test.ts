@@ -11,8 +11,8 @@ describe("renderChartPdf", () => {
     const doc = await renderChartPdf(model);
     expect(doc.output().startsWith("%PDF")).toBe(true);
     const fonts = doc.getFontList();
-    expect(fonts).toHaveProperty("SourceSerif4");
-    expect(fonts).toHaveProperty("SourceSans3");
+    expect(fonts).toHaveProperty("Geist");
+    expect(fonts).toHaveProperty("GeistMono");
     expect(doc.getNumberOfPages()).toBe(1);
   });
 

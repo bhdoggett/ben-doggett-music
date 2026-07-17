@@ -1,0 +1,468 @@
+/* Shared chord chart controls + content + focus mode.
+   Surface/background styling is provided by the parent container
+   (e.g. .chordDisplay on release pages, .chartPane on resources). */
+
+.chartHeader {
+  margin-top: var(--spacing-md);
+  margin-bottom: 1.5rem;
+}
+
+.songTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--neutral-charcoal);
+  margin: 0 0 0.5rem 0;
+  font-family: var(--font-geist-sans);
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tempo {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: relative;
+  min-height: 2.25rem;
+  border-bottom: 2px solid var(--neutral-cream);
+  padding-bottom: var(--spacing-md);
+}
+
+.keyLabel {
+  font-size: 0.875rem;
+  color: var(--neutral-charcoal);
+  font-weight: 500;
+}
+
+.keySelect {
+  padding: var(--spacing-sm) 0.75rem;
+  font-size: var(--font-size-sm);
+  color: var(--neutral-charcoal);
+  background-color: white;
+  border: 2px solid var(--neutral-cream);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-geist-sans);
+  min-width: 8.75rem;
+}
+
+.keySelect:hover {
+  border-color: var(--primary-earth);
+}
+
+.keySelect:focus {
+  outline: none;
+  border-color: var(--primary-earth);
+  box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+}
+
+.infoButton {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  line-height: 1;
+  border-radius: 50%;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.infoButton:hover {
+  color: var(--primary-earth);
+  background-color: var(--surface-secondary);
+}
+
+.infoButton:focus {
+  outline: none;
+}
+
+.licenseInfo {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  background: var(--surface);
+  border: 1px solid var(--surface-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  max-width: 320px;
+  z-index: 100;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.licenseInfo a {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.downloadButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-lg);
+  background: var(--accent);
+  color: var(--surface-white);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.downloadButton:hover {
+  background: var(--primary-earth);
+}
+
+.pdfError {
+  color: var(--accent-terracotta);
+  margin-bottom: var(--spacing-md);
+}
+
+.chartContent {
+  overflow-x: auto;
+  margin-top: var(--spacing-sm);
+}
+
+/* Style the chordsheetjs HTML output */
+.chartContent :global(table) {
+  width: auto;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.chartContent :global(tr) {
+  vertical-align: top;
+}
+
+.chartContent :global(td) {
+  padding: 0;
+  vertical-align: top;
+}
+
+.chartContent :global(.chord) {
+  font-family: var(--font-geist-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-earth);
+  white-space: pre;
+}
+
+.chartContent :global(.lyrics) {
+  font-family: var(--font-geist-sans);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--neutral-charcoal);
+  white-space: preserve nowrap;
+}
+
+.chartContent :global(.row) {
+  margin-bottom: 0.5rem;
+}
+
+.chartContent :global(.paragraph) {
+  margin-bottom: 1.5rem;
+}
+
+.chartContent :global(.comment) {
+  font-style: italic;
+  color: var(--primary-earth);
+  opacity: 0.8;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    gap: 0.5rem;
+  }
+
+  .keySelect {
+    flex: 1;
+    min-width: 7.5rem;
+  }
+
+  .chartContent :global(.chord) {
+    font-size: 0.8125rem;
+  }
+
+  .chartContent :global(.lyrics) {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .controls {
+    gap: var(--spacing-sm);
+  }
+
+  .keySelect {
+    min-width: 7.5rem;
+  }
+}
+
+.copyright {
+  width: auto;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--neutral-cream);
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 0.875rem;
+  color: var(--primary-earth);
+  font-style: italic;
+  margin: auto;
+}
+
+/* Focus Mode Button */
+.focusModeButton {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-earth);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-family: var(--font-geist-sans);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Two-column toggle button */
+.columnButton {
+  background: none;
+  border: 2px solid var(--neutral-cream);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.35rem 0.55rem;
+  line-height: 1;
+  transition: all 0.2s ease;
+  font-family: var(--font-geist-sans);
+}
+
+.columnButton:hover {
+  border-color: var(--primary-earth);
+  color: var(--primary-earth);
+}
+
+.columnButtonActive {
+  border-color: var(--primary-earth);
+  color: var(--primary-earth);
+  background: var(--surface-secondary);
+}
+
+/* Two-column chart content */
+.chartContentTwoColumn {
+  max-width: 8.5in;
+}
+
+.chartContentTwoColumn :global(.chord-sheet) {
+  column-count: 2;
+  column-gap: 0.5in;
+  column-fill: balance;
+}
+
+.chartContentTwoColumn :global(.paragraph) {
+  break-inside: avoid;
+}
+
+.chartContentTwoColumn :global(table) {
+  max-width: 100%;
+}
+
+.chartContentTwoColumn :global(.lyrics) {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.focusModeButton:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.focusModeButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.3);
+}
+
+/* Focus Mode Overlay */
+.focusModeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1100;
+  background-color: #ffffff;
+  color: #000000;
+  overflow-y: auto;
+  padding: 1rem 2rem 5rem 2rem;
+  font-family: var(--font-geist-sans);
+}
+
+.focusModeControls {
+  border-bottom: 2px solid #333333;
+  margin-bottom: 2rem;
+}
+
+.focusModeKeySelect {
+  border-color: rgb(100, 100, 100);
+}
+
+.focusModeKeySelect:hover {
+  border-color: rgb(38, 38, 38);
+}
+
+.focusModeKeySelect:focus {
+  outline: none;
+  border-color: rgb(38, 38, 38);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.focusModeCopyright {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+.focusModeCopyright p {
+  font-size: 0.875rem;
+  color: rgb(68, 68, 68);
+  font-style: italic;
+}
+
+.focusModeExit {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  line-height: 1;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.focusModeExit:hover {
+  background-color: #cecece;
+  color: #202020;
+}
+
+.focusModeExit:focus {
+  outline: none;
+  background-color: #cecece;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.focusModeContent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Focus Mode Chord Content Styles */
+.focusModeContent :global(table) {
+  width: auto;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.focusModeContent :global(tr) {
+  vertical-align: top;
+}
+
+.focusModeContent :global(td) {
+  padding: 0;
+  vertical-align: top;
+}
+
+.focusModeContent :global(.chord) {
+  font-family: var(--font-geist-mono);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3e3e3e;
+  white-space: pre;
+}
+
+.focusModeContent :global(.lyrics) {
+  font-family: var(--font-geist-sans);
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #000000;
+  white-space: preserve nowrap;
+}
+
+.focusModeContent :global(.row) {
+  margin-bottom: 0.75rem;
+}
+
+.focusModeContent :global(.paragraph) {
+  margin-bottom: 2rem;
+}
+
+.focusModeContent :global(.comment) {
+  font-style: italic;
+  font-weight: 800;
+  color: #434343;
+  opacity: 0.9;
+  margin: 1.5rem 0;
+  font-size: 1.25rem;
+}
+
+/* Responsive adjustments for focus mode */
+@media (max-width: 768px) {
+  .focusModeOverlay {
+    padding: 1rem;
+  }
+
+  .focusModeContent :global(.chord) {
+    font-size: 1rem;
+  }
+
+  .focusModeContent :global(.lyrics) {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .focusModeContent :global(.comment) {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .focusModeContent :global(.chord) {
+    font-size: 1.125rem;
+  }
+
+  .focusModeContent :global(.lyrics) {
+    font-size: 1.375rem;
+  }
+}

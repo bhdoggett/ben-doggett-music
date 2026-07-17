@@ -7,6 +7,7 @@ const entry = (songId: string, songTitle: string): ChartEntry => ({
   songTitle,
   releaseId: "r",
   releaseTitle: "R",
+  releaseType: "ep",
   chordProText: "",
   originalKey: "C",
 });

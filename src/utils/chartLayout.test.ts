@@ -147,7 +147,7 @@ describe("layoutChart", () => {
     expect(section.page).toBe(following.page);
   });
 
-  it("appends copyright after content, breaking pages when needed", () => {
+  it("places copyright centered at the bottom of page 1", () => {
     const all = ops(
       model(
         [{ type: "line", segments: [{ chord: "C", lyrics: "hi" }] }],
@@ -156,6 +156,28 @@ describe("layoutChart", () => {
     );
     const c = byText(all, "© 2026 Ben Doggett")!;
     expect(c.font).toBe("copyright");
+    expect(c.page).toBe(1);
+    expect(c.y).toBe(LAYOUT.page.height - LAYOUT.page.margin);
+  });
+
+  it("keeps an entire section together when it fits in a column", () => {
+    // Fill the first column almost completely, then add a short section
+    const filler: ChartModel["items"] = Array.from({ length: 22 }, () => ({
+      type: "line" as const,
+      segments: [{ chord: "C", lyrics: "filler" }],
+    }));
+    const all = ops(
+      model([
+        ...filler,
+        { type: "section", label: "Bridge" },
+        { type: "line", segments: [{ chord: "F", lyrics: "bridge1" }] },
+        { type: "line", segments: [{ chord: "G", lyrics: "bridge2" }] },
+      ])
+    );
+    const section = byText(all, "BRIDGE")!;
+    const last = byText(all, "bridge2")!;
+    expect(section.page).toBe(last.page);
+    expect(section.x).toBe(last.x);
   });
 });
 
@@ -175,5 +197,69 @@ describe("keyless lyrics-only sheets", () => {
     );
     expect(all.find((op) => op.text.startsWith("Key:"))).toBeUndefined();
     expect(all.find((op) => op.text === "Just words")).toBeDefined();
+  });
+});
+
+describe("two-column layout", () => {
+  const measure = (text: string) => text.length * 6;
+
+  it("flows content into a second column before breaking the page", () => {
+    const lines: ChartModel["items"] = Array.from({ length: 40 }, () => ({
+      type: "line" as const,
+      segments: [{ chord: "C", lyrics: "line of text" }],
+    }));
+    const single = layoutChart(model(lines), measure, false);
+    const two = layoutChart(model(lines), measure, true);
+
+    const singleMaxPage = Math.max(...single.map((o) => o.page));
+    const twoMaxPage = Math.max(...two.map((o) => o.page));
+
+    // Two-column should use fewer (or equal) pages
+    expect(twoMaxPage).toBeLessThanOrEqual(singleMaxPage);
+
+    // Some content should be in the right column (x > left column width)
+    const contentWidth = LAYOUT.page.width - 2 * LAYOUT.page.margin;
+    const columnWidth = (contentWidth - LAYOUT.columnGap) / 2;
+    const rightColStart = LAYOUT.page.margin + columnWidth + LAYOUT.columnGap;
+    const rightColOps = two.filter((o) => o.x >= rightColStart);
+    expect(rightColOps.length).toBeGreaterThan(0);
+  });
+
+  it("keeps title and key at full page width", () => {
+    const all = layoutChart(
+      model([{ type: "line", segments: [{ chord: "C", lyrics: "hi" }] }]),
+      measure,
+      true
+    );
+    expect(byText(all, "Test Song")!.x).toBe(LAYOUT.page.margin);
+    expect(byText(all, "Key: C")!.x).toBe(LAYOUT.page.margin);
+  });
+
+  it("moves an entire section to the next column when it doesn't fit", () => {
+    // Fill left column almost completely, then a short section
+    const filler: ChartModel["items"] = Array.from({ length: 22 }, () => ({
+      type: "line" as const,
+      segments: [{ chord: "C", lyrics: "filler" }],
+    }));
+    const all = layoutChart(
+      model([
+        ...filler,
+        { type: "section", label: "Bridge" },
+        { type: "line", segments: [{ chord: "F", lyrics: "b1" }] },
+        { type: "line", segments: [{ chord: "G", lyrics: "b2" }] },
+      ]),
+      measure,
+      true
+    );
+    const section = byText(all, "BRIDGE")!;
+    const last = byText(all, "b2")!;
+    // Section header and all lines should be in the same column
+    expect(section.x).toBe(last.x);
+    expect(section.page).toBe(last.page);
+    // The section should NOT be in the left column (it was moved)
+    const contentWidth = LAYOUT.page.width - 2 * LAYOUT.page.margin;
+    const columnWidth = (contentWidth - LAYOUT.columnGap) / 2;
+    const rightColStart = LAYOUT.page.margin + columnWidth + LAYOUT.columnGap;
+    expect(section.x).toBeGreaterThanOrEqual(rightColStart);
   });
 });

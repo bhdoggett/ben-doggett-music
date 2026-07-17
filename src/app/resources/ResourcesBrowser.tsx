@@ -1,11 +1,8 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import { ChordProParser, HtmlTableFormatter } from "chordsheetjs";
+import ChordChart from "@/components/ChordChart";
 import { ChartEntry } from "@/types";
-import { calculateSemitones, keysFor, transposeSong } from "@/utils/chords";
-import { downloadChartPdf } from "@/utils/chartPdf";
-import { buildChartModel } from "@/utils/chartModel";
 import { filterCharts } from "./filterCharts";
 import styles from "./page.module.css";
 
@@ -16,62 +13,34 @@ interface ResourcesBrowserProps {
 export default function ResourcesBrowser({ charts }: ResourcesBrowserProps) {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState(charts[0]?.songId ?? "");
-  const [selectedKey, setSelectedKey] = useState(charts[0]?.originalKey ?? "");
-  const [pdfError, setPdfError] = useState<string | null>(null);
   const chartPaneRef = useRef<HTMLDivElement>(null);
 
   const visible = filterCharts(charts, query);
   const selected = charts.find((c) => c.songId === selectedId) ?? null;
 
-  const chartHtml = useMemo(() => {
-    if (!selected) return "";
-    const parsed = new ChordProParser().parse(selected.chordProText);
-    const song =
-      selected.originalKey &&
-      selectedKey &&
-      calculateSemitones(selected.originalKey, selectedKey) !== 0
-        ? transposeSong(parsed, selectedKey)
-        : parsed;
-    return new HtmlTableFormatter().format(song);
-  }, [selected, selectedKey]);
-
   const selectSong = (entry: ChartEntry) => {
     setSelectedId(entry.songId);
-    setSelectedKey(entry.originalKey);
-    setPdfError(null);
-    // On stacked (mobile) layout, bring the chart into view
     if (window.innerWidth < 768) {
       chartPaneRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  const handleDownload = async () => {
-    if (!selected) return;
-    setPdfError(null);
-    try {
-      const model = buildChartModel(
-        selected.chordProText,
-        selectedKey || selected.originalKey,
-        selected.copyright
-      );
-      await downloadChartPdf(model, selected.songId);
-    } catch {
-      setPdfError("PDF download failed. Please try again.");
-    }
-  };
-
-  // Group visible entries by release, preserving release order
   const groups = useMemo(() => {
-    const byRelease = new Map<string, { title: string; songs: ChartEntry[] }>();
+    const byKey = new Map<
+      string,
+      { title: string; type: "single" | "ep"; songs: ChartEntry[] }
+    >();
     for (const entry of visible) {
-      const group = byRelease.get(entry.releaseId) ?? {
-        title: entry.releaseTitle,
+      const key = entry.releaseType === "single" ? "singles" : entry.releaseId;
+      const group = byKey.get(key) ?? {
+        title: entry.releaseType === "single" ? "Singles" : entry.releaseTitle,
+        type: entry.releaseType,
         songs: [],
       };
       group.songs.push(entry);
-      byRelease.set(entry.releaseId, group);
+      byKey.set(key, group);
     }
-    return Array.from(byRelease.values());
+    return Array.from(byKey.values());
   }, [visible]);
 
   return (
@@ -113,46 +82,13 @@ export default function ResourcesBrowser({ charts }: ResourcesBrowserProps) {
         </nav>
         <div className={styles.chartPane} ref={chartPaneRef}>
           {selected ? (
-            <>
-              <div className={styles.chartControls}>
-                {selected.originalKey ? (
-                  <>
-                    <label htmlFor="resource-key" className={styles.keyLabel}>
-                      Key:
-                    </label>
-                    <select
-                      id="resource-key"
-                      className={styles.keySelect}
-                      value={selectedKey}
-                      onChange={(e) => setSelectedKey(e.target.value)}
-                    >
-                      {keysFor(selected.originalKey).map((k) => (
-                        <option key={k} value={k}>
-                          {k}
-                          {k === selected.originalKey ? " (Original)" : ""}
-                        </option>
-                      ))}
-                    </select>
-                  </>
-                ) : (
-                  <span className={styles.keyLabel}>Lyrics</span>
-                )}
-                <button
-                  className={styles.downloadButton}
-                  onClick={handleDownload}
-                >
-                  Download PDF
-                </button>
-              </div>
-              {pdfError && <p className={styles.pdfError}>{pdfError}</p>}
-              <div
-                className={styles.chartContent}
-                dangerouslySetInnerHTML={{ __html: chartHtml }}
-              />
-              {selected.copyright && (
-                <p className={styles.copyright}>{selected.copyright}</p>
-              )}
-            </>
+            <ChordChart
+              key={selected.songId}
+              chordProText={selected.chordProText}
+              songId={selected.songId}
+              copyright={selected.copyright}
+              showDownload
+            />
           ) : (
             <p className={styles.emptyList}>Select a song.</p>
           )}

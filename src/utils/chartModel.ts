@@ -15,6 +15,7 @@ export type ChartItem =
 export interface ChartModel {
   title: string;
   key: string;
+  tempo?: string;
   items: ChartItem[];
   copyright?: string;
 }
@@ -30,6 +31,7 @@ export function buildChartModel(
   const parsed = new ChordProParser().parse(plainText);
   const originalKey = String(parsed.metadata.key ?? "");
   const title = String(parsed.metadata.title ?? "Untitled");
+  const tempo = String(parsed.metadata.tempo ?? "").trim().replace(/^~/, "").trim() || undefined;
 
   const song =
     originalKey && calculateSemitones(originalKey, targetKey) !== 0
@@ -85,5 +87,5 @@ export function buildChartModel(
     items.pop();
   }
 
-  return { title, key: targetKey, items, copyright };
+  return { title, key: targetKey, tempo, items, copyright };
 }

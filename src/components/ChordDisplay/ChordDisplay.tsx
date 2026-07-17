@@ -1,32 +1,25 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import { createPortal } from "react-dom";
-import { ChordProParser, HtmlTableFormatter, Song } from "chordsheetjs";
-import styles from "./ChordDisplay.module.css";
+import React, { useState, useEffect } from "react";
+import ChordChart from "@/components/ChordChart";
 import { useAudio } from "@/contexts/AudioContext";
-import { calculateSemitones, transposeSong, MAJOR_KEYS, MINOR_KEYS } from "@/utils/chords";
+import styles from "./ChordDisplay.module.css";
 
 interface ChordDisplayProps {
   chordProUrl: string;
-  releaseType?: "single" | "ep";
   prefetchedData?: string;
+  showDownload?: boolean;
 }
 
 const ChordDisplay: React.FC<ChordDisplayProps> = ({
   chordProUrl,
-  releaseType,
   prefetchedData,
+  showDownload = true,
 }) => {
-  const [chordSheet, setChordSheet] = useState<Song | null>(null);
+  const [chordProText, setChordProText] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [originalKey, setOriginalKey] = useState<string>("");
-  const [selectedKey, setSelectedKey] = useState<string>("");
-  const [isFocusMode, setIsFocusMode] = useState<boolean>(false);
   const [retryCount, setRetryCount] = useState<number>(0);
-  const [transposedSheet, setTransposedSheet] = useState<Song | null>(null);
-  const scrollPositionRef = useRef<number>(0);
   const { state } = useAudio();
   const selectedSong = state.selectedSong;
 
@@ -36,11 +29,10 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
       setError(null);
 
       try {
-        let chordProText: string;
+        let text: string;
 
-        // Use prefetched data if available
         if (prefetchedData) {
-          chordProText = prefetchedData;
+          text = prefetchedData;
         } else {
           const response = await fetch(chordProUrl);
 
@@ -51,23 +43,13 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
             throw new Error("Failed to load chord sheet");
           }
 
-          chordProText = await response.text();
+          text = await response.text();
         }
 
-        // Parse ChordPro file using chordsheetjs
-        const parser = new ChordProParser();
-        const parsedSheet = parser.parse(chordProText);
-
-        // Extract original key from metadata
-        const key = parsedSheet.metadata.key || "";
-        setOriginalKey(key);
-        setSelectedKey(key);
-
-        setChordSheet(parsedSheet);
-        setRetryCount(0); // Reset retry count on success
+        setChordProText(text);
+        setRetryCount(0);
       } catch (err) {
         if (err instanceof Error) {
-          // Check if it's a network error
           if (
             err.message.includes("Failed to fetch") ||
             err.message.includes("NetworkError")
@@ -95,59 +77,6 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
     setRetryCount((prev) => prev + 1);
   };
 
-  const enterFocusMode = () => {
-    // Store current scroll position
-    scrollPositionRef.current = window.scrollY;
-    setIsFocusMode(true);
-    // Prevent body scroll when focus mode is active
-    document.body.style.overflow = "hidden";
-  };
-
-  const exitFocusMode = () => {
-    setIsFocusMode(false);
-    // Restore body scroll
-    document.body.style.overflow = "";
-    // Restore scroll position
-    setTimeout(() => {
-      window.scrollTo(0, scrollPositionRef.current);
-    }, 0);
-  };
-
-  // Transpose chord sheet when selectedKey changes
-  useEffect(() => {
-    if (!chordSheet || !originalKey || !selectedKey) {
-      setTransposedSheet(chordSheet);
-      return;
-    }
-
-    const semitones = calculateSemitones(originalKey, selectedKey);
-
-    if (semitones === 0) {
-      // No transposition needed
-      setTransposedSheet(chordSheet);
-    } else {
-      // changeKey-based transposition spells chords for the target key
-      setTransposedSheet(transposeSong(chordSheet, selectedKey));
-    }
-  }, [chordSheet, originalKey, selectedKey]);
-
-  // Handle keyboard events for focus mode
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && isFocusMode) {
-        exitFocusMode();
-      }
-    };
-
-    if (isFocusMode) {
-      document.addEventListener("keydown", handleKeyDown);
-      return () => {
-        document.removeEventListener("keydown", handleKeyDown);
-      };
-    }
-  }, [isFocusMode]);
-
-  // Render loading state
   if (isLoading) {
     return (
       <div className={styles.chordDisplay}>
@@ -158,7 +87,6 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
     );
   }
 
-  // Render error state
   if (error) {
     const isNetworkError = error.includes("Network error");
 
@@ -176,128 +104,25 @@ const ChordDisplay: React.FC<ChordDisplayProps> = ({
     );
   }
 
-  // Render chord sheet
-  if (chordSheet && transposedSheet) {
-    const formatter = new HtmlTableFormatter();
-    const formattedHtml = formatter.format(transposedSheet);
-
-    // Extract metadata
-    const title = chordSheet.metadata.title || "Untitled";
-    const artist = chordSheet.metadata.artist || "";
-    const key = selectedKey || originalKey;
-
-    // Determine if original key is major or minor
-    const isMinorKey = originalKey.endsWith("m");
-
-    // Only show keys of the same type as the original
-    const musicalKeys = isMinorKey ? MINOR_KEYS : MAJOR_KEYS;
-
+  if (!chordProText) {
     return (
       <div className={styles.chordDisplay}>
-        <div className={styles.header}>
-          {/* Transposition Controls */}
-          <div className={styles.transpositionControls}>
-            <label htmlFor="key-select" className={styles.transpositionLabel}>
-              Transpose to:
-            </label>
-            <select
-              id="key-select"
-              className={styles.keySelect}
-              value={selectedKey}
-              onChange={(e) => setSelectedKey(e.target.value)}
-            >
-              {musicalKeys.map((k) => (
-                <option key={k} value={k}>
-                  {k}
-                  {k === originalKey ? " (Original)" : ""}
-                </option>
-              ))}
-            </select>
-
-            {/* Focus Mode Button */}
-            <button
-              className={styles.focusModeButton}
-              onClick={enterFocusMode}
-              title="Enter focus mode for performance"
-            >
-              Focus Mode
-            </button>
-          </div>
+        <div className={styles.emptyState}>
+          <p>No chord sheet available</p>
         </div>
-
-        <div
-          className={styles.chordContent}
-          dangerouslySetInnerHTML={{ __html: formattedHtml }}
-        />
-
-        {selectedSong && selectedSong.copyright && (
-          <div className={styles.copyright}>
-            <p>{selectedSong.copyright}</p>
-          </div>
-        )}
-
-        {/* Focus Mode Overlay */}
-        {isFocusMode &&
-          typeof window !== "undefined" &&
-          createPortal(
-            <div className={styles.focusModeOverlay}>
-              <div className={`${styles.header} ${styles.focusModeHeader}`}>
-                {/* Transposition Controls */}
-                <div className={styles.transpositionControls}>
-                  <label
-                    htmlFor="key-select"
-                    className={styles.transpositionLabel}
-                  >
-                    Transpose to:
-                  </label>
-                  <select
-                    id="key-select"
-                    className={`${styles.keySelect} ${styles.focusModeKeySelect}`}
-                    value={selectedKey}
-                    onChange={(e) => setSelectedKey(e.target.value)}
-                  >
-                    {musicalKeys.map((k) => (
-                      <option key={k} value={k}>
-                        {k}
-                        {k === originalKey ? " (Original)" : ""}
-                      </option>
-                    ))}
-                  </select>
-
-                  {/* Focus Mode Button */}
-                  <button
-                    className={styles.focusModeExit}
-                    onClick={exitFocusMode}
-                    title="Exit focus mode (ESC)"
-                  >
-                    ✕
-                  </button>
-                </div>
-              </div>
-              {/* <div className={styles.focusModeHeader}>
-                
-              </div> */}
-              <div
-                className={styles.focusModeContent}
-                dangerouslySetInnerHTML={{ __html: formattedHtml }}
-              />
-              {selectedSong && selectedSong.copyright && (
-                <div className={styles.focusModeCopyright}>
-                  <p>{selectedSong.copyright}</p>
-                </div>
-              )}
-            </div>,
-            document.body
-          )}
       </div>
     );
   }
 
   return (
     <div className={styles.chordDisplay}>
-      <div className={styles.emptyState}>
-        <p>No chord sheet available</p>
-      </div>
+      <ChordChart
+        chordProText={chordProText}
+        songId={selectedSong?.id ?? ""}
+        copyright={selectedSong?.copyright}
+        showDownload={showDownload}
+        showFocusMode
+      />
     </div>
   );
 };

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 function loadChartEntries(): ChartEntry[] {
-  return releases.flatMap((release) =>
+  return [...releases].reverse().flatMap((release) =>
     release.songs
       .filter((song) => song.chordProUrl)
       .map((song) => {
@@ -29,6 +29,7 @@ function loadChartEntries(): ChartEntry[] {
           songTitle: song.title,
           releaseId: release.id,
           releaseTitle: release.title,
+          releaseType: release.type,
           chordProText,
           originalKey: String(parsed.metadata.key ?? ""),
           copyright: song.copyright,
@@ -44,13 +45,6 @@ export default function ResourcesPage() {
     <>
       <NavBar />
       <div className={styles.container}>
-        <p className={styles.usageNote}>
-          No license required, but I&apos;d love to hear from you if
-          you&apos;re singing any of my songs at your church. Reach out at{" "}
-          <a href="mailto:bendoggettsongs@gmail.com" className={styles.email}>
-            bendoggettsongs@gmail.com
-          </a>
-        </p>
         <ResourcesBrowser charts={charts} />
       </div>
     </>

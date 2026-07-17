@@ -49,6 +49,7 @@ export interface ChartEntry {
   songTitle: string;
   releaseId: string;
   releaseTitle: string;
+  releaseType: "single" | "ep";
   chordProText: string;
   originalKey: string;
   copyright?: string;

@@ -4,6 +4,7 @@ import { buildChartModel, ChartItem } from "./chartModel";
 const CHART = [
   "{title: Test Song}",
   "{key: C}",
+  "{tempo: 120}",
   "",
   "{comment: Verse 1}",
   "The [C]LORD is My [F]Shepherd {comment: (repeat)}",
@@ -19,9 +20,10 @@ const line = (item: ChartItem) =>
 describe("buildChartModel", () => {
   const model = buildChartModel(CHART, "C", "© Ben Doggett");
 
-  it("carries title, key, copyright", () => {
+  it("carries title, key, tempo, copyright", () => {
     expect(model.title).toBe("Test Song");
     expect(model.key).toBe("C");
+    expect(model.tempo).toBe("120");
     expect(model.copyright).toBe("© Ben Doggett");
   });
 
